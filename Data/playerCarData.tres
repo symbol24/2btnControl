@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerCarData" load_steps=2 format=3 uid="uid://scmvn5oaw2ff"]
+
+[ext_resource type="Script" path="res://Code/PlayerCar/player_car_data.gd" id="1_hfu7h"]
+
+[resource]
+script = ExtResource("1_hfu7h")
+acceleration = 700.0
+friction = 50.0
+speed = 100.0
+turn_angle = 0.9
+rotation_speed = 2000.0
+rotate_delay = 0.3

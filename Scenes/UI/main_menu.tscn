@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv1wftrvdj81m"]
+
+[ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="1_ai5wb"]
+[ext_resource type="Script" path="res://Code/UI/main_menu.gd" id="1_m568g"]
+
+[node name="MainMenu" type="Control"]
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m568g")
+metadata/id = "main_menu"
+
+[node name="background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="title" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(320, 30)
+layout_mode = 0
+offset_top = 21.0
+offset_right = 320.0
+offset_bottom = 51.0
+theme = ExtResource("1_ai5wb")
+bbcode_enabled = true
+text = "[center]Game Title here[/center]"
+scroll_active = false
+
+[node name="Play" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 73.0
+offset_right = 186.0
+offset_bottom = 104.0
+theme = ExtResource("1_ai5wb")
+text = "Play"

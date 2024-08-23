@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1w5i40fugu4u"]
+
+[ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="1_fqj2i"]
+[ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/Utilities/parking_spot.tscn" id="2_q7bb8"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
+b = Vector2(320, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_d1n7k"]
+b = Vector2(320, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_i8qtd"]
+b = Vector2(0, 179)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hs4k0"]
+b = Vector2(0, 180)
+
+[node name="world" type="Node2D"]
+metadata/id = "test_level"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(320, 180)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="world_boundries" type="StaticBody2D" parent="."]
+
+[node name="up" type="CollisionShape2D" parent="world_boundries"]
+shape = SubResource("SegmentShape2D_jtjmp")
+
+[node name="down" type="CollisionShape2D" parent="world_boundries"]
+position = Vector2(0, 180)
+shape = SubResource("SegmentShape2D_d1n7k")
+
+[node name="left" type="CollisionShape2D" parent="world_boundries"]
+shape = SubResource("SegmentShape2D_i8qtd")
+
+[node name="right" type="CollisionShape2D" parent="world_boundries"]
+position = Vector2(320, 0)
+shape = SubResource("SegmentShape2D_hs4k0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(160, 90)
+
+[node name="parking_spot" parent="." instance=ExtResource("2_q7bb8")]
+position = Vector2(232, 92)
+
+[node name="PlayerCar" parent="." instance=ExtResource("1_fqj2i")]
+position = Vector2(147, 92)

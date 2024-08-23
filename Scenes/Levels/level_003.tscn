@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbk1fur20grw"]
+
+[ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/Utilities/parking_spot.tscn" id="1_1pvqv"]
+[ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="2_b4pv4"]
+[ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_nw0em"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
+b = Vector2(320, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_d1n7k"]
+b = Vector2(320, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_i8qtd"]
+b = Vector2(0, 179)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hs4k0"]
+b = Vector2(0, 180)
+
+[node name="world" type="Node2D"]
+metadata/id = "test_level"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(320, 180)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="world_boundries" type="StaticBody2D" parent="."]
+
+[node name="up" type="CollisionShape2D" parent="world_boundries"]
+shape = SubResource("SegmentShape2D_jtjmp")
+
+[node name="down" type="CollisionShape2D" parent="world_boundries"]
+position = Vector2(0, 180)
+shape = SubResource("SegmentShape2D_d1n7k")
+
+[node name="left" type="CollisionShape2D" parent="world_boundries"]
+shape = SubResource("SegmentShape2D_i8qtd")
+
+[node name="right" type="CollisionShape2D" parent="world_boundries"]
+position = Vector2(320, 0)
+shape = SubResource("SegmentShape2D_hs4k0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(160, 90)
+
+[node name="parking_spot" parent="." instance=ExtResource("1_1pvqv")]
+position = Vector2(232, 92)
+
+[node name="PlayerCar" parent="." instance=ExtResource("2_b4pv4")]
+position = Vector2(147, 92)
+
+[node name="level_name" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(320, 25)
+offset_right = 320.0
+offset_bottom = 25.0
+theme = ExtResource("3_nw0em")
+bbcode_enabled = true
+text = "[center]level 3
+[/center]"
