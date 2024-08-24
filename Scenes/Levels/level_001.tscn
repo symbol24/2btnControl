@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=4 uid="uid://d2o180h6k4x"]
+[gd_scene load_steps=12 format=4 uid="uid://d2o180h6k4x"]
 
 [ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="1_aaa2t"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_ahuuo"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="2_ghmxe"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_mmyvb"]
 [ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="5_a841p"]
+[ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="6_fd644"]
+[ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="6_ncjwt"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
 b = Vector2(320, 0)
@@ -26,12 +28,12 @@ tile_map_data = PackedByteArray("AAAUAAsAAAAAAAUAAAAUAAoAAAACAAUAAAAUAAkAAAACAAM
 tile_set = ExtResource("1_ahuuo")
 
 [node name="fluff" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAALAAUAAAACAAIAAAAMAAUAAAADAAIAAAAEAAoAAAACAAAAAAA=")
+tile_map_data = PackedByteArray("AAALAAUAAAACAAIAAAAMAAUAAAADAAIAAAA=")
 tile_set = ExtResource("1_ahuuo")
 
 [node name="spots" type="TileMapLayer" parent="."]
 rotation = 1.5708
-tile_map_data = PackedByteArray("AAARAAgAAAAIAAYAAAARAAkAAAAIAAcAAAASAAgAAAAJAAYAAAASAAkAAAAJAAcAAAAHAO//AAAIAAYAAAAHAPD/AAAIAAcAAAAIAO//AAAJAAYAAAAIAPD/AAAJAAcAAAAKAO//AAAIAAYAAAAKAPD/AAAIAAcAAAALAO//AAAJAAYAAAALAPD/AAAJAAcAAAAHAPP/AAAIAAYAAAAHAPT/AAAIAAcAAAAIAPP/AAAJAAYAAAAIAPT/AAAJAAcAAAAKAPP/AAAIAAYAAAAKAPT/AAAIAAcAAAALAPP/AAAJAAYAAAALAPT/AAAJAAcAAAAHAPf/AAAIAAYAAAAHAPj/AAAIAAcAAAAIAPf/AAAJAAYAAAAIAPj/AAAJAAcAAAAKAPf/AAAIAAYAAAAKAPj/AAAIAAcAAAALAPf/AAAJAAYAAAALAPj/AAAJAAcAAAAFAPz/AAAEAAIAAAAGAPz/AAAFAAIAAAA=")
+tile_map_data = PackedByteArray("AAARAAgAAAAIAAYAAAARAAkAAAAIAAcAAAASAAgAAAAJAAYAAAASAAkAAAAJAAcAAAAHAO//AAAIAAYAAAAHAPD/AAAIAAcAAAAIAO//AAAJAAYAAAAIAPD/AAAJAAcAAAAKAO//AAAIAAYAAAAKAPD/AAAIAAcAAAALAO//AAAJAAYAAAALAPD/AAAJAAcAAAAHAPP/AAAIAAYAAAAHAPT/AAAIAAcAAAAIAPP/AAAJAAYAAAAIAPT/AAAJAAcAAAAKAPP/AAAIAAYAAAAKAPT/AAAIAAcAAAALAPP/AAAJAAYAAAALAPT/AAAJAAcAAAAHAPf/AAAIAAYAAAAHAPj/AAAIAAcAAAAIAPf/AAAJAAYAAAAIAPj/AAAJAAcAAAAKAPf/AAAIAAYAAAAKAPj/AAAIAAcAAAALAPf/AAAJAAYAAAALAPj/AAAJAAcAAAAFAPv/AAAEAAIAAAAGAPv/AAAFAAIAAAA=")
 tile_set = ExtResource("1_ahuuo")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -135,3 +137,11 @@ position = Vector2(125, 152)
 
 [node name="car12" parent="cars" instance=ExtResource("5_a841p")]
 position = Vector2(128, 171)
+
+[node name="KeyKiosk" parent="." instance=ExtResource("6_ncjwt")]
+position = Vector2(92, 148)
+rotation = 1.5708
+
+[node name="hut" parent="." instance=ExtResource("6_fd644")]
+position = Vector2(23, 148)
+rotation = -1.5708

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://cv40isjamhbcs"]
+[gd_scene load_steps=11 format=4 uid="uid://cv40isjamhbcs"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_pimng"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="2_sst6x"]
 [ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="3_2dm42"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_t4mjm"]
+[ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="5_5nwgp"]
+[ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="6_8qn8l"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
 b = Vector2(320, 0)
@@ -88,3 +90,9 @@ theme = ExtResource("3_t4mjm")
 bbcode_enabled = true
 text = "[center]Press down to move backward[/center]"
 scroll_active = false
+
+[node name="hut" parent="." instance=ExtResource("5_5nwgp")]
+position = Vector2(295, 88)
+
+[node name="KeyKiosk" parent="." instance=ExtResource("6_8qn8l")]
+position = Vector2(295, 142)

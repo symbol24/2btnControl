@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqyk60yoy0w0g"]
+
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_8skjd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcspx"]
+size = Vector2(16, 8)
+
+[node name="KeyKiosk" type="StaticBody2D"]
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xcspx")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_8skjd")
