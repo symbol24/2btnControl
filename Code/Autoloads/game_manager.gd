@@ -74,8 +74,9 @@ func _load_scene(_id := "") -> void:
 		return
 	
 	if active_level != null: 
-		game.remove_child.call_deferred(active_level)
-		active_level.queue_free.call_deferred()
+		var temp = active_level
+		game.remove_child.call_deferred(temp)
+		temp.queue_free.call_deferred()
 		
 	to_load = path
 	is_loading = true
@@ -86,7 +87,8 @@ func _complete_load() -> void:
 	is_loading = false
 	var new_world = ResourceLoader.load_threaded_get(to_load)
 	
-	game.add_child.call_deferred(new_world.instantiate())
+	active_level = new_world.instantiate()
+	game.add_child.call_deferred(active_level)
 	await get_tree().create_timer(loading_delay).timeout
 	S.ToggleDisplay.emit("loading_screen", false)
 	S.PauseGame.emit(false)
