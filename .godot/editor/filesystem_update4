@@ -36,3 +36,4 @@ res://Code/PlayerCar/player_car_data.gd
 res://Code/Utilities/car_color_data.gd
 res://Data/car_color_data.tres
 res://Code/Obstacles/obstacle_car.gd
+res://Data/parking_tileset.tres

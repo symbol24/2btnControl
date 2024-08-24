@@ -11,4 +11,4 @@ turn_angle = 0.9
 rotation_speed = 2000.0
 rotate_delay = 0.3
 parked_detection_delay = 0.2
-crash_input_delay = 0.6
+crash_input_delay = 0.4

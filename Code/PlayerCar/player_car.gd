@@ -62,21 +62,22 @@ func _physics_process(_delta: float) -> void:
 	if rotate_timer_on:
 		rotate_timer += _delta
 	
-	if move_forward:
-		velocity = _move(_delta, 1, velocity)
-		if rotation_on: rotation_on = false
-	elif move_backward:
-		velocity = _move(_delta, -1, velocity)
-		if !rotation_on: rotate_timer_on = true
-	else:
-		if velocity != Vector2.ZERO:
-			velocity = _move(_delta, 0, velocity)
-		if velocity == Vector2.ZERO:
+	if accept_input:
+		if move_forward:
+			velocity = _move(_delta, 1, velocity)
 			if rotation_on: rotation_on = false
+		elif move_backward:
+			velocity = _move(_delta, -1, velocity)
+			if !rotation_on: rotate_timer_on = true
+		else:
+			if velocity != Vector2.ZERO:
+				velocity = _move(_delta, 0, velocity)
+			if velocity == Vector2.ZERO:
+				if rotation_on: rotation_on = false
 	
-	if rotation_on and !parked:
-		var speed_lost = (data.speed - current_speed)/data.speed if current_speed > 0.0 else (data.speed + current_speed)/data.speed
-		rotation_degrees = _rotate(_delta, rotation_degrees, data.turn_angle, speed_lost)
+		if rotation_on and !parked:
+			var speed_lost = (data.speed - current_speed)/data.speed if current_speed > 0.0 else (data.speed + current_speed)/data.speed
+			rotation_degrees = _rotate(_delta, rotation_degrees, data.turn_angle, speed_lost)
 	
 	if !parked: move_and_slide()
 		
@@ -100,7 +101,7 @@ func _rotate(_delta := 0.0, _rotation := 0.0, _angle := 0.0, _speed_lost := 0.0)
 	return new_rotation
 
 func _front_detector_enter(_area) -> void:
-	print("area is ParkingSpot ", _area is ParkingSpot)
+	#print("area is ParkingSpot ", _area is ParkingSpot)
 	if _area is ParkingSpot:
 		front_in = true
 
@@ -131,7 +132,7 @@ func push(_direction:Vector2) -> void:
 	if _direction:
 		accept_input_timer = 0.0
 		accept_input = false
-		velocity += _direction
+		velocity = _direction
 
 func _set_car_color() -> void:
 	var is_metallic := randi_range(0,1)
