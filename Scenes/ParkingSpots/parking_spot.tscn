@@ -10,6 +10,13 @@ collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_kr61f")
 
+[node name="zone" type="ColorRect" parent="."]
+offset_left = -30.0
+offset_top = -17.5
+offset_right = 30.0
+offset_bottom = 17.5
+color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
 [node name="collider" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_he3yy")
 

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck7qj12db5sp"]
+
+[ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="1_vvwe8"]
+
+[node name="level_page" type="GridContainer"]
+theme = ExtResource("1_vvwe8")
+columns = 9
+metadata/_tab_index = 0

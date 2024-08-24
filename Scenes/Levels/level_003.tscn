@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cbk1fur20grw"]
 
-[ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/Utilities/parking_spot.tscn" id="1_1pvqv"]
+[ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/ParkingSpots/parking_spot.tscn" id="1_1pvqv"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="2_b4pv4"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_nw0em"]
 
@@ -16,8 +16,9 @@ b = Vector2(0, 179)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hs4k0"]
 b = Vector2(0, 180)
 
-[node name="world" type="Node2D"]
+[node name="level" type="Node2D"]
 metadata/id = "test_level"
+metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(320, 180)
@@ -45,10 +46,11 @@ shape = SubResource("SegmentShape2D_hs4k0")
 offset = Vector2(160, 90)
 
 [node name="parking_spot" parent="." instance=ExtResource("1_1pvqv")]
-position = Vector2(232, 92)
+position = Vector2(57, 44)
+rotation = 0.785398
 
 [node name="PlayerCar" parent="." instance=ExtResource("2_b4pv4")]
-position = Vector2(147, 92)
+position = Vector2(190, 92)
 
 [node name="level_name" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(320, 25)
@@ -56,5 +58,16 @@ offset_right = 320.0
 offset_bottom = 25.0
 theme = ExtResource("3_nw0em")
 bbcode_enabled = true
-text = "[center]level 3
-[/center]"
+text = "[center]level 3[/center]"
+
+[node name="tutorial_reset" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(160, 50)
+offset_left = 147.0
+offset_top = 117.0
+offset_right = 307.0
+offset_bottom = 167.0
+theme = ExtResource("3_nw0em")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "[center]Pressing up and down at the same time resets the level[/center]"
+scroll_active = false

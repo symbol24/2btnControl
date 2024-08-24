@@ -1,3 +1,4 @@
+CarColorData
 LoaderData
 Theme
 PlayerCarData

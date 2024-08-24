@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://b42l5e3jvdua0"]
+
+[ext_resource type="Script" path="res://Code/Utilities/parking_spot.gd" id="1_godaa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pupvy"]
+size = Vector2(60, 42)
+
+[node name="parking_spot_big" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_godaa")
+
+[node name="zone" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(60, 42)
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 30.0
+offset_bottom = 22.0
+color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[node name="collider" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_pupvy")
+
+[node name="line1" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(50, 2)
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 30.0
+offset_bottom = -18.0
+color = Color(1, 1, 1, 0.745098)
+
+[node name="line2" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(50, 2)
+offset_left = -30.0
+offset_top = 20.0
+offset_right = 30.0
+offset_bottom = 22.0
+color = Color(1, 1, 1, 0.745098)

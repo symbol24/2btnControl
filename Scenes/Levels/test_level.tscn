@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://b1w5i40fugu4u"]
 
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="1_fqj2i"]
-[ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/Utilities/parking_spot.tscn" id="2_q7bb8"]
+[ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/ParkingSpots/parking_spot.tscn" id="2_q7bb8"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
 b = Vector2(320, 0)

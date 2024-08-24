@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bahlrx6e287i2"]
+
+[ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="1_oxhy1"]
+[ext_resource type="Script" path="res://Code/UI/level_button.gd" id="2_vta1n"]
+
+[node name="level_button" type="Button"]
+custom_minimum_size = Vector2(18, 18)
+theme = ExtResource("1_oxhy1")
+theme_override_font_sizes/font_size = 5
+text = "000"
+script = ExtResource("2_vta1n")

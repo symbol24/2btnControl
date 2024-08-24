@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Code/UI/main_menu.gd" id="1_m568g"]
 
 [node name="MainMenu" type="Control"]
+process_mode = 3
 custom_minimum_size = Vector2(320, 180)
 layout_mode = 3
 anchors_preset = 0
@@ -37,3 +38,13 @@ offset_right = 186.0
 offset_bottom = 104.0
 theme = ExtResource("1_ai5wb")
 text = "Play"
+
+[node name="level_select" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 145.0
+offset_top = 109.0
+offset_right = 186.0
+offset_bottom = 140.0
+theme = ExtResource("1_ai5wb")
+text = "Levels"

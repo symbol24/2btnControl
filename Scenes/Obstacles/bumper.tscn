@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnvrv7ryb8k5d"]
+
+[ext_resource type="Script" path="res://Code/Obstacles/bumper.gd" id="1_he6jl"]
+[ext_resource type="Texture2D" uid="uid://iulfkeyqs583" path="res://Textures/bumper.png" id="2_bxht0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcmog"]
+size = Vector2(13, 28)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ffy7c"]
+radius = 4.0
+height = 32.0
+
+[node name="Bumper" type="StaticBody2D"]
+collision_mask = 2
+script = ExtResource("1_he6jl")
+force = 3.0
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_bxht0")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(2.18557e-08, -1.5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_gcmog")
+
+[node name="repulser" type="Area2D" parent="."]
+unique_name_in_owner = true
+visible = false
+collision_mask = 2
+
+[node name="collider" type="CollisionShape2D" parent="repulser"]
+position = Vector2(0, 4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ffy7c")

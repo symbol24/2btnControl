@@ -6,12 +6,12 @@ class_name LoaderData extends Resource
 var current_level := ""
 
 func get_level(_id := "") -> String:
-	if _id == "current": return current_level
-	elif _id == "next": return _get_next(current_level)
-	
+	if _id == "current": _id = current_level
+	elif _id == "next": _id = _get_next(current_level)
+	print("id = ", _id)
 	for each in levels:
 		if each.has("id") and each["id"] == _id:
-			current_level = each["path"]
+			current_level = _id
 			return each["path"]
 	return ""
 

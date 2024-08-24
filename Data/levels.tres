@@ -19,5 +19,11 @@ levels = Array[Dictionary]([{
 }, {
 "id": "level_003",
 "path": "res://Scenes/Levels/level_003.tscn"
+}, {
+"id": "level_004",
+"path": "res://Scenes/Levels/level_004.tscn"
+}, {
+"id": "level_005",
+"path": "res://Scenes/Levels/level_005.tscn"
 }])
-level_order = Array[String](["level_001", "level_002", "level_003"])
+level_order = Array[String](["level_001", "level_002", "level_003", "level_004", "level_005"])

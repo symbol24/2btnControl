@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfdjd2puot7rf"]
+
+[ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="1_r6xx6"]
+[ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="2_hvc0u"]
+[ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="3_tkcre"]
+[ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="4_47tm5"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
+b = Vector2(320, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_d1n7k"]
+b = Vector2(320, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_i8qtd"]
+b = Vector2(0, 179)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hs4k0"]
+b = Vector2(0, 180)
+
+[node name="world" type="Node2D"]
+metadata/id = "test_level"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(320, 180)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="world_boundries" type="StaticBody2D" parent="."]
+
+[node name="up" type="CollisionShape2D" parent="world_boundries"]
+shape = SubResource("SegmentShape2D_jtjmp")
+
+[node name="down" type="CollisionShape2D" parent="world_boundries"]
+position = Vector2(0, 180)
+shape = SubResource("SegmentShape2D_d1n7k")
+
+[node name="left" type="CollisionShape2D" parent="world_boundries"]
+shape = SubResource("SegmentShape2D_i8qtd")
+
+[node name="right" type="CollisionShape2D" parent="world_boundries"]
+position = Vector2(320, 0)
+shape = SubResource("SegmentShape2D_hs4k0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(160, 90)
+
+[node name="parking_spot_big" parent="." instance=ExtResource("1_r6xx6")]
+position = Vector2(248, 93)
+
+[node name="PlayerCar" parent="." instance=ExtResource("2_hvc0u")]
+position = Vector2(111, 92)
+
+[node name="car" parent="." instance=ExtResource("3_tkcre")]
+position = Vector2(185, 93)
+rotation = 1.5708
+
+[node name="level_name" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(320, 25)
+offset_right = 320.0
+offset_bottom = 25.0
+theme = ExtResource("4_47tm5")
+bbcode_enabled = true
+text = "[center]level 4[/center]"

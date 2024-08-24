@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://d2o180h6k4x"]
 
-[ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/Utilities/parking_spot.tscn" id="1_v2xsm"]
+[ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="1_aaa2t"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="2_ghmxe"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_mmyvb"]
 
@@ -16,7 +16,7 @@ b = Vector2(0, 179)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hs4k0"]
 b = Vector2(0, 180)
 
-[node name="world" type="Node2D"]
+[node name="level" type="Node2D"]
 metadata/id = "test_level"
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -44,8 +44,8 @@ shape = SubResource("SegmentShape2D_hs4k0")
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(160, 90)
 
-[node name="parking_spot" parent="." instance=ExtResource("1_v2xsm")]
-position = Vector2(232, 92)
+[node name="parking_spot_big" parent="." instance=ExtResource("1_aaa2t")]
+position = Vector2(260, 92)
 
 [node name="PlayerCar" parent="." instance=ExtResource("2_ghmxe")]
 position = Vector2(147, 92)
@@ -57,3 +57,26 @@ offset_bottom = 25.0
 theme = ExtResource("3_mmyvb")
 bbcode_enabled = true
 text = "[center]level 1[/center]"
+
+[node name="tutorial_forward" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(160, 50)
+offset_left = 1.0
+offset_top = 26.0
+offset_right = 161.0
+offset_bottom = 76.0
+theme = ExtResource("3_mmyvb")
+bbcode_enabled = true
+text = "[center]Press up to move forward[/center]"
+scroll_active = false
+
+[node name="tutorial_park" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(160, 50)
+offset_left = 160.0
+offset_top = 26.0
+offset_right = 320.0
+offset_bottom = 76.0
+theme = ExtResource("3_mmyvb")
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "[center]Make sure both red dots are inside the parking spot[/center]"
+scroll_active = false

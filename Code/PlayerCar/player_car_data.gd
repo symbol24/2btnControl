@@ -9,3 +9,4 @@ class_name PlayerCarData extends Resource
 @export var rotate_delay := 0.5
 
 @export var parked_detection_delay := 0.1
+@export var crash_input_delay := 0.3
