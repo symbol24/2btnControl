@@ -6,6 +6,10 @@ signal LoadSceneFromPath(path)
 signal GameReady(game)
 signal PauseGame(is_paused)
 
+#PlayerData
+signal Save()
+signal Load()
+
 #Gameplay
 signal CarParked()
 signal StartLevelTimer()

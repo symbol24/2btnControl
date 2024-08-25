@@ -53,3 +53,9 @@ res://Data/Audio/boings.tres
 res://Scenes/Obstacles/bumper.tscn
 res://Code/Obstacles/bumper.gd
 res://Code/Utilities/save_data.gd
+res://Code/Autoloads/player_data.gd
+res://Code/UI/save_icon.gd
+res://Data/UI/main_theme.tres
+res://Code/Utilities/tb_button.gd
+res://Scenes/UI/level_button.tscn
+res://Code/UI/level_button.gd

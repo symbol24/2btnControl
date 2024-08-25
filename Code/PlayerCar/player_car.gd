@@ -59,6 +59,13 @@ var parked_timer := 0.0:
 
 #Conditions
 var oil_slick := false
+var reset_active := false
+var reset_timer := 0.0:
+	set(_value):
+		reset_timer = _value
+		if reset_timer >= data.reset_delay:
+			reset_timer = 0.0
+			reset_active = false
 
 func _ready() -> void:
 	S.ResetLevel.connect(_reset_car)
@@ -75,14 +82,12 @@ func _ready() -> void:
 		S.ToggleDisplay.emit("gameplay_ui", true)
 
 func _physics_process(_delta: float) -> void:
-	if front_in and back_in:
-		parked_timer += _delta
-	if !accept_input:
-		accept_input_timer += _delta
-	if rotate_timer_on:
-		rotate_timer += _delta
+	if front_in and back_in: parked_timer += _delta
+	if !accept_input: accept_input_timer += _delta
+	if rotate_timer_on: rotate_timer += _delta
+	if reset_active: reset_timer += _delta
 	
-	if accept_input and !parked:
+	if accept_input and !parked and !reset_active:
 		if move_forward:
 			velocity = _move(_delta, 1, velocity)
 			if rotation_on: rotation_on = false
@@ -102,6 +107,8 @@ func _physics_process(_delta: float) -> void:
 	if oil_slick:
 		rotation_on = true
 		rotation_degrees = _rotate(_delta, rotation_degrees, data.oil_slick_rot, 0)
+	
+	if reset_active and velocity != Vector2.ZERO: velocity = Vector2.ZERO
 	
 	move_and_slide()
 		
@@ -133,6 +140,7 @@ func _front_detector_enter(_area) -> void:
 func _front_detector_exit(_area) -> void:
 	if _area is ParkingSpot:
 		front_in = false
+		if !back_in: parking_spot = null
 		
 func _back_detector_enter(_area) -> void:
 	if _area is ParkingSpot:
@@ -142,6 +150,7 @@ func _back_detector_enter(_area) -> void:
 func _back_detector_exit(_area) -> void:
 	if _area is ParkingSpot:
 		back_in = false
+		if !front_in: parking_spot = null
 
 func _check_if_parked() -> void:
 	if front_in and back_in and _check_if_slow_speed(current_speed) and !parked:
@@ -155,6 +164,7 @@ func _check_if_slow_speed(_speed := 0.0):
 	return _speed >= data.parked_slow_speed[0] and _speed <= data.parked_slow_speed[1]
 
 func _reset_car() -> void:
+	reset_active = true
 	parked = false
 	velocity = Vector2.ZERO
 	transform = start_transform

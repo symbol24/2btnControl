@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://ba782djndha7k"]
+[gd_scene load_steps=15 format=4 uid="uid://ba782djndha7k"]
 
 [ext_resource type="Script" path="res://Code/UI/ui_canvas.gd" id="1_amwc2"]
 [ext_resource type="Script" path="res://Code/UI/gameplay.gd" id="2_iqp4r"]
@@ -6,9 +6,74 @@
 [ext_resource type="Script" path="res://Code/UI/result_screen.gd" id="4_0f8vl"]
 [ext_resource type="Script" path="res://Code/UI/loading_screen.gd" id="5_6cnba"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="6_cmtl1"]
+[ext_resource type="Script" path="res://Code/Utilities/tb_button.gd" id="7_cmipv"]
 [ext_resource type="Script" path="res://Code/UI/levels_selector.gd" id="7_gr110"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="8_nnetg"]
 [ext_resource type="PackedScene" uid="uid://d4laau4frxsm0" path="res://Scenes/UI/loading_tire.tscn" id="9_4x14f"]
+[ext_resource type="Script" path="res://Code/UI/save_icon.gd" id="10_3udt6"]
+
+[sub_resource type="Animation" id="Animation_qeukk"]
+resource_name = "key"
+length = 2.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("keys:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("keys:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_42gif"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("keys:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("keys:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4v44k"]
+_data = {
+"RESET": SubResource("Animation_42gif"),
+"key": SubResource("Animation_qeukk")
+}
 
 [node name="UiCanvas" type="CanvasLayer"]
 process_mode = 3
@@ -121,7 +186,8 @@ offset_top = 146.0
 offset_right = 298.0
 offset_bottom = 168.0
 theme = ExtResource("6_cmtl1")
-text = "Back"
+text = "BACK"
+script = ExtResource("7_cmipv")
 
 [node name="pause_restart" type="Button" parent="PauseMenu"]
 unique_name_in_owner = true
@@ -131,7 +197,8 @@ offset_top = 146.0
 offset_right = 244.0
 offset_bottom = 168.0
 theme = ExtResource("6_cmtl1")
-text = "Restart Level"
+text = "RESTART LEVEL"
+script = ExtResource("7_cmipv")
 
 [node name="pause_exit" type="Button" parent="PauseMenu"]
 unique_name_in_owner = true
@@ -141,7 +208,8 @@ offset_top = 146.0
 offset_right = 172.0
 offset_bottom = 168.0
 theme = ExtResource("6_cmtl1")
-text = "Main Menu"
+text = "MAIN MENU"
+script = ExtResource("7_cmipv")
 
 [node name="ResultScreen" type="Control" parent="."]
 unique_name_in_owner = true
@@ -178,7 +246,8 @@ offset_top = 146.0
 offset_right = 298.0
 offset_bottom = 168.0
 theme = ExtResource("6_cmtl1")
-text = "Continue"
+text = "CONTINUE"
+script = ExtResource("7_cmipv")
 
 [node name="restart" type="Button" parent="ResultScreen"]
 unique_name_in_owner = true
@@ -188,7 +257,8 @@ offset_top = 146.0
 offset_right = 244.0
 offset_bottom = 168.0
 theme = ExtResource("6_cmtl1")
-text = "Restart Level"
+text = "RESTART LEVEL"
+script = ExtResource("7_cmipv")
 
 [node name="exit" type="Button" parent="ResultScreen"]
 unique_name_in_owner = true
@@ -198,7 +268,8 @@ offset_top = 146.0
 offset_right = 172.0
 offset_bottom = 168.0
 theme = ExtResource("6_cmtl1")
-text = "Main Menu"
+text = "MAIN MENU"
+script = ExtResource("7_cmipv")
 
 [node name="level_time_label" type="RichTextLabel" parent="ResultScreen"]
 custom_minimum_size = Vector2(60, 15)
@@ -274,8 +345,29 @@ offset_top = 130.0
 offset_right = 240.0
 offset_bottom = 155.0
 theme = ExtResource("6_cmtl1")
-text = "Loading"
+text = "LOADING"
 scroll_active = false
 
 [node name="LoadingTire" parent="LoadingScreen" instance=ExtResource("9_4x14f")]
 position = Vector2(261, 143)
+
+[node name="SaveIcon" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_3udt6")
+id = "save_icon"
+
+[node name="keys" type="TileMapLayer" parent="SaveIcon"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+tile_map_data = PackedByteArray("AAABAAgAAAAGAAIAAAABAAkAAAAGAAMAAAACAAgAAAAHAAIAAAACAAkAAAAHAAMAAAA=")
+tile_set = ExtResource("8_nnetg")
+
+[node name="animator" type="AnimationPlayer" parent="SaveIcon"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_4v44k")
+}

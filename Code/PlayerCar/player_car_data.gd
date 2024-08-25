@@ -11,3 +11,4 @@ class_name PlayerCarData extends Resource
 @export var crash_input_delay := 0.3
 @export var oil_slick_rot := 1.1
 @export var bark_chance := 0.1
+@export var reset_delay := 0.3
