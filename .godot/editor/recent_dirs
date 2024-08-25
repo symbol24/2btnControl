@@ -1,8 +1,9 @@
+res://Scenes/Levels
+res://Code/Obstacles
+res://Scenes/Obstacles
 res://Code/UI
 res://Code/Autoloads
 res://Data/Audio
-res://Code/Obstacles
-res://Scenes/Obstacles
 res://Data/UI/style_boxes
 res://Scenes/UI
 res://Code/Utilities
@@ -11,4 +12,3 @@ res://Data/UI
 res://Scenes/Utilities
 res://Code/PlayerCar
 res://Scenes/PlayerCar
-res://Scenes/Levels

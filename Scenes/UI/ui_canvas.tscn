@@ -275,9 +275,9 @@ script = ExtResource("7_cmipv")
 custom_minimum_size = Vector2(60, 15)
 layout_mode = 0
 offset_left = 59.0
-offset_top = 65.0
+offset_top = 53.0
 offset_right = 159.0
-offset_bottom = 80.0
+offset_bottom = 68.0
 theme = ExtResource("6_cmtl1")
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
@@ -289,9 +289,9 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(60, 15)
 layout_mode = 0
 offset_left = 179.0
-offset_top = 65.0
+offset_top = 53.0
 offset_right = 239.0
-offset_bottom = 80.0
+offset_bottom = 68.0
 theme = ExtResource("6_cmtl1")
 theme_override_font_sizes/normal_font_size = 10
 text = "00:00.00"
@@ -300,9 +300,9 @@ text = "00:00.00"
 custom_minimum_size = Vector2(100, 15)
 layout_mode = 0
 offset_left = 59.0
-offset_top = 85.0
+offset_top = 73.0
 offset_right = 159.0
-offset_bottom = 100.0
+offset_bottom = 88.0
 theme = ExtResource("6_cmtl1")
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
@@ -314,12 +314,62 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(60, 15)
 layout_mode = 0
 offset_left = 179.0
-offset_top = 85.0
+offset_top = 73.0
 offset_right = 239.0
-offset_bottom = 100.0
+offset_bottom = 88.0
 theme = ExtResource("6_cmtl1")
 theme_override_font_sizes/normal_font_size = 10
 text = "00:00.00"
+
+[node name="cones_hit_label" type="RichTextLabel" parent="ResultScreen"]
+custom_minimum_size = Vector2(100, 15)
+layout_mode = 0
+offset_left = 59.0
+offset_top = 90.0
+offset_right = 159.0
+offset_bottom = 105.0
+theme = ExtResource("6_cmtl1")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[right]Cones Hit:[/right]"
+scroll_active = false
+
+[node name="cones_hit" type="RichTextLabel" parent="ResultScreen"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 15)
+layout_mode = 0
+offset_left = 179.0
+offset_top = 90.0
+offset_right = 239.0
+offset_bottom = 105.0
+theme = ExtResource("6_cmtl1")
+theme_override_font_sizes/normal_font_size = 10
+text = "0"
+
+[node name="cones_hit_label2" type="RichTextLabel" parent="ResultScreen"]
+custom_minimum_size = Vector2(100, 15)
+layout_mode = 0
+offset_left = 59.0
+offset_top = 106.0
+offset_right = 159.0
+offset_bottom = 121.0
+theme = ExtResource("6_cmtl1")
+theme_override_font_sizes/normal_font_size = 10
+bbcode_enabled = true
+text = "[right]Total Cones Hit:[/right]"
+scroll_active = false
+
+[node name="cones_hit2" type="RichTextLabel" parent="ResultScreen"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 15)
+layout_mode = 0
+offset_left = 179.0
+offset_top = 106.0
+offset_right = 239.0
+offset_bottom = 121.0
+theme = ExtResource("6_cmtl1")
+theme_override_font_sizes/normal_font_size = 10
+text = "0"
 
 [node name="LoadingScreen" type="Control" parent="."]
 unique_name_in_owner = true

@@ -13,6 +13,8 @@ signal Load()
 #Gameplay
 signal CarParked()
 signal StartLevelTimer()
+signal ConeHit()
+signal ToggleGate(open)
 
 #level
 signal ResetLevel()

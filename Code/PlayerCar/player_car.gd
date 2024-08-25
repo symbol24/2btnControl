@@ -66,6 +66,7 @@ var reset_timer := 0.0:
 		if reset_timer >= data.reset_delay:
 			reset_timer = 0.0
 			reset_active = false
+var in_puddle := false
 
 func _ready() -> void:
 	S.ResetLevel.connect(_reset_car)
@@ -109,6 +110,8 @@ func _physics_process(_delta: float) -> void:
 		rotation_degrees = _rotate(_delta, rotation_degrees, data.oil_slick_rot, 0)
 	
 	if reset_active and velocity != Vector2.ZERO: velocity = Vector2.ZERO
+	
+	if in_puddle: velocity = velocity * data.puddle_slow_down
 	
 	move_and_slide()
 		
@@ -198,3 +201,13 @@ func _crash_detecter_body_entered(_body) -> void:
 func _crash_detecter_area_entered(_area) -> void:
 	if _area.get_parent() and _area.get_parent() is Bumper:
 		S.PlayAudio.emit(BOINGS)
+
+func pot_hole() -> void:
+	accept_input = false
+	var offset := data.pot_hole_strength
+	if randf() <= 0.5: offset = -offset
+	if randf() <= 0.5: velocity.y += offset
+	else: velocity.x += offset
+	
+func end_pot_hole() -> void:
+	accept_input_timer = 33

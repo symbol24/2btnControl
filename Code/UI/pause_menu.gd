@@ -13,23 +13,23 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
-		var pause = true if GM.is_playing else false
+		var pause := true if GM.is_playing else false
 		S.ToggleDisplay.emit("pause_menu", pause)
 		S.PauseGame.emit(pause)
 
-func _continue_pressed():
+func _continue_pressed() -> void:
 	hide()
 	S.PauseGame.emit(false)
 
-func _restart_pressed():
+func _restart_pressed() -> void:
 	S.LoadScene.emit("current")
 	hide()
 
-func _exit_pressed():
+func _exit_pressed() -> void:
 	S.LoadScene.emit("main_menu")
 	hide()
 
-func _toggle_display(_id = "", _visible := true) -> void:
+func _toggle_display(_id := "", _visible := true) -> void:
 	if _id == id:
 		if _visible: pause_continue.grab_focus()
 		set_deferred("visible", _visible)

@@ -17,17 +17,19 @@ func _ready() -> void:
 
 func _back_pressed() -> void:
 	hide()
+	S.ResetLevel.emit()
+	S.PauseGame.emit(false)
 
 func _construct_level_pages(_level_name:Array[String]) -> void:
 	if !_level_name.is_empty():
 		var page_count = ceil(_level_name.size() / buttons_per_page) if _level_name.size() > 45 else 1
 		#print("constructing ", page_count, " level pages")
 		for x in page_count:
-			var new_page = LEVEL_PAGE.instantiate()
+			var new_page := LEVEL_PAGE.instantiate()
 			new_page.name = "Page "+str(x+1)
 			var i = x * buttons_per_page
 			while i < (x+1) * buttons_per_page and i < _level_name.size():
-				var new_button = LEVEL_BUTTON.instantiate()
+				var new_button := LEVEL_BUTTON.instantiate()
 				new_button.name = "level_"+str(i)
 				new_button.level_id = _level_name[i]
 				new_button.text = str(i+1)
@@ -36,8 +38,10 @@ func _construct_level_pages(_level_name:Array[String]) -> void:
 				i += 1
 			tab_container.add_child.call_deferred(new_page)
 
-func _toggle_display(_id = "", _visible := true) -> void:
+func _toggle_display(_id := "", _visible := true) -> void:
 	if _id == id:
 		set_deferred("visible", _visible)
 		if !button_pool.is_empty() and _visible:
 			button_pool[0].grab_focus()
+		if _visible: S.PauseGame.emit(true)
+		else: S.PauseGame.emit(false)

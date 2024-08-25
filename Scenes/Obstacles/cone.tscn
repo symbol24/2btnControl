@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://banqa38750x1l"]
+
+[ext_resource type="Script" path="res://Code/Obstacles/cone.gd" id="1_cc58j"]
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_gyhiv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqfo2"]
+radius = 8.0
+
+[node name="Cone" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_cc58j")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_dqfo2")
+
+[node name="up" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+position = Vector2(8, 8)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 10, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_gyhiv")
+
+[node name="down" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-8, 8)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 11, 0, 0, 0, 0, 0, 1, 0, 255, 255, 0, 0, 12, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_gyhiv")

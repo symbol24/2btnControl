@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnfs7awu8ejgs"]
+
+[ext_resource type="Script" path="res://Code/Obstacles/gate_opener.gd" id="1_qf2xl"]
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_mu6tt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46kf1"]
+size = Vector2(32, 32)
+
+[node name="GateOpener" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_qf2xl")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_46kf1")
+
+[node name="plate" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 13, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 13, 0, 1, 0, 0, 0, 0, 0, 255, 255, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 1, 0, 0, 0)
+tile_set = ExtResource("2_mu6tt")

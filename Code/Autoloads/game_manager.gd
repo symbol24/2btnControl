@@ -7,7 +7,7 @@ var is_playing:bool:
 		return !get_tree().paused
 
 #Levels and loading
-var active_level
+var active_level:Node2D
 var game:Game
 var is_loading := false
 var to_load := ""
@@ -27,6 +27,9 @@ var time_string := "":
 		S.UpdateLevelTimer.emit(time_string)
 var tot_timer_string := ""
 
+var cone_hit_count := 0
+var level_cones_hit := 0
+
 func _ready() -> void:
 	process_mode = PROCESS_MODE_ALWAYS
 	S.LoadScene.connect(_load_scene)
@@ -35,6 +38,7 @@ func _ready() -> void:
 	S.CarParked.connect(_car_parked)
 	S.PauseGame.connect(_pause_game)
 	S.StartLevelTimer.connect(_start_timer)
+	S.ConeHit.connect(_cone_hit)
 
 func _physics_process(_delta: float) -> void:
 	if is_loading:
@@ -58,7 +62,7 @@ func _pause_game(_value := false) -> void:
 func _load_from_path(_path := "") -> void:
 	#print("Received load from path signal: ", _path)
 	if _path:
-		var loaded = load(_path)
+		var loaded := load(_path)
 		get_tree().change_scene_to_packed.call_deferred(loaded)
 
 func _load_scene(_id := "") -> void:
@@ -67,14 +71,14 @@ func _load_scene(_id := "") -> void:
 	S.ToggleDisplay.emit("gameplay_ui", false)
 	time_string = "00.00.000"
 	S.PauseGame.emit(true)
-	var path = LEVELS.get_level(_id)
+	var path := LEVELS.get_level(_id)
 	if path == "": 
 		push_error("Level list does not contain ", _id)
 		S.ToggleDisplay.emit("loading_screen", false)
 		return
 	
 	if active_level != null: 
-		var temp = active_level
+		var temp := active_level
 		game.remove_child.call_deferred(temp)
 		temp.queue_free.call_deferred()
 		
@@ -82,14 +86,15 @@ func _load_scene(_id := "") -> void:
 	is_loading = true
 	load_complete = false
 	ResourceLoader.load_threaded_request(to_load)
+	level_cones_hit = 0
 
 func _complete_load() -> void:
 	is_loading = false
-	var new_world = ResourceLoader.load_threaded_get(to_load)
+	var new_world := ResourceLoader.load_threaded_get(to_load)
 	
 	active_level = new_world.instantiate()
 	game.add_child.call_deferred(active_level)
-	var wait_timer = get_tree().create_timer(loading_delay)
+	var wait_timer := get_tree().create_timer(loading_delay)
 	await wait_timer.timeout
 	S.ToggleDisplay.emit("loading_screen", false)
 	S.PauseGame.emit(false)
@@ -99,7 +104,7 @@ func _set_game(_game:Game) -> void:
 		game = _game
 		S.LoadScene.emit("main_menu")
 
-func _car_parked():
+func _car_parked() -> void:
 	timer_running = false
 	await get_tree().create_timer(1).timeout
 	total_timer += current_level_timer
@@ -113,3 +118,7 @@ func get_time_string(_timer := 0.0) -> String:
 	var sec := fmod(_timer, 60)
 	var mins := fmod(_timer, 3600) / 60
 	return "%02d:%02d.%03d" % [mins, sec, msec]
+
+func _cone_hit() -> void:
+	cone_hit_count += 1
+	level_cones_hit += 1

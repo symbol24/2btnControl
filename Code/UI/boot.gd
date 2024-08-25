@@ -22,7 +22,7 @@ func _anim_check(_anim_name:="") -> void:
 	if _anim_name == "godot": animator.play("logo")
 	elif _anim_name == "logo": S.LoadSceneFromPath.emit(GAME)
 
-func _skip():
+func _skip() -> void:
 	if animator.current_animation == "godot": animator.play("logo")
 	elif animator.current_animation == "logo": S.LoadSceneFromPath.emit(GAME)
 		

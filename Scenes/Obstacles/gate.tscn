@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1xyv4yx83ncd"]
+
+[ext_resource type="Script" path="res://Code/Obstacles/gate.gd" id="1_g7s46"]
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_7akyt"]
+
+[node name="Gate" type="StaticBody2D"]
+collision_mask = 3
+script = ExtResource("1_g7s46")
+
+[node name="collider" type="CollisionPolygon2D" parent="."]
+unique_name_in_owner = true
+polygon = PackedVector2Array(-15, 1, -18, 4, -21, 4, -24, 1, -24, -2, -21, -5, -18, -5, -15, -2, 15, -2, 18, -5, 21, -5, 24, -2, 24, 1, 21, 4, 18, 4, 15, 1)
+
+[node name="closed" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+position = Vector2(8, 8)
+tile_map_data = PackedByteArray(0, 0, 254, 255, 255, 255, 0, 0, 13, 0, 3, 0, 0, 0, 255, 255, 255, 255, 0, 0, 14, 0, 3, 0, 0, 0, 0, 0, 255, 255, 0, 0, 15, 0, 3, 0, 0, 0)
+tile_set = ExtResource("2_7akyt")
+
+[node name="open" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(8, 8)
+tile_map_data = PackedByteArray(0, 0, 254, 255, 255, 255, 0, 0, 13, 0, 2, 0, 0, 0, 255, 255, 255, 255, 0, 0, 14, 0, 2, 0, 0, 0, 0, 0, 255, 255, 0, 0, 15, 0, 2, 0, 0, 0)
+tile_set = ExtResource("2_7akyt")
