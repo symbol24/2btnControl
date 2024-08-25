@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cbk1fur20grw"]
+[gd_scene load_steps=13 format=4 uid="uid://cbk1fur20grw"]
 
 [ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/ParkingSpots/parking_spot.tscn" id="1_1pvqv"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_qnu31"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="5_o70wl"]
 [ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="6_4uulj"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="7_ah1e4"]
+[ext_resource type="Texture2D" uid="uid://pgxrr51dlfr6" path="res://Textures/arrow_keys.png" id="8_23gbj"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
 b = Vector2(320, 0)
@@ -20,7 +21,7 @@ b = Vector2(0, 179)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hs4k0"]
 b = Vector2(0, 180)
 
-[node name="level" type="Node2D"]
+[node name="level" type="Node2D" groups=["level"]]
 metadata/id = "test_level"
 metadata/_edit_lock_ = true
 
@@ -67,29 +68,6 @@ offset = Vector2(160, 90)
 position = Vector2(53, 45)
 rotation = -1.05592
 
-[node name="PlayerCar" parent="." instance=ExtResource("2_b4pv4")]
-position = Vector2(190, 92)
-
-[node name="level_name" type="RichTextLabel" parent="."]
-custom_minimum_size = Vector2(320, 25)
-offset_right = 320.0
-offset_bottom = 25.0
-theme = ExtResource("3_nw0em")
-bbcode_enabled = true
-text = "[center]level 3[/center]"
-
-[node name="tutorial_reset" type="RichTextLabel" parent="."]
-custom_minimum_size = Vector2(160, 50)
-offset_left = 147.0
-offset_top = 117.0
-offset_right = 307.0
-offset_bottom = 167.0
-theme = ExtResource("3_nw0em")
-theme_override_font_sizes/normal_font_size = 12
-bbcode_enabled = true
-text = "[center]Pressing R resets the level[/center]"
-scroll_active = false
-
 [node name="cars" type="Node2D" parent="."]
 
 [node name="car" parent="cars" instance=ExtResource("5_o70wl")]
@@ -123,3 +101,43 @@ rotation = 1.5708
 [node name="hut" parent="." instance=ExtResource("7_ah1e4")]
 position = Vector2(285, 22)
 rotation = 1.5708
+
+[node name="tutorial_reset" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0.560784)
+custom_minimum_size = Vector2(60, 25)
+offset_left = 85.0
+offset_top = 131.0
+offset_right = 145.0
+offset_bottom = 156.0
+theme = ExtResource("3_nw0em")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "Pressing"
+scroll_active = false
+
+[node name="tutorial_reset2" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0.560784)
+custom_minimum_size = Vector2(160, 50)
+offset_left = 176.0
+offset_top = 131.0
+offset_right = 336.0
+offset_bottom = 181.0
+theme = ExtResource("3_nw0em")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "resets the car."
+scroll_active = false
+
+[node name="arrow_up" type="Sprite2D" parent="."]
+position = Vector2(161, 130)
+texture = ExtResource("8_23gbj")
+vframes = 2
+
+[node name="arrow_down" type="Sprite2D" parent="."]
+position = Vector2(161, 150)
+texture = ExtResource("8_23gbj")
+vframes = 2
+frame = 1
+
+[node name="PlayerCar" parent="." instance=ExtResource("2_b4pv4")]
+position = Vector2(190, 92)

@@ -1,0 +1,5 @@
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://sv0til3jpp0b"]
+
+[resource]
+content_margin_top = 5.0
+bg_color = Color(0.054902, 0.0509804, 0.0862745, 0)

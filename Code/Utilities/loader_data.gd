@@ -8,7 +8,7 @@ var current_level := ""
 func get_level(_id := "") -> String:
 	if _id == "current": _id = current_level
 	elif _id == "next": _id = _get_next(current_level)
-	print("id = ", _id)
+	#print("id = ", _id)
 	for each in levels:
 		if each.has("id") and each["id"] == _id:
 			current_level = _id
@@ -20,4 +20,4 @@ func _get_next(_current := "") -> String:
 		if level_order[i] == _current: 
 			if level_order[i+1] != null or level_order[i+1] != "":
 				return level_order[i+1]
-	return ""
+	return "level_001"

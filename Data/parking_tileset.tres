@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://ctb0cwkl7fnqv"]
+[gd_resource type="TileSet" load_steps=17 format=3 uid="uid://ctb0cwkl7fnqv"]
 
 [ext_resource type="Texture2D" uid="uid://dmwexkt2j14ik" path="res://Textures/parking_sprite.png" id="1_dqrne"]
 
@@ -16,6 +16,9 @@ tile_data = PackedInt32Array(0, 524288, 6, 65536, 524288, 7, 1, 589824, 6, 65537
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_is3j5"]
 tile_data = PackedInt32Array(0, 458752, 4, 65536, 458752, 5, 1, 524288, 4, 65537, 524288, 5, 2, 589824, 4, 65538, 589824, 5)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_22eg0"]
+tile_data = PackedInt32Array(0, 196608, 0, 65536, 196608, 1)
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_w65l2"]
 tile_data = PackedInt32Array(0, 131072, 7, 65536, 131072, 8, 131072, 131072, 9, 1, 196608, 7, 65537, 196608, 8, 131073, 196608, 9, 2, 262144, 7, 65538, 262144, 8, 131074, 262144, 9)
@@ -312,6 +315,12 @@ texture = ExtResource("1_dqrne")
 9:6/0 = 0
 9:8/0 = 0
 6:1/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+5:0/0 = 0
 
 [resource]
 terrain_set_0/mode = 0
@@ -333,3 +342,4 @@ pattern_9 = SubResource("TileMapPattern_afu6m")
 pattern_10 = SubResource("TileMapPattern_oeqdg")
 pattern_11 = SubResource("TileMapPattern_sf0r3")
 pattern_12 = SubResource("TileMapPattern_is3j5")
+pattern_13 = SubResource("TileMapPattern_22eg0")

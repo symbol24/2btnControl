@@ -89,7 +89,8 @@ func _complete_load() -> void:
 	
 	active_level = new_world.instantiate()
 	game.add_child.call_deferred(active_level)
-	await get_tree().create_timer(loading_delay).timeout
+	var wait_timer = get_tree().create_timer(loading_delay)
+	await wait_timer.timeout
 	S.ToggleDisplay.emit("loading_screen", false)
 	S.PauseGame.emit(false)
 

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="AudioFile" load_steps=4 format=3 uid="uid://dt0v8l3x6okr4"]
+
+[ext_resource type="AudioStream" uid="uid://df8ptk7y1wuc4" path="res://Audio/SFX/heymycar.ogg" id="1_j1ne0"]
+[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_oo7bt"]
+[ext_resource type="AudioStream" uid="uid://bbx3kkwx2nch3" path="res://Audio/SFX/learn2drive.ogg" id="2_pk3nf"]
+
+[resource]
+script = ExtResource("1_oo7bt")
+files = Array[AudioStream]([ExtResource("1_j1ne0"), ExtResource("2_pk3nf")])
+volume_db = 10.0
+min_pitch_scale = 1.0
+max_pitch_scale = 1.0
+is_music = false

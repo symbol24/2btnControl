@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AudioFile" load_steps=6 format=3 uid="uid://bpf0878gsftdi"]
+
+[ext_resource type="AudioStream" uid="uid://byyq4bi4wabjg" path="res://Audio/SFX/crash1.ogg" id="1_8oxfx"]
+[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_11dqs"]
+[ext_resource type="AudioStream" uid="uid://b158cn4s8pulu" path="res://Audio/SFX/crash2.ogg" id="2_tqges"]
+[ext_resource type="AudioStream" uid="uid://tmejiilqkfo0" path="res://Audio/SFX/crash3.ogg" id="3_ja45p"]
+[ext_resource type="AudioStream" uid="uid://dtn5lvn4mhvgi" path="res://Audio/SFX/crash4.ogg" id="4_bipco"]
+
+[resource]
+script = ExtResource("1_11dqs")
+files = Array[AudioStream]([ExtResource("1_8oxfx"), ExtResource("2_tqges"), ExtResource("3_ja45p"), ExtResource("4_bipco")])
+volume_db = 10.0
+min_pitch_scale = 0.9
+max_pitch_scale = 1.1
+is_music = false
+always_play = false

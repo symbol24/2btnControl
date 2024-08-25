@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ogo7kqhsjr16"]
+[gd_scene load_steps=10 format=3 uid="uid://ogo7kqhsjr16"]
 
 [ext_resource type="Script" path="res://Code/PlayerCar/player_car.gd" id="1_jkyj6"]
 [ext_resource type="Resource" uid="uid://scmvn5oaw2ff" path="res://Data/playerCarData.tres" id="2_h6sde"]
@@ -14,6 +14,9 @@ radius = 2.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wo8ut"]
 radius = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b13n"]
+size = Vector2(32, 16)
 
 [node name="PlayerCar" type="CharacterBody2D"]
 process_mode = 1
@@ -65,7 +68,6 @@ script = ExtResource("4_q5hnn")
 
 [node name="front_detector" type="Area2D" parent="."]
 unique_name_in_owner = true
-visible = false
 position = Vector2(-9, 0)
 collision_layer = 2
 collision_mask = 4
@@ -76,7 +78,6 @@ shape = SubResource("CircleShape2D_rqibm")
 
 [node name="back_detector" type="Area2D" parent="."]
 unique_name_in_owner = true
-visible = false
 position = Vector2(9, 0)
 collision_layer = 2
 collision_mask = 4
@@ -84,3 +85,10 @@ collision_mask = 4
 [node name="collider" type="CollisionShape2D" parent="back_detector"]
 position = Vector2(-24, 0)
 shape = SubResource("CircleShape2D_wo8ut")
+
+[node name="crash_detector" type="Area2D" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="collider" type="CollisionShape2D" parent="crash_detector"]
+shape = SubResource("RectangleShape2D_4b13n")

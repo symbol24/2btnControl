@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddl0ooju0r2p1"]
+
+[ext_resource type="Script" path="res://Code/Obstacles/oil_slick.gd" id="1_3bvqo"]
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_ep83y"]
+
+[node name="OilSlick" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_3bvqo")
+
+[node name="collider" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(0, -15, 9, -14, 13, -11, 13, -6, 9, -3, 4, 0, 4, 3, 9, 7, 10, 11, 8, 15, -5, 15, -8, 14, -11, 10, -11, 5, -9, 3, -12, 3, -14, 0, -14, -8, -12, -11, -5, -15, -2, -15, -2, -15)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 4, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 4, 0, 1, 0, 0, 0, 0, 0, 255, 255, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 1, 0, 0, 0)
+tile_set = ExtResource("1_ep83y")

@@ -31,3 +31,4 @@ func _toggle_display(_id = "", _visible := true) -> void:
 		set_deferred("visible", _visible)
 		level_time.text = GM.time_string
 		total_time.text = GM.tot_timer_string
+		if _visible: continue_button.grab_focus()

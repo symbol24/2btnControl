@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0y85jef3vsqh"
+path="res://.godot/imported/car parked 1.ogg-1ba24a3b218d4f9236dd6f4b5405c074.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/SFX/car parked 1.ogg"
+dest_files=["res://.godot/imported/car parked 1.ogg-1ba24a3b218d4f9236dd6f4b5405c074.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

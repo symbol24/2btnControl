@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=4 uid="uid://c7lcvqeyp5ai8"]
+
+[ext_resource type="Script" path="res://Code/Utilities/loader_parking_spot.gd" id="1_xf3yk"]
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_h16cc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jaf64"]
+size = Vector2(48, 48)
+
+[node name="LoaderParkingSpot" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_xf3yk")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(24, 24)
+tile_map_data = PackedByteArray("AAD9//3/AAACAAcAAAD9//7/AAACAAgAAAD9////AAACAAkAAAD+//3/AAADAAcAAAD+//7/AAADAAgAAAD+////AAADAAkAAAD///3/AAAEAAcAAAD///7/AAAEAAgAAAD/////AAAEAAkAAAA=")
+tile_set = ExtResource("2_h16cc")
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jaf64")

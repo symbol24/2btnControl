@@ -7,5 +7,5 @@ func _ready() -> void:
 
 func _toggle_display(_id = "", _visible := true) -> void:
 	if _id == id:
-		print("Making ", _id, " visible: ", _visible)
+		#print("Making ", _id, " visible: ", _visible)
 		set_deferred("visible", _visible)

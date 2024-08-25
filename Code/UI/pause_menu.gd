@@ -22,3 +22,9 @@ func _restart_pressed():
 func _exit_pressed():
 	S.LoadScene.emit("main_menu")
 	hide()
+
+func _toggle_display(_id = "", _visible := true) -> void:
+	if _id == id:
+		set_deferred("visible", _visible)
+		if _visible:
+			pause_continue.grab_focus()

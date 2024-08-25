@@ -1,11 +1,13 @@
-res://Scenes/Obstacles
-res://Data
+res://Code/Autoloads
+res://Data/Audio
 res://Code/Obstacles
-res://Code/UI
+res://Scenes/Obstacles
+res://Data/UI/style_boxes
 res://Scenes/UI
 res://Code/Utilities
+res://Data
+res://Code/UI
 res://Data/UI
-res://Code/Autoloads
 res://Scenes/Utilities
 res://Code/PlayerCar
 res://Scenes/PlayerCar

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://br04k8swrm7d4"]
+
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_ytn7q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k46xc"]
+radius = 6.0
+height = 32.0
+
+[node name="Divider" type="StaticBody2D"]
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_k46xc")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(8, 16)
+tile_map_data = PackedByteArray(0, 0, 255, 255, 254, 255, 0, 0, 3, 0, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 3, 0, 1, 0, 0, 0)
+tile_set = ExtResource("1_ytn7q")

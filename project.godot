@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 GM="*res://Code/Autoloads/game_manager.gd"
 S="*res://Code/Autoloads/signals.gd"
 Ui="*res://Scenes/UI/ui_canvas.tscn"
+Audio="*res://Code/Autoloads/audio.gd"
+PD="*res://Code/Autoloads/player_data.gd"
 
 [debug]
 
