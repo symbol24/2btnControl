@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="2btnControl"
+config/name="Valet Parking Not Included"
+config/description="With only 2 buttons, can you park all these cars?"
+config/version="1.0"
 run/main_scene="res://Scenes/UI/boot.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Textures/key_icon.png"
 
 [autoload]
 

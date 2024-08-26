@@ -1,10 +1,14 @@
-res://Scenes/Levels
+D:/Exports/Valet/web
+D:/Exports/Valet/windows
+D:/Exports/Valet
+res://Textures
+res://Data/UI/style_boxes
 res://Code/Obstacles
+res://Data/Audio
+res://Scenes/Levels
 res://Scenes/Obstacles
 res://Code/UI
 res://Code/Autoloads
-res://Data/Audio
-res://Data/UI/style_boxes
 res://Scenes/UI
 res://Code/Utilities
 res://Data

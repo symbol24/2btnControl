@@ -1,0 +1,186 @@
+[gd_scene load_steps=14 format=4 uid="uid://dbiy8wywun1dd"]
+
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_fa2e1"]
+[ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="2_iyb4p"]
+[ext_resource type="PackedScene" uid="uid://c1xyv4yx83ncd" path="res://Scenes/Obstacles/gate.tscn" id="2_y5fts"]
+[ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="3_lw4od"]
+[ext_resource type="PackedScene" uid="uid://bnfs7awu8ejgs" path="res://Scenes/Obstacles/gate_opener.tscn" id="3_y3iiu"]
+[ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="4_ilhd2"]
+[ext_resource type="PackedScene" uid="uid://br04k8swrm7d4" path="res://Scenes/Obstacles/divider.tscn" id="6_s3fah"]
+[ext_resource type="PackedScene" uid="uid://ddl0ooju0r2p1" path="res://Scenes/Obstacles/oil_slick.tscn" id="7_xquw8"]
+[ext_resource type="PackedScene" uid="uid://banqa38750x1l" path="res://Scenes/Obstacles/cone.tscn" id="8_xb2av"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wux44"]
+b = Vector2(320, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0mb8t"]
+b = Vector2(320, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lq3qx"]
+b = Vector2(0, 179)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c246a"]
+b = Vector2(0, 180)
+
+[node name="Level017" type="Node2D" groups=["level"]]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(160, 90)
+
+[node name="ground" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAUAAsAAAACAAQAAAAUAAoAAAAAAAMAAAAUAAkAAAAAAAUAAAAUAAgAAAABAAQAAAAUAAcAAAABAAQAAAAUAAYAAAAAAAUAAAAUAAUAAAACAAQAAAAUAAQAAAACAAMAAAAUAAMAAAACAAMAAAAUAAIAAAACAAQAAAAUAAEAAAACAAQAAAAUAAAAAAABAAQAAAAUAP//AAACAAMAAAATAAsAAAABAAUAAAATAAoAAAACAAMAAAATAAkAAAACAAQAAAATAAgAAAACAAQAAAATAAcAAAABAAMAAAATAAYAAAABAAUAAAATAAUAAAAAAAUAAAATAAQAAAAAAAQAAAATAAMAAAABAAUAAAATAAIAAAAAAAMAAAATAAEAAAABAAMAAAATAAAAAAAAAAUAAAATAP//AAACAAMAAAASAAsAAAAAAAUAAAASAAoAAAAAAAUAAAASAAkAAAACAAMAAAASAAgAAAAAAAQAAAASAAcAAAAAAAUAAAASAAYAAAAAAAUAAAASAAUAAAAAAAUAAAASAAQAAAAAAAMAAAASAAMAAAABAAMAAAASAAIAAAAAAAQAAAASAAEAAAACAAUAAAASAAAAAAAAAAUAAAASAP//AAABAAMAAAARAAsAAAAAAAQAAAARAAoAAAABAAQAAAARAAkAAAAAAAUAAAARAAgAAAABAAUAAAARAAcAAAACAAQAAAARAAYAAAACAAUAAAARAAUAAAABAAUAAAARAAQAAAABAAQAAAARAAMAAAABAAQAAAARAAIAAAAAAAQAAAARAAEAAAABAAMAAAARAAAAAAACAAQAAAARAP//AAAAAAUAAAAQAAsAAAABAAUAAAAQAAoAAAAAAAUAAAAQAAkAAAAAAAMAAAAQAAgAAAABAAQAAAAQAAcAAAABAAMAAAAQAAYAAAACAAMAAAAQAAUAAAACAAMAAAAQAAQAAAAAAAQAAAAQAAMAAAACAAMAAAAQAAIAAAABAAQAAAAQAAEAAAACAAMAAAAQAAAAAAACAAMAAAAQAP//AAAAAAQAAAAPAAsAAAAAAAMAAAAPAAoAAAABAAMAAAAPAAkAAAAAAAMAAAAPAAgAAAACAAUAAAAPAAcAAAABAAUAAAAPAAYAAAACAAQAAAAPAAUAAAAAAAQAAAAPAAQAAAACAAMAAAAPAAMAAAAAAAMAAAAPAAIAAAAAAAUAAAAPAAEAAAACAAMAAAAPAAAAAAAAAAQAAAAPAP//AAACAAMAAAAOAAsAAAAAAAQAAAAOAAoAAAACAAMAAAAOAAkAAAAAAAQAAAAOAAgAAAABAAMAAAAOAAcAAAABAAMAAAAOAAYAAAACAAUAAAAOAAUAAAABAAQAAAAOAAQAAAACAAQAAAAOAAMAAAACAAUAAAAOAAIAAAACAAQAAAAOAAEAAAACAAMAAAAOAAAAAAABAAMAAAAOAP//AAAAAAQAAAANAAsAAAABAAUAAAANAAoAAAACAAUAAAANAAkAAAACAAUAAAANAAgAAAABAAUAAAANAAcAAAABAAUAAAANAAYAAAACAAUAAAANAAUAAAABAAUAAAANAAQAAAABAAQAAAANAAMAAAABAAQAAAANAAIAAAAAAAUAAAANAAEAAAAAAAUAAAANAAAAAAABAAMAAAANAP//AAACAAUAAAAMAAsAAAABAAQAAAAMAAoAAAACAAQAAAAMAAkAAAAAAAMAAAAMAAgAAAABAAQAAAAMAAcAAAABAAMAAAAMAAYAAAAAAAMAAAAMAAUAAAACAAMAAAAMAAQAAAACAAUAAAAMAAMAAAABAAUAAAAMAAIAAAAAAAQAAAAMAAEAAAAAAAQAAAAMAAAAAAACAAMAAAAMAP//AAABAAQAAAALAAsAAAACAAUAAAALAAoAAAABAAMAAAALAAkAAAAAAAQAAAALAAgAAAABAAMAAAALAAcAAAAAAAMAAAALAAYAAAABAAMAAAALAAUAAAACAAMAAAALAAQAAAABAAUAAAALAAMAAAAAAAUAAAALAAIAAAABAAQAAAALAAEAAAABAAQAAAALAAAAAAABAAQAAAALAP//AAACAAUAAAAKAAsAAAACAAMAAAAKAAoAAAAAAAUAAAAKAAkAAAABAAUAAAAKAAgAAAACAAUAAAAKAAcAAAAAAAMAAAAKAAYAAAACAAMAAAAKAAUAAAAAAAUAAAAKAAQAAAAAAAMAAAAKAAMAAAABAAUAAAAKAAIAAAACAAUAAAAKAAEAAAABAAQAAAAKAAAAAAABAAMAAAAKAP//AAAAAAQAAAAJAAsAAAABAAQAAAAJAAoAAAABAAUAAAAJAAkAAAACAAQAAAAJAAgAAAABAAQAAAAJAAcAAAAAAAQAAAAJAAYAAAABAAMAAAAJAAUAAAAAAAMAAAAJAAQAAAACAAUAAAAJAAMAAAAAAAUAAAAJAAIAAAABAAMAAAAJAAEAAAACAAUAAAAJAAAAAAAAAAQAAAAJAP//AAABAAMAAAAIAAsAAAAAAAMAAAAIAAoAAAAAAAQAAAAIAAkAAAAAAAUAAAAIAAgAAAACAAQAAAAIAAcAAAACAAUAAAAIAAYAAAACAAQAAAAIAAUAAAABAAMAAAAIAAQAAAAAAAQAAAAIAAMAAAABAAMAAAAIAAIAAAACAAUAAAAIAAEAAAACAAUAAAAIAAAAAAAAAAUAAAAIAP//AAAAAAQAAAAHAAsAAAABAAUAAAAHAAoAAAABAAMAAAAHAAkAAAAAAAQAAAAHAAgAAAABAAMAAAAHAAcAAAACAAMAAAAHAAYAAAAAAAUAAAAHAAUAAAAAAAUAAAAHAAQAAAACAAQAAAAHAAMAAAACAAMAAAAHAAIAAAABAAMAAAAHAAEAAAACAAQAAAAHAAAAAAAAAAQAAAAHAP//AAAAAAMAAAAGAAsAAAACAAMAAAAGAAoAAAAAAAQAAAAGAAkAAAABAAUAAAAGAAgAAAABAAQAAAAGAAcAAAAAAAMAAAAGAAYAAAABAAUAAAAGAAUAAAACAAQAAAAGAAQAAAABAAMAAAAGAAMAAAABAAQAAAAGAAIAAAAAAAUAAAAGAAEAAAACAAQAAAAGAAAAAAACAAMAAAAGAP//AAAAAAQAAAAFAAsAAAABAAQAAAAFAAoAAAABAAQAAAAFAAkAAAABAAQAAAAFAAgAAAABAAUAAAAFAAcAAAAAAAQAAAAFAAYAAAABAAMAAAAFAAUAAAACAAMAAAAFAAQAAAACAAMAAAAFAAMAAAAAAAQAAAAFAAIAAAAAAAUAAAAFAAEAAAABAAMAAAAFAAAAAAABAAQAAAAFAP//AAACAAUAAAAEAAsAAAABAAUAAAAEAAoAAAABAAQAAAAEAAkAAAACAAMAAAAEAAgAAAAAAAMAAAAEAAcAAAAAAAUAAAAEAAYAAAABAAMAAAAEAAUAAAABAAQAAAAEAAQAAAACAAMAAAAEAAMAAAABAAQAAAAEAAIAAAABAAMAAAAEAAEAAAACAAMAAAAEAAAAAAAAAAQAAAAEAP//AAACAAUAAAADAAsAAAAAAAQAAAADAAoAAAACAAUAAAADAAkAAAABAAUAAAADAAgAAAABAAQAAAADAAcAAAAAAAUAAAADAAYAAAAAAAUAAAADAAUAAAACAAQAAAADAAQAAAABAAQAAAADAAMAAAACAAMAAAADAAIAAAAAAAMAAAADAAEAAAAAAAUAAAADAAAAAAABAAQAAAADAP//AAAAAAQAAAACAAsAAAACAAMAAAACAAoAAAABAAQAAAACAAkAAAABAAMAAAACAAgAAAAAAAUAAAACAAcAAAABAAMAAAACAAYAAAABAAUAAAACAAUAAAAAAAQAAAACAAQAAAACAAUAAAACAAMAAAAAAAUAAAACAAIAAAABAAUAAAACAAEAAAABAAQAAAACAAAAAAAAAAMAAAACAP//AAACAAQAAAABAAsAAAAAAAQAAAABAAoAAAAAAAQAAAABAAkAAAAAAAQAAAABAAgAAAAAAAMAAAABAAcAAAAAAAQAAAABAAYAAAAAAAQAAAABAAUAAAACAAQAAAABAAQAAAACAAUAAAABAAMAAAABAAQAAAABAAIAAAABAAUAAAABAAEAAAAAAAUAAAABAAAAAAAAAAMAAAABAP//AAABAAMAAAAAAAsAAAAAAAQAAAAAAAoAAAACAAMAAAAAAAkAAAABAAUAAAAAAAgAAAACAAUAAAAAAAcAAAAAAAMAAAAAAAYAAAABAAMAAAAAAAUAAAABAAQAAAAAAAQAAAABAAQAAAAAAAMAAAAAAAMAAAAAAAIAAAABAAMAAAAAAAEAAAABAAUAAAAAAAAAAAABAAMAAAAAAP//AAACAAQAAAD//wsAAAAAAAMAAAD//woAAAACAAUAAAD//wkAAAACAAUAAAD//wgAAAAAAAQAAAD//wcAAAAAAAUAAAD//wYAAAACAAMAAAD//wUAAAABAAQAAAD//wQAAAABAAUAAAD//wMAAAACAAMAAAD//wIAAAACAAMAAAD//wEAAAACAAQAAAD//wAAAAAAAAUAAAD/////AAABAAQAAAA=")
+tile_set = ExtResource("1_fa2e1")
+
+[node name="spots" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAIAAQAAAAIAAAAAAAIAAUAAAAIAAEAAAAIAAYAAAAIAAIAAAAJAAQAAAAJAAAAAAAJAAUAAAAJAAEAAAAJAAYAAAAJAAIAAAAFAAQAAAAIAAAAAAAFAAUAAAAIAAEAAAAFAAYAAAAIAAIAAAAGAAQAAAAJAAAAAAAGAAUAAAAJAAEAAAAGAAYAAAAJAAIAAAAOAAAAAAAGAAAAAAAOAAEAAAAGAAEAAAAPAAAAAAAHAAAAAAAPAAEAAAAHAAEAAAA=")
+tile_set = ExtResource("1_fa2e1")
+
+[node name="arrows" type="TileMapLayer" parent="."]
+position = Vector2(2, 6)
+tile_map_data = PackedByteArray("AAAGAAAAAAACAAIAAAAHAAAAAAADAAIAAAA=")
+tile_set = ExtResource("1_fa2e1")
+
+[node name="world_boundries" type="StaticBody2D" parent="."]
+
+[node name="up" type="CollisionShape2D" parent="world_boundries"]
+shape = SubResource("SegmentShape2D_wux44")
+
+[node name="down" type="CollisionShape2D" parent="world_boundries"]
+position = Vector2(0, 180)
+shape = SubResource("SegmentShape2D_0mb8t")
+
+[node name="left" type="CollisionShape2D" parent="world_boundries"]
+shape = SubResource("SegmentShape2D_lq3qx")
+
+[node name="right" type="CollisionShape2D" parent="world_boundries"]
+position = Vector2(320, 0)
+shape = SubResource("SegmentShape2D_c246a")
+
+[node name="obstacles" type="Node2D" parent="."]
+
+[node name="Gate" parent="obstacles" instance=ExtResource("2_y5fts")]
+position = Vector2(118, 153)
+rotation = 1.5708
+
+[node name="Gate2" parent="obstacles" instance=ExtResource("2_y5fts")]
+position = Vector2(118, 90)
+rotation = 1.5708
+
+[node name="Pre_open_gate" parent="obstacles" instance=ExtResource("2_y5fts")]
+position = Vector2(210, 123)
+
+[node name="collider" parent="obstacles/Pre_open_gate" index="0"]
+disabled = true
+
+[node name="closed" parent="obstacles/Pre_open_gate" index="1"]
+visible = false
+
+[node name="open" parent="obstacles/Pre_open_gate" index="2"]
+visible = true
+
+[node name="Pre_open_gate2" parent="obstacles" instance=ExtResource("2_y5fts")]
+position = Vector2(31, 55)
+
+[node name="collider" parent="obstacles/Pre_open_gate2" index="0"]
+disabled = true
+
+[node name="closed" parent="obstacles/Pre_open_gate2" index="1"]
+visible = false
+
+[node name="open" parent="obstacles/Pre_open_gate2" index="2"]
+visible = true
+
+[node name="GateOpener" parent="obstacles" instance=ExtResource("3_y3iiu")]
+position = Vector2(87, 153)
+
+[node name="GateOpener2" parent="obstacles" instance=ExtResource("3_y3iiu")]
+position = Vector2(295, 153)
+
+[node name="GateOpener3" parent="obstacles" instance=ExtResource("3_y3iiu")]
+position = Vector2(295, 96)
+
+[node name="GateOpener4" parent="obstacles" instance=ExtResource("3_y3iiu")]
+position = Vector2(57, 96)
+
+[node name="hut" parent="obstacles" instance=ExtResource("4_ilhd2")]
+position = Vector2(20, 115)
+level_number = "17"
+
+[node name="Divider" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(57, 122)
+rotation = 1.5708
+
+[node name="Divider2" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(95, 122)
+rotation = 1.5708
+
+[node name="Divider3" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(131, 122)
+rotation = 1.5708
+
+[node name="Divider4" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(166, 122)
+rotation = 1.5708
+
+[node name="Divider5" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(258, 122)
+rotation = 1.5708
+
+[node name="Divider6" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(293, 122)
+rotation = 1.5708
+
+[node name="Divider7" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(258, 64)
+rotation = 1.5708
+
+[node name="Divider8" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(293, 64)
+rotation = 1.5708
+
+[node name="Divider9" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(188, 64)
+rotation = 1.5708
+
+[node name="Divider10" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(223, 64)
+rotation = 1.5708
+
+[node name="Divider12" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(114, 37)
+rotation = 1.5708
+
+[node name="Divider11" parent="obstacles" instance=ExtResource("6_s3fah")]
+position = Vector2(154, 45)
+rotation = 1.99666
+
+[node name="OilSlick" parent="obstacles" instance=ExtResource("7_xquw8")]
+position = Vector2(255, 93)
+
+[node name="Cone" parent="obstacles" instance=ExtResource("8_xb2av")]
+position = Vector2(118, 54)
+
+[node name="Cone2" parent="obstacles" instance=ExtResource("8_xb2av")]
+position = Vector2(92, 54)
+
+[node name="Cone3" parent="obstacles" instance=ExtResource("8_xb2av")]
+position = Vector2(70, 54)
+
+[node name="Cone4" parent="obstacles" instance=ExtResource("8_xb2av")]
+position = Vector2(240, 46)
+
+[node name="Cone5" parent="obstacles" instance=ExtResource("8_xb2av")]
+position = Vector2(214, 46)
+
+[node name="Cone6" parent="obstacles" instance=ExtResource("8_xb2av")]
+position = Vector2(192, 46)
+
+[node name="parking_spot_big" parent="." instance=ExtResource("2_iyb4p")]
+position = Vector2(284, 30)
+rotation = 1.5708
+
+[node name="PlayerCar" parent="." instance=ExtResource("3_lw4od")]
+position = Vector2(22, 152)
+
+[editable path="obstacles/Pre_open_gate"]
+[editable path="obstacles/Pre_open_gate2"]

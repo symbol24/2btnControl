@@ -9,7 +9,8 @@ var timer := 0.0:
 		timer = _value
 		if timer >= delay_before_closing:
 			timer = 0.0
-			_toggle_gate(false)
+			_toggle_gate()
+			gate_open = false
 
 func _ready() -> void:
 	S.StartLevelTimer.connect(_toggle_active)

@@ -1,5 +1,7 @@
 class_name PotHole extends Area2D
 
+const POT_HOLE = preload("res://Data/Audio/pot_hole.tres")
+
 @onready var hole_1: TileMapLayer = %hole1
 @onready var hole_2: TileMapLayer = %hole2
 @onready var hole_3: TileMapLayer = %hole3
@@ -17,6 +19,7 @@ func _ready() -> void:
 
 func _body_entered(_body) -> void:
 	if _body is PlayerCar:
+		S.PlayAudio.emit(POT_HOLE)
 		_body.pot_hole()
 
 func _body_exited(_body) -> void:

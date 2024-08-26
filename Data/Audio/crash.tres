@@ -9,7 +9,7 @@
 [resource]
 script = ExtResource("1_11dqs")
 files = Array[AudioStream]([ExtResource("1_8oxfx"), ExtResource("2_tqges"), ExtResource("3_ja45p"), ExtResource("4_bipco")])
-volume_db = 10.0
+volume_db = 0.0
 min_pitch_scale = 0.9
 max_pitch_scale = 1.1
 is_music = false

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AudioFile" load_steps=6 format=3 uid="uid://cj7j6jiyeiaio"]
+
+[ext_resource type="AudioStream" uid="uid://doanmo0p6m1q5" path="res://Audio/SFX/gateclosed1.ogg" id="1_bhj2r"]
+[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_stwv3"]
+[ext_resource type="AudioStream" uid="uid://hbfl3ruj3pps" path="res://Audio/SFX/gateclosed2.ogg" id="2_u3e3s"]
+[ext_resource type="AudioStream" uid="uid://cjh8f6gmseu7s" path="res://Audio/SFX/gateclosed3.ogg" id="3_bi56i"]
+[ext_resource type="AudioStream" uid="uid://dvjlcnhs4kqbe" path="res://Audio/SFX/gateclosed4.ogg" id="4_n2xgs"]
+
+[resource]
+script = ExtResource("1_stwv3")
+files = Array[AudioStream]([ExtResource("1_bhj2r"), ExtResource("2_u3e3s"), ExtResource("3_bi56i"), ExtResource("4_n2xgs")])
+volume_db = 0.0
+min_pitch_scale = 0.9
+max_pitch_scale = 1.1
+is_music = false
+always_play = false

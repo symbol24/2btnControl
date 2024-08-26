@@ -40,5 +40,32 @@ levels = Array[Dictionary]([{
 }, {
 "id": "level_011",
 "path": "res://Scenes/Levels/level_011.tscn"
+}, {
+"id": "level_012",
+"path": "res://Scenes/Levels/level_012.tscn"
+}, {
+"id": "level_013",
+"path": "res://Scenes/Levels/level_013.tscn"
+}, {
+"id": "level_014",
+"path": "res://Scenes/Levels/level_014.tscn"
+}, {
+"id": "level_015",
+"path": "res://Scenes/Levels/level_015.tscn"
+}, {
+"id": "level_016",
+"path": "res://Scenes/Levels/level_016.tscn"
+}, {
+"id": "level_017",
+"path": "res://Scenes/Levels/level_017.tscn"
+}, {
+"id": "level_018",
+"path": "res://Scenes/Levels/level_018.tscn"
+}, {
+"id": "level_019",
+"path": "res://Scenes/Levels/level_019.tscn"
+}, {
+"id": "level_020",
+"path": "res://Scenes/Levels/level_020.tscn"
 }])
-level_order = Array[String](["level_001", "level_002", "level_003", "level_004", "level_005", "level_006", "level_007", "level_008", "level_009", "level_010", "level_011"])
+level_order = Array[String](["level_001", "level_002", "level_003", "level_004", "level_005", "level_006", "level_007", "level_008", "level_009", "level_010", "level_011", "level_012", "level_013", "level_014", "level_015", "level_016", "level_017", "level_018", "level_019", "level_020"])

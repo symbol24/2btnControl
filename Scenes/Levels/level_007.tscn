@@ -1,9 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://lgsnkxogrq0i"]
+[gd_scene load_steps=12 format=4 uid="uid://lgsnkxogrq0i"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_37f18"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="2_gsss5"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="3_0cxil"]
-[ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="3_l2qa7"]
 [ext_resource type="PackedScene" uid="uid://br04k8swrm7d4" path="res://Scenes/Obstacles/divider.tscn" id="4_3c3dx"]
 [ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="5_kl23p"]
 [ext_resource type="PackedScene" uid="uid://bnvrv7ryb8k5d" path="res://Scenes/Obstacles/bumper.tscn" id="6_0gm8h"]
@@ -61,10 +60,7 @@ shape = SubResource("SegmentShape2D_c246a")
 [node name="hut" parent="obstacles" instance=ExtResource("2_gsss5")]
 position = Vector2(27, 152)
 rotation = -1.5708
-
-[node name="KeyKiosk" parent="obstacles" instance=ExtResource("3_l2qa7")]
-position = Vector2(93, 153)
-rotation = 1.5708
+level_number = "06"
 
 [node name="Divider" parent="obstacles" instance=ExtResource("4_3c3dx")]
 position = Vector2(38, 112)
@@ -134,5 +130,5 @@ rotation = 1.5708
 position = Vector2(274, 122)
 
 [node name="PlayerCar" parent="." instance=ExtResource("3_0cxil")]
-position = Vector2(69, 151)
+position = Vector2(67, 152)
 rotation = 1.5708

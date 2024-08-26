@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://cv40isjamhbcs"]
+[gd_scene load_steps=10 format=4 uid="uid://cv40isjamhbcs"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_pimng"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="2_sst6x"]
 [ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="3_2dm42"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_t4mjm"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="5_5nwgp"]
-[ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="6_8qn8l"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
 b = Vector2(320, 0)
@@ -56,15 +55,15 @@ offset = Vector2(160, 90)
 
 [node name="tutorial_backward2" type="RichTextLabel" parent="."]
 modulate = Color(1, 1, 1, 0.560784)
-custom_minimum_size = Vector2(160, 50)
-offset_left = 31.0
-offset_top = 122.0
-offset_right = 191.0
-offset_bottom = 172.0
+custom_minimum_size = Vector2(180, 80)
+offset_left = 18.0
+offset_top = 112.0
+offset_right = 198.0
+offset_bottom = 192.0
 theme = ExtResource("3_t4mjm")
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "[center]Watchout, moving backwards means you also turn left.[/center]"
+text = "[center]Do the same thing, but in reverse. What do you mean, you turn left when reversing?[/center]"
 scroll_active = false
 
 [node name="parking_spot_big" parent="." instance=ExtResource("3_2dm42")]
@@ -72,9 +71,7 @@ position = Vector2(88, 40)
 
 [node name="hut" parent="." instance=ExtResource("5_5nwgp")]
 position = Vector2(295, 88)
-
-[node name="KeyKiosk" parent="." instance=ExtResource("6_8qn8l")]
-position = Vector2(295, 142)
+level_number = "02"
 
 [node name="PlayerCar" parent="." instance=ExtResource("2_sst6x")]
 position = Vector2(254, 124)

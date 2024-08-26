@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://jbr0ow4btwde"]
+[gd_scene load_steps=11 format=4 uid="uid://jbr0ow4btwde"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_6d1bk"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="3_2ut3q"]
 [ext_resource type="PackedScene" uid="uid://banqa38750x1l" path="res://Scenes/Obstacles/cone.tscn" id="4_mawks"]
 [ext_resource type="PackedScene" uid="uid://br04k8swrm7d4" path="res://Scenes/Obstacles/divider.tscn" id="4_ynun6"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="5_urtox"]
-[ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="6_c7srq"]
 [ext_resource type="PackedScene" uid="uid://fkn7f766j6ti" path="res://Scenes/ParkingSpots/parking_spot.tscn" id="7_cc1g2"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wux44"]
@@ -94,12 +93,9 @@ position = Vector2(105, 55)
 position = Vector2(105, 18)
 
 [node name="hut" parent="obstacles" instance=ExtResource("5_urtox")]
-position = Vector2(22, 20)
+position = Vector2(25, 22)
 rotation = -1.5708
-
-[node name="KeyKiosk" parent="obstacles" instance=ExtResource("6_c7srq")]
-position = Vector2(91, 19)
-rotation = 1.5708
+level_number = "09"
 
 [node name="parking_spot" parent="." instance=ExtResource("7_cc1g2")]
 position = Vector2(217, 26)

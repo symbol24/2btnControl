@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://d2o180h6k4x"]
+[gd_scene load_steps=11 format=4 uid="uid://d2o180h6k4x"]
 
 [ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="1_aaa2t"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_ahuuo"]
@@ -6,7 +6,6 @@
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_mmyvb"]
 [ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="5_a841p"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="6_fd644"]
-[ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="6_ncjwt"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jtjmp"]
 b = Vector2(320, 0)
@@ -65,11 +64,11 @@ custom_minimum_size = Vector2(160, 50)
 offset_left = 64.0
 offset_top = 8.0
 offset_right = 224.0
-offset_bottom = 58.0
+offset_bottom = 68.0
 theme = ExtResource("3_mmyvb")
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
-text = "[center]Make sure the whole car is inside the parking spot[/center]"
+text = "[center]Alright, you know how to park right? Just stop the car inside the open parking space.[/center]"
 scroll_active = false
 
 [node name="cars" type="Node2D" parent="."]
@@ -110,13 +109,10 @@ position = Vector2(125, 152)
 [node name="car12" parent="cars" instance=ExtResource("5_a841p")]
 position = Vector2(128, 171)
 
-[node name="KeyKiosk" parent="." instance=ExtResource("6_ncjwt")]
-position = Vector2(92, 148)
-rotation = 1.5708
-
 [node name="hut" parent="." instance=ExtResource("6_fd644")]
 position = Vector2(23, 148)
 rotation = -1.5708
+level_number = "01"
 
 [node name="PlayerCar" parent="." instance=ExtResource("2_ghmxe")]
 position = Vector2(101, 88)

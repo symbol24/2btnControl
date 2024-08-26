@@ -1,8 +1,19 @@
-[gd_scene load_steps=8 format=4 uid="uid://klvsy2qlxdd0"]
+[gd_scene load_steps=19 format=4 uid="uid://klvsy2qlxdd0"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_31wfn"]
-[ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="2_w0w3v"]
+[ext_resource type="PackedScene" uid="uid://bnvrv7ryb8k5d" path="res://Scenes/Obstacles/bumper.tscn" id="2_i1r81"]
+[ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="3_0hg5e"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="3_oly4o"]
+[ext_resource type="PackedScene" uid="uid://banqa38750x1l" path="res://Scenes/Obstacles/cone.tscn" id="4_eexf8"]
+[ext_resource type="PackedScene" uid="uid://br04k8swrm7d4" path="res://Scenes/Obstacles/divider.tscn" id="5_psx4n"]
+[ext_resource type="PackedScene" uid="uid://c1xyv4yx83ncd" path="res://Scenes/Obstacles/gate.tscn" id="6_2mjeo"]
+[ext_resource type="PackedScene" uid="uid://bnfs7awu8ejgs" path="res://Scenes/Obstacles/gate_opener.tscn" id="7_huf32"]
+[ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="8_n04hs"]
+[ext_resource type="PackedScene" uid="uid://ddl0ooju0r2p1" path="res://Scenes/Obstacles/oil_slick.tscn" id="9_i0uev"]
+[ext_resource type="PackedScene" uid="uid://5v803ajjikep" path="res://Scenes/Obstacles/pot_hole.tscn" id="10_f82mo"]
+[ext_resource type="PackedScene" uid="uid://b2ocescwtarwv" path="res://Scenes/Obstacles/puddle.tscn" id="11_vdl60"]
+[ext_resource type="PackedScene" uid="uid://b8ra1kt5mxmix" path="res://Scenes/Obstacles/timed_gate.tscn" id="12_nkh4k"]
+[ext_resource type="PackedScene" uid="uid://crpfa5ncbyoh7" path="res://Scenes/ParkingSpots/parking_spot_wide_short.tscn" id="14_hkb6c"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wux44"]
 b = Vector2(320, 0)
@@ -16,7 +27,7 @@ b = Vector2(0, 179)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_c246a"]
 b = Vector2(0, 180)
 
-[node name="LevelTemplate" type="Node2D" groups=["level"]]
+[node name="Level020" type="Node2D" groups=["level"]]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(160, 90)
@@ -26,9 +37,14 @@ tile_map_data = PackedByteArray("AAAUAAsAAAACAAQAAAAUAAoAAAAAAAMAAAAUAAkAAAAAAAU
 tile_set = ExtResource("1_31wfn")
 
 [node name="spots" type="TileMapLayer" parent="."]
+position = Vector2(-10, 0)
+tile_map_data = PackedByteArray("AAADAAoAAAAJAAgAAAAGAAoAAAAJAAgAAAAJAAoAAAAJAAgAAAAMAAoAAAAJAAgAAAAPAAoAAAAJAAgAAAASAAoAAAAJAAgAAAA=")
 tile_set = ExtResource("1_31wfn")
 
 [node name="arrows" type="TileMapLayer" parent="."]
+position = Vector2(2, 4)
+rotation = 1.5708
+tile_map_data = PackedByteArray("AAAFAP7/AAACAAIAAAAGAP7/AAADAAIAAAA=")
 tile_set = ExtResource("1_31wfn")
 
 [node name="world_boundries" type="StaticBody2D" parent="."]
@@ -49,10 +65,113 @@ shape = SubResource("SegmentShape2D_c246a")
 
 [node name="obstacles" type="Node2D" parent="."]
 
-[node name="parking_spot_big" parent="." instance=ExtResource("2_w0w3v")]
-position = Vector2(248, 87)
+[node name="Bumper" parent="obstacles" instance=ExtResource("2_i1r81")]
+position = Vector2(146, 52)
+rotation = -1.5708
+
+[node name="Bumper2" parent="obstacles" instance=ExtResource("2_i1r81")]
+position = Vector2(146, 88)
+rotation = -1.5708
+
+[node name="Bumper3" parent="obstacles" instance=ExtResource("2_i1r81")]
+position = Vector2(58, 72)
+rotation = -1.5708
+
+[node name="Bumper4" parent="obstacles" instance=ExtResource("2_i1r81")]
+position = Vector2(58, 108)
+rotation = -1.5708
+
+[node name="car" parent="obstacles" instance=ExtResource("3_0hg5e")]
+position = Vector2(73, 167)
+rotation = -3.31613
+
+[node name="car2" parent="obstacles" instance=ExtResource("3_0hg5e")]
+position = Vector2(131, 168)
+rotation = 0.0349066
+
+[node name="Cone" parent="obstacles" instance=ExtResource("4_eexf8")]
+position = Vector2(285, 106)
+
+[node name="Cone2" parent="obstacles" instance=ExtResource("4_eexf8")]
+position = Vector2(134, 112)
+
+[node name="Cone3" parent="obstacles" instance=ExtResource("4_eexf8")]
+position = Vector2(128, 69)
+
+[node name="Cone4" parent="obstacles" instance=ExtResource("4_eexf8")]
+position = Vector2(58, 10)
+
+[node name="Cone5" parent="obstacles" instance=ExtResource("4_eexf8")]
+position = Vector2(147, 10)
+
+[node name="Cone6" parent="obstacles" instance=ExtResource("4_eexf8")]
+position = Vector2(134, 27)
+
+[node name="Divider" parent="obstacles" instance=ExtResource("5_psx4n")]
+position = Vector2(264, 28)
 rotation = 1.5708
 
+[node name="Divider5" parent="obstacles" instance=ExtResource("5_psx4n")]
+position = Vector2(177, 28)
+rotation = 1.5708
+
+[node name="Divider2" parent="obstacles" instance=ExtResource("5_psx4n")]
+position = Vector2(229, 28)
+rotation = 1.5708
+
+[node name="Divider3" parent="obstacles" instance=ExtResource("5_psx4n")]
+position = Vector2(264, 75)
+rotation = 1.5708
+
+[node name="Divider4" parent="obstacles" instance=ExtResource("5_psx4n")]
+position = Vector2(229, 75)
+rotation = 1.5708
+
+[node name="Divider6" parent="obstacles" instance=ExtResource("5_psx4n")]
+position = Vector2(200, 112)
+rotation = 1.5708
+
+[node name="Divider7" parent="obstacles" instance=ExtResource("5_psx4n")]
+position = Vector2(165, 112)
+rotation = 1.5708
+
+[node name="Divider8" parent="obstacles" instance=ExtResource("5_psx4n")]
+position = Vector2(58, 142)
+
+[node name="Gate" parent="obstacles" instance=ExtResource("6_2mjeo")]
+position = Vector2(214, 148)
+rotation = 1.5708
+
+[node name="GateOpener" parent="obstacles" instance=ExtResource("7_huf32")]
+position = Vector2(296, 137)
+
+[node name="hut" parent="obstacles" instance=ExtResource("8_n04hs")]
+position = Vector2(299, 20)
+level_number = "20"
+
+[node name="OilSlick" parent="obstacles" instance=ExtResource("9_i0uev")]
+position = Vector2(242, 148)
+
+[node name="PotHole" parent="obstacles" instance=ExtResource("10_f82mo")]
+position = Vector2(194, 90)
+
+[node name="PotHole2" parent="obstacles" instance=ExtResource("10_f82mo")]
+position = Vector2(120, 138)
+
+[node name="PotHole3" parent="obstacles" instance=ExtResource("10_f82mo")]
+position = Vector2(89, 101)
+
+[node name="Puddle" parent="obstacles" instance=ExtResource("11_vdl60")]
+position = Vector2(58, 40)
+
+[node name="TimedGate" parent="obstacles" instance=ExtResource("12_nkh4k")]
+position = Vector2(205, 51)
+rotation = 1.5708
+delay_before_closing = 1.5
+
+[node name="parking_spot" parent="." instance=ExtResource("14_hkb6c")]
+position = Vector2(30, 168)
+
 [node name="PlayerCar" parent="." instance=ExtResource("3_oly4o")]
-position = Vector2(111, 88)
+position = Vector2(298, 56)
 rotation = 3.14159

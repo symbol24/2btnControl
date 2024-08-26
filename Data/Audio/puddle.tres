@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="AudioFile" load_steps=9 format=3 uid="uid://bod6ksd3gjbih"]
+
+[ext_resource type="AudioStream" uid="uid://d367urta43ek" path="res://Audio/SFX/splash1.ogg" id="1_0eqqx"]
+[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_4dclk"]
+[ext_resource type="AudioStream" uid="uid://bgf7vkqa2wo51" path="res://Audio/SFX/splash2.ogg" id="2_cvixc"]
+[ext_resource type="AudioStream" uid="uid://0v81ym2sexgy" path="res://Audio/SFX/splish1.ogg" id="3_0l5yk"]
+[ext_resource type="AudioStream" uid="uid://cw1wwgrws2qsa" path="res://Audio/SFX/splish2.ogg" id="4_2vtnp"]
+[ext_resource type="AudioStream" uid="uid://smd1jtm0pber" path="res://Audio/SFX/sploosh1.ogg" id="5_wfj6q"]
+[ext_resource type="AudioStream" uid="uid://cqllb5121sndc" path="res://Audio/SFX/sploosh2.ogg" id="6_ttvbk"]
+[ext_resource type="AudioStream" uid="uid://cm8pfwlsath0r" path="res://Audio/SFX/sploosh3.ogg" id="7_ur51d"]
+
+[resource]
+script = ExtResource("1_4dclk")
+files = Array[AudioStream]([ExtResource("1_0eqqx"), ExtResource("2_cvixc"), ExtResource("3_0l5yk"), ExtResource("4_2vtnp"), ExtResource("5_wfj6q"), ExtResource("6_ttvbk"), ExtResource("7_ur51d")])
+volume_db = 3.0
+min_pitch_scale = 1.0
+max_pitch_scale = 1.0
+is_music = false
+always_play = false

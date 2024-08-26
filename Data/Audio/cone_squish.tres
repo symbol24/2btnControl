@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="AudioFile" load_steps=7 format=3 uid="uid://nrb5vmtmqcc8"]
+
+[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_demfv"]
+[ext_resource type="AudioStream" uid="uid://dkrebltyj2nuk" path="res://Audio/SFX/squish1.ogg" id="1_f3go1"]
+[ext_resource type="AudioStream" uid="uid://wxqmaqtggho8" path="res://Audio/SFX/squish2.ogg" id="2_kdnq0"]
+[ext_resource type="AudioStream" uid="uid://b6gcwbymunaix" path="res://Audio/SFX/squish3.ogg" id="3_ngxxg"]
+[ext_resource type="AudioStream" uid="uid://b3mhrvm0lbh1v" path="res://Audio/SFX/squish4.ogg" id="4_niulp"]
+[ext_resource type="AudioStream" uid="uid://n6mae418f080" path="res://Audio/SFX/squish5.ogg" id="5_ib5sw"]
+
+[resource]
+script = ExtResource("1_demfv")
+files = Array[AudioStream]([ExtResource("1_f3go1"), ExtResource("2_kdnq0"), ExtResource("3_ngxxg"), ExtResource("4_niulp"), ExtResource("5_ib5sw")])
+volume_db = 0.0
+min_pitch_scale = 0.9
+max_pitch_scale = 1.1
+is_music = false
+always_play = false

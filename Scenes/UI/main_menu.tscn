@@ -88,7 +88,7 @@ bbcode_enabled = true
 text = "[center]Play[/center]"
 scroll_active = false
 
-[node name="enter" type="RichTextLabel" parent="."]
+[node name="park" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(80, 30)
 offset_left = 222.0
 offset_top = 79.0
@@ -100,7 +100,7 @@ theme_override_fonts/bold_font = ExtResource("5_gil3c")
 theme_override_font_sizes/normal_font_size = 13
 theme_override_font_sizes/bold_font_size = 18
 bbcode_enabled = true
-text = "[center]Enter to[/center]"
+text = "[center]Park to[/center]"
 scroll_active = false
 
 [node name="this_you" type="RichTextLabel" parent="."]

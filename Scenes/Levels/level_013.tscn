@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://bkhygy5dxmrve"]
+[gd_scene load_steps=11 format=4 uid="uid://bkhygy5dxmrve"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_lry0i"]
 [ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="2_4mh1l"]
+[ext_resource type="PackedScene" uid="uid://b8ra1kt5mxmix" path="res://Scenes/Obstacles/timed_gate.tscn" id="2_gikcv"]
+[ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="3_hi5hb"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="3_m6oyi"]
+[ext_resource type="PackedScene" uid="uid://banqa38750x1l" path="res://Scenes/Obstacles/cone.tscn" id="5_2qt02"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wux44"]
 b = Vector2(320, 0)
@@ -16,7 +19,7 @@ b = Vector2(0, 179)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_c246a"]
 b = Vector2(0, 180)
 
-[node name="LevelTemplate" type="Node2D" groups=["level"]]
+[node name="level013" type="Node2D" groups=["level"]]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(160, 90)
@@ -26,6 +29,8 @@ tile_map_data = PackedByteArray("AAAUAAsAAAACAAQAAAAUAAoAAAAAAAMAAAAUAAkAAAAAAAU
 tile_set = ExtResource("1_lry0i")
 
 [node name="spots" type="TileMapLayer" parent="."]
+rotation = 1.5708
+tile_map_data = PackedByteArray("AAACAO3/AAAIAAYAAAACAO7/AAAIAAcAAAADAO3/AAAJAAYAAAADAO7/AAAJAAcAAAD//+3/AAAIAAYAAAD//+7/AAAIAAcAAAAAAO3/AAAJAAYAAAAAAO7/AAAJAAcAAAAIAO3/AAAIAAYAAAAIAO7/AAAIAAcAAAAJAO3/AAAJAAYAAAAJAO7/AAAJAAcAAAALAO3/AAAIAAYAAAALAO7/AAAIAAcAAAAMAO3/AAAJAAYAAAAMAO7/AAAJAAcAAAA=")
 tile_set = ExtResource("1_lry0i")
 
 [node name="arrows" type="TileMapLayer" parent="."]
@@ -49,10 +54,65 @@ shape = SubResource("SegmentShape2D_c246a")
 
 [node name="obstacles" type="Node2D" parent="."]
 
+[node name="TimedGate" parent="obstacles" instance=ExtResource("2_gikcv")]
+position = Vector2(241, 84)
+rotation = 1.5708
+
+[node name="hut" parent="obstacles" instance=ExtResource("3_hi5hb")]
+position = Vector2(26, 46)
+level_number = "13"
+
+[node name="Cone" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(71, 42)
+
+[node name="Cone2" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(102, 42)
+
+[node name="Cone3" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(135, 42)
+
+[node name="Cone4" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(166, 42)
+
+[node name="Cone5" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(200, 42)
+
+[node name="Cone6" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(231, 42)
+
+[node name="Cone7" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(264, 42)
+
+[node name="Cone8" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(295, 42)
+
+[node name="Cone9" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(71, 127)
+
+[node name="Cone10" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(102, 127)
+
+[node name="Cone11" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(135, 127)
+
+[node name="Cone12" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(166, 127)
+
+[node name="Cone13" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(200, 127)
+
+[node name="Cone14" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(231, 127)
+
+[node name="Cone15" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(264, 127)
+
+[node name="Cone16" parent="obstacles" instance=ExtResource("5_2qt02")]
+position = Vector2(295, 127)
+
 [node name="parking_spot_big" parent="." instance=ExtResource("2_4mh1l")]
-position = Vector2(248, 87)
+position = Vector2(296, 83)
 rotation = 1.5708
 
 [node name="PlayerCar" parent="." instance=ExtResource("3_m6oyi")]
-position = Vector2(111, 88)
-rotation = 3.14159
+position = Vector2(27, 84)

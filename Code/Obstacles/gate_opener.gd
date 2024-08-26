@@ -9,8 +9,8 @@ func _ready() -> void:
 func _body_entered(_body) -> void:
 	if _body is PlayerCar:
 		print("sending open gate")
-		S.ToggleGate.emit(true)
+		S.ToggleGate.emit()
 		
 func _body_exited(_body) -> void:
 	if _body is PlayerCar:
-		if must_hold: S.ToggleGate.emit(false)
+		if must_hold: S.ToggleGate.emit()

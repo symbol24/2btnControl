@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=4 uid="uid://cbk1fur20grw"]
+[gd_scene load_steps=12 format=4 uid="uid://cbk1fur20grw"]
 
 [ext_resource type="PackedScene" uid="uid://be11c04vgrym2" path="res://Scenes/ParkingSpots/parking_spot_long.tscn" id="1_1pvqv"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_qnu31"]
 [ext_resource type="PackedScene" uid="uid://ogo7kqhsjr16" path="res://Scenes/PlayerCar/player_car.tscn" id="2_b4pv4"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_nw0em"]
 [ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="5_o70wl"]
-[ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="6_4uulj"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="7_ah1e4"]
 [ext_resource type="Texture2D" uid="uid://pgxrr51dlfr6" path="res://Textures/arrow_keys.png" id="8_23gbj"]
 
@@ -94,50 +93,60 @@ rotation = 3.64076
 position = Vector2(56, 15)
 rotation = 0.575959
 
-[node name="KeyKiosk" parent="." instance=ExtResource("6_4uulj")]
-position = Vector2(225, 23)
-rotation = 1.5708
-
 [node name="hut" parent="." instance=ExtResource("7_ah1e4")]
 position = Vector2(285, 22)
 rotation = 1.5708
+level_number = "03"
 
 [node name="tutorial_reset" type="RichTextLabel" parent="."]
 modulate = Color(1, 1, 1, 0.560784)
-custom_minimum_size = Vector2(60, 25)
-offset_left = 85.0
-offset_top = 131.0
-offset_right = 145.0
-offset_bottom = 156.0
+custom_minimum_size = Vector2(200, 50)
+offset_left = 77.0
+offset_top = 108.0
+offset_right = 277.0
+offset_bottom = 158.0
 theme = ExtResource("3_nw0em")
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "Pressing"
+text = "Press"
 scroll_active = false
 
 [node name="tutorial_reset2" type="RichTextLabel" parent="."]
 modulate = Color(1, 1, 1, 0.560784)
 custom_minimum_size = Vector2(160, 50)
-offset_left = 176.0
-offset_top = 131.0
-offset_right = 336.0
-offset_bottom = 181.0
+offset_left = 145.0
+offset_top = 108.0
+offset_right = 305.0
+offset_bottom = 158.0
 theme = ExtResource("3_nw0em")
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "resets the car."
+text = "at the same time if "
+scroll_active = false
+
+[node name="tutorial_reset3" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0.560784)
+custom_minimum_size = Vector2(220, 50)
+offset_left = 77.0
+offset_top = 134.0
+offset_right = 297.0
+offset_bottom = 184.0
+theme = ExtResource("3_nw0em")
+theme_override_font_sizes/normal_font_size = 12
+bbcode_enabled = true
+text = "you are stuck. The car wiill return to it's starting position."
 scroll_active = false
 
 [node name="arrow_up" type="Sprite2D" parent="."]
-position = Vector2(161, 130)
+position = Vector2(130, 106)
 texture = ExtResource("8_23gbj")
 vframes = 2
 
 [node name="arrow_down" type="Sprite2D" parent="."]
-position = Vector2(161, 150)
+position = Vector2(130, 126)
 texture = ExtResource("8_23gbj")
 vframes = 2
 frame = 1
 
 [node name="PlayerCar" parent="." instance=ExtResource("2_b4pv4")]
-position = Vector2(190, 92)
+position = Vector2(191, 89)

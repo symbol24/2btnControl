@@ -1,3 +1,5 @@
+RichTextLabel
+Control
 StaticBody2D
 TileMapLayer
 CollisionShape2D
@@ -5,10 +7,8 @@ Area2D
 CollisionPolygon2D
 Node2D
 AnimationPlayer
-Control
 TileMap
 Sprite2D
-RichTextLabel
 Node
 Button
 GridContainer

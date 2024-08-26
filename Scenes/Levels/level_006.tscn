@@ -64,6 +64,7 @@ position = Vector2(133, 88)
 
 [node name="hut" parent="obstacles" instance=ExtResource("5_skkte")]
 position = Vector2(292, 37)
+level_number = "06"
 
 [node name="Divider" parent="obstacles" instance=ExtResource("6_3l72a")]
 position = Vector2(77, 42)
