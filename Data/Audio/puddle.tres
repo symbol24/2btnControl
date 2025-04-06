@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AudioFile" load_steps=9 format=3 uid="uid://bod6ksd3gjbih"]
 
 [ext_resource type="AudioStream" uid="uid://d367urta43ek" path="res://Audio/SFX/splash1.ogg" id="1_0eqqx"]
-[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_4dclk"]
+[ext_resource type="Script" uid="uid://b7se3ypw8v0ag" path="res://Code/Utilities/audio_file.gd" id="1_4dclk"]
 [ext_resource type="AudioStream" uid="uid://bgf7vkqa2wo51" path="res://Audio/SFX/splash2.ogg" id="2_cvixc"]
 [ext_resource type="AudioStream" uid="uid://0v81ym2sexgy" path="res://Audio/SFX/splish1.ogg" id="3_0l5yk"]
 [ext_resource type="AudioStream" uid="uid://cw1wwgrws2qsa" path="res://Audio/SFX/splish2.ogg" id="4_2vtnp"]

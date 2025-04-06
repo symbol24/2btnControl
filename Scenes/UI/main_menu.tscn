@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=4 uid="uid://dv1wftrvdj81m"]
 
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="1_ai5wb"]
-[ext_resource type="Script" path="res://Code/Levels/main_menu.gd" id="1_ymqhs"]
+[ext_resource type="Script" uid="uid://ykovguw6fw8h" path="res://Code/Levels/main_menu.gd" id="1_ymqhs"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_rai0a"]
 [ext_resource type="PackedScene" uid="uid://c7lcvqeyp5ai8" path="res://Scenes/ParkingSpots/loader_parking_spot.tscn" id="4_hwnqj"]
 [ext_resource type="FontFile" uid="uid://cxqi21uirwr5c" path="res://Data/Fonts/Pinlight.ttf" id="4_ndsgk"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://5v803ajjikep"]
 
-[ext_resource type="Script" path="res://Code/Obstacles/pot_hole.gd" id="1_l5nw8"]
+[ext_resource type="Script" uid="uid://dhbhadrwb1rn0" path="res://Code/Obstacles/pot_hole.gd" id="1_l5nw8"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_l8c1h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k1e7m"]

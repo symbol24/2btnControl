@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmke2lvyylppx"]
 
 [ext_resource type="Texture2D" uid="uid://busyniubtbcw7" path="res://Textures/Cars/cars.png" id="1_jjg22"]
-[ext_resource type="Script" path="res://Code/Obstacles/obstacle_car.gd" id="1_x5mmo"]
+[ext_resource type="Script" uid="uid://dev6w2lf7oete" path="res://Code/Obstacles/obstacle_car.gd" id="1_x5mmo"]
 [ext_resource type="Resource" uid="uid://dejwp1x3xijvq" path="res://Data/car_color_data.tres" id="2_fu80s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mpp78"]

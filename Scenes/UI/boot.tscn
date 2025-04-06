@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=4 uid="uid://6y1kchvbtpf2"]
 
-[ext_resource type="Script" path="res://Code/UI/boot.gd" id="1_dnrvn"]
+[ext_resource type="Script" uid="uid://bwdfu4ol4ola" path="res://Code/UI/boot.gd" id="1_dnrvn"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_3p2hf"]
 [ext_resource type="Texture2D" uid="uid://c2n0tkhrvkqdt" path="res://Textures/UI/godot_splash.png" id="2_fbmu6"]
 [ext_resource type="Texture2D" uid="uid://qq63iym8188a" path="res://Textures/UI/rid_back.png" id="3_6onm4"]
@@ -212,9 +212,9 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sep1y"]
 _data = {
-"RESET": SubResource("Animation_7eniy"),
-"godot": SubResource("Animation_t8uem"),
-"logo": SubResource("Animation_biuw3")
+&"RESET": SubResource("Animation_7eniy"),
+&"godot": SubResource("Animation_t8uem"),
+&"logo": SubResource("Animation_biuw3")
 }
 
 [node name="Boot" type="Node2D"]
@@ -263,5 +263,5 @@ metadata/_edit_use_anchors_ = true
 [node name="animator" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_sep1y")
+&"": SubResource("AnimationLibrary_sep1y")
 }

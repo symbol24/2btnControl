@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b2ocescwtarwv"]
 
-[ext_resource type="Script" path="res://Code/Obstacles/puddle.gd" id="1_81jcj"]
+[ext_resource type="Script" uid="uid://boehhpa7dce8i" path="res://Code/Obstacles/puddle.gd" id="1_81jcj"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_i5ps5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l3pir"]

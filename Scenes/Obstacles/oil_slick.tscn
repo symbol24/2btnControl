@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ddl0ooju0r2p1"]
 
-[ext_resource type="Script" path="res://Code/Obstacles/oil_slick.gd" id="1_3bvqo"]
+[ext_resource type="Script" uid="uid://dgt8sol7pgk7d" path="res://Code/Obstacles/oil_slick.gd" id="1_3bvqo"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_ep83y"]
 
 [node name="OilSlick" type="Area2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://bwl2vsp3q63hm"]
 
-[ext_resource type="Script" path="res://Code/Obstacles/hut.gd" id="1_7pf4s"]
+[ext_resource type="Script" uid="uid://cq07bottbirnr" path="res://Code/Obstacles/hut.gd" id="1_7pf4s"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_qkvkm"]
 [ext_resource type="PackedScene" uid="uid://bqyk60yoy0w0g" path="res://Scenes/Obstacles/key_kiosk.tscn" id="3_pu667"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="4_xmjcc"]

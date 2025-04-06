@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AudioFile" load_steps=4 format=3 uid="uid://6jdal2bo8tti"]
 
 [ext_resource type="AudioStream" uid="uid://c0y85jef3vsqh" path="res://Audio/SFX/car parked 1.ogg" id="1_4iwtm"]
-[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_t7qhe"]
+[ext_resource type="Script" uid="uid://b7se3ypw8v0ag" path="res://Code/Utilities/audio_file.gd" id="1_t7qhe"]
 [ext_resource type="AudioStream" uid="uid://nivw76b2qxpf" path="res://Audio/SFX/car parked 2.ogg" id="2_synb4"]
 
 [resource]

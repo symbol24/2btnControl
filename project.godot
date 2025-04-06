@@ -14,7 +14,7 @@ config/name="Valet Parking Not Included"
 config/description="With only 2 buttons, can you park all these cars?"
 config/version="1.0"
 run/main_scene="res://Scenes/UI/boot.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Textures/key_icon.png"
 
 [autoload]
@@ -36,10 +36,6 @@ window/size/viewport_height=180
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
 
 [file_customization]
 

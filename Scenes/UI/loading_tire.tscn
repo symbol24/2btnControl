@@ -2,6 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://cmj5ytk24vw5c" path="res://Textures/loading_tire.png" id="1_vj60p"]
 
+[sub_resource type="Animation" id="Animation_60dkg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
 [sub_resource type="Animation" id="Animation_pqftp"]
 resource_name = "rotate"
 length = 0.4
@@ -20,25 +35,10 @@ tracks/0/keys = {
 "values": [4, 5, 6, 7]
 }
 
-[sub_resource type="Animation" id="Animation_60dkg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p0l1j"]
 _data = {
-"RESET": SubResource("Animation_60dkg"),
-"rotate": SubResource("Animation_pqftp")
+&"RESET": SubResource("Animation_60dkg"),
+&"rotate": SubResource("Animation_pqftp")
 }
 
 [node name="LoadingTire" type="Node2D"]

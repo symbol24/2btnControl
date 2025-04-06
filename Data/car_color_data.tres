@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CarColorData" load_steps=2 format=3 uid="uid://dejwp1x3xijvq"]
 
-[ext_resource type="Script" path="res://Code/Utilities/car_color_data.gd" id="1_8lfah"]
+[ext_resource type="Script" uid="uid://bq6pmyomxfawg" path="res://Code/Utilities/car_color_data.gd" id="1_8lfah"]
 
 [resource]
 script = ExtResource("1_8lfah")

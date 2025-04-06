@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="AudioFile" load_steps=4 format=3 uid="uid://crv2ra83llk54"]
 
 [ext_resource type="AudioStream" uid="uid://vieahcc2so5t" path="res://Audio/SFX/boing.ogg" id="1_4ud0e"]
-[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_rmoer"]
+[ext_resource type="Script" uid="uid://b7se3ypw8v0ag" path="res://Code/Utilities/audio_file.gd" id="1_rmoer"]
 [ext_resource type="AudioStream" uid="uid://db0sks5iwgdya" path="res://Audio/SFX/boing2.ogg" id="2_36d4k"]
 
 [resource]

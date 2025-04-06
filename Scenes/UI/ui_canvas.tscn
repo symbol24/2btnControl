@@ -1,16 +1,43 @@
 [gd_scene load_steps=15 format=4 uid="uid://ba782djndha7k"]
 
-[ext_resource type="Script" path="res://Code/UI/ui_canvas.gd" id="1_amwc2"]
-[ext_resource type="Script" path="res://Code/UI/gameplay.gd" id="2_iqp4r"]
-[ext_resource type="Script" path="res://Code/UI/pause_menu.gd" id="3_h1myp"]
-[ext_resource type="Script" path="res://Code/UI/result_screen.gd" id="4_0f8vl"]
-[ext_resource type="Script" path="res://Code/UI/loading_screen.gd" id="5_6cnba"]
+[ext_resource type="Script" uid="uid://mybulyq3y76d" path="res://Code/UI/ui_canvas.gd" id="1_amwc2"]
+[ext_resource type="Script" uid="uid://b0rsls5nw4ma4" path="res://Code/UI/gameplay.gd" id="2_iqp4r"]
+[ext_resource type="Script" uid="uid://bjoegeo00bdt2" path="res://Code/UI/pause_menu.gd" id="3_h1myp"]
+[ext_resource type="Script" uid="uid://c2t3xs2if7jvj" path="res://Code/UI/result_screen.gd" id="4_0f8vl"]
+[ext_resource type="Script" uid="uid://bjd6aakg5k8jq" path="res://Code/UI/loading_screen.gd" id="5_6cnba"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="6_cmtl1"]
-[ext_resource type="Script" path="res://Code/Utilities/tb_button.gd" id="7_cmipv"]
-[ext_resource type="Script" path="res://Code/UI/levels_selector.gd" id="7_gr110"]
+[ext_resource type="Script" uid="uid://cqeur4nji36a" path="res://Code/Utilities/tb_button.gd" id="7_cmipv"]
+[ext_resource type="Script" uid="uid://ceus2aoldchtp" path="res://Code/UI/levels_selector.gd" id="7_gr110"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="8_nnetg"]
 [ext_resource type="PackedScene" uid="uid://d4laau4frxsm0" path="res://Scenes/UI/loading_tire.tscn" id="9_4x14f"]
-[ext_resource type="Script" path="res://Code/UI/save_icon.gd" id="10_3udt6"]
+[ext_resource type="Script" uid="uid://bgg0tyf5w5cp5" path="res://Code/UI/save_icon.gd" id="10_3udt6"]
+
+[sub_resource type="Animation" id="Animation_42gif"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("keys:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("keys:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_qeukk"]
 resource_name = "key"
@@ -42,37 +69,10 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_42gif"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("keys:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("keys:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4v44k"]
 _data = {
-"RESET": SubResource("Animation_42gif"),
-"key": SubResource("Animation_qeukk")
+&"RESET": SubResource("Animation_42gif"),
+&"key": SubResource("Animation_qeukk")
 }
 
 [node name="UiCanvas" type="CanvasLayer"]

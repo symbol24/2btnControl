@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AudioFile" load_steps=6 format=3 uid="uid://l0ir8ym8kcng"]
 
-[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_8gv0y"]
+[ext_resource type="Script" uid="uid://b7se3ypw8v0ag" path="res://Code/Utilities/audio_file.gd" id="1_8gv0y"]
 [ext_resource type="AudioStream" uid="uid://25b2pbvw7jn8" path="res://Audio/SFX/konk.ogg" id="1_bxefe"]
 [ext_resource type="AudioStream" uid="uid://cc0skm3fjvwnl" path="res://Audio/SFX/konk2.ogg" id="2_kmom2"]
 [ext_resource type="AudioStream" uid="uid://bwuaccrfrog5l" path="res://Audio/SFX/kerplunk.ogg" id="3_gj013"]

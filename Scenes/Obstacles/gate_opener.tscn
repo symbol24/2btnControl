@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnfs7awu8ejgs"]
 
-[ext_resource type="Script" path="res://Code/Obstacles/gate_opener.gd" id="1_qf2xl"]
+[ext_resource type="Script" uid="uid://dpsu4hhpjkqv8" path="res://Code/Obstacles/gate_opener.gd" id="1_qf2xl"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_mu6tt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_46kf1"]

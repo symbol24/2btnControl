@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=4 uid="uid://b42l5e3jvdua0"]
 
-[ext_resource type="Script" path="res://Code/Utilities/parking_spot.gd" id="1_godaa"]
+[ext_resource type="Script" uid="uid://cprjdyr1sowld" path="res://Code/Utilities/parking_spot.gd" id="1_godaa"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_7p3ch"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pupvy"]

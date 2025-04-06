@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="AudioFile" load_steps=3 format=3 uid="uid://be402xo7kwayl"]
 
-[ext_resource type="Script" path="res://Code/Utilities/audio_file.gd" id="1_72t63"]
+[ext_resource type="Script" uid="uid://b7se3ypw8v0ag" path="res://Code/Utilities/audio_file.gd" id="1_72t63"]
 [ext_resource type="AudioStream" uid="uid://cdf2fmhey4uc4" path="res://Audio/Music/kick_backOGG.ogg" id="1_lg5jv"]
 
 [resource]
@@ -10,3 +10,4 @@ volume_db = -20.0
 min_pitch_scale = 1.0
 max_pitch_scale = 1.0
 is_music = true
+always_play = false

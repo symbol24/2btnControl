@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b8ra1kt5mxmix"]
 
-[ext_resource type="Script" path="res://Code/Obstacles/timed_gate.gd" id="1_mvq4v"]
+[ext_resource type="Script" uid="uid://chjxrvv06bicm" path="res://Code/Obstacles/timed_gate.gd" id="1_mvq4v"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_kiqsl"]
 
 [node name="TimedGate" type="StaticBody2D"]
