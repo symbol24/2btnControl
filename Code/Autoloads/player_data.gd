@@ -19,14 +19,13 @@ func _ready() -> void:
 
 
 func save() -> void:
+	S.DisplaySaveIcon.emit()
 	if data == null:
 		data = SaveData.new()
 	
 	var error = ResourceSaver.save(data, FOLDER + FILE)
 	if error != OK:
 		push_error("Save error: ", error_string(error))
-	else:
-		print("save ok!")
 
 
 func _load() -> void:

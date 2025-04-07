@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://ba782djndha7k"]
+[gd_scene load_steps=13 format=4 uid="uid://ba782djndha7k"]
 
 [ext_resource type="Script" uid="uid://mybulyq3y76d" path="res://Code/UI/ui_canvas.gd" id="1_amwc2"]
 [ext_resource type="Script" uid="uid://b0rsls5nw4ma4" path="res://Code/UI/gameplay.gd" id="2_iqp4r"]
@@ -11,69 +11,7 @@
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="8_nnetg"]
 [ext_resource type="PackedScene" uid="uid://d4laau4frxsm0" path="res://Scenes/UI/loading_tire.tscn" id="9_4x14f"]
 [ext_resource type="Script" uid="uid://bgg0tyf5w5cp5" path="res://Code/UI/save_icon.gd" id="10_3udt6"]
-
-[sub_resource type="Animation" id="Animation_42gif"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("keys:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("keys:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_qeukk"]
-resource_name = "key"
-length = 2.0
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("keys:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("keys:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4v44k"]
-_data = {
-&"RESET": SubResource("Animation_42gif"),
-&"key": SubResource("Animation_qeukk")
-}
+[ext_resource type="Texture2D" uid="uid://ctiup5yfedr5w" path="res://Textures/key_icon.png" id="12_7s1ye"]
 
 [node name="UiCanvas" type="CanvasLayer"]
 process_mode = 3
@@ -402,22 +340,21 @@ scroll_active = false
 position = Vector2(261, 143)
 
 [node name="SaveIcon" type="Control" parent="."]
-visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(320, 180)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("10_3udt6")
-id = "save_icon"
 
-[node name="keys" type="TileMapLayer" parent="SaveIcon"]
-visible = false
-modulate = Color(1, 1, 1, 0)
-tile_map_data = PackedByteArray("AAABAAgAAAAGAAIAAAABAAkAAAAGAAMAAAACAAgAAAAHAAIAAAACAAkAAAAHAAMAAAA=")
-tile_set = ExtResource("8_nnetg")
-
-[node name="animator" type="AnimationPlayer" parent="SaveIcon"]
+[node name="icon" type="TextureRect" parent="SaveIcon"]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_4v44k")
-}
+modulate = Color(1, 1, 1, 0)
+top_level = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 130.0
+offset_right = 50.0
+offset_bottom = 170.0
+texture = ExtResource("12_7s1ye")

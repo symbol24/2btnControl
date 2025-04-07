@@ -1,14 +1,22 @@
-class_name SaveIcon extends TBControl
-
-@onready var animator: AnimationPlayer = %animator
+class_name SaveIcon extends Control
 
 
-func _toggle_display(_id := "", _visible := true) -> void:
-	if _id == id:
-		set_deferred("visible", _visible)
-		if _visible:
-			if !animator.is_playing(): animator.play("key")
-		else:
-			if animator.is_playing(): 
-				animator.stop()
-				animator.play("RESET")
+@export var cycles:int = 3
+@export var tween_time:float = 1.0
+
+@onready var icon: TextureRect = %icon
+
+
+func _ready() -> void:
+	S.DisplaySaveIcon.connect(_display_save)
+
+
+func _display_save() -> void:
+	var cycle:int = 0
+	while cycle < cycles:
+		var tween:Tween = create_tween()
+		tween.set_parallel(false)
+		tween.tween_property(icon, "modulate", Color.WHITE, tween_time)
+		tween.tween_property(icon, "modulate", Color.TRANSPARENT, tween_time)
+		await tween.finished
+		cycle += 1

@@ -23,6 +23,7 @@ signal ResetLevel()
 signal ToggleDisplay(id, is_visible)
 signal UpdateLevelTimer(value)
 signal LevelButtonPressed(level_id)
+signal DisplaySaveIcon()
 
 #Audio
 signal PlayAudio(audio_data, is_2d)
