@@ -27,4 +27,5 @@ signal LevelButtonPressed(level_id)
 #Audio
 signal PlayAudio(audio_data, is_2d)
 signal AudioExiting(player)
-signal UpdateAudioVolumes()
+signal ResetAudioVolumes()
+signal UpdateAudioVolume(track:StringName, value:float)

@@ -24,10 +24,13 @@ func _ready() -> void:
 
 
 func _anim_check(_anim_name:="") -> void:
-	if _anim_name == "godot": 
+	if _anim_name == &"godot": 
 		current = &"logo"
 		animator.play(&"RESET")
 	elif _anim_name == &"RESET":
 		animator.play(current)
-	elif _anim_name == "logo": 
+	elif _anim_name == &"logo": 
+		current = &"save"
+		animator.play(&"RESET")
+	elif _anim_name == &"save": 
 		S.LoadSceneFromPath.emit(GAME)

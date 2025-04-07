@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://6y1kchvbtpf2"]
+[gd_scene load_steps=14 format=4 uid="uid://6y1kchvbtpf2"]
 
 [ext_resource type="Script" uid="uid://bwdfu4ol4ola" path="res://Code/UI/boot.gd" id="1_dnrvn"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_3p2hf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="4_vka3d"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="5_0lxtx"]
 [ext_resource type="Texture2D" uid="uid://dta34lo82pa73" path="res://Textures/UI/logo_back_mini.png" id="5_ycm45"]
+[ext_resource type="Texture2D" uid="uid://ctiup5yfedr5w" path="res://Textures/key_icon.png" id="7_vka3d"]
 
 [sub_resource type="Animation" id="Animation_7eniy"]
 length = 0.001
@@ -185,6 +186,42 @@ tracks/14/path = NodePath("my_logo/company_name:modulate")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("save:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("save/save_icon:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("save/Label:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -405,11 +442,53 @@ tracks/9/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_vka3d"]
+resource_name = "save"
+length = 7.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("save:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("save/save_icon:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.01, 6, 6.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("save/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.01, 6, 6.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sep1y"]
 _data = {
 &"RESET": SubResource("Animation_7eniy"),
 &"godot": SubResource("Animation_t8uem"),
-&"logo": SubResource("Animation_biuw3")
+&"logo": SubResource("Animation_biuw3"),
+&"save": SubResource("Animation_vka3d")
 }
 
 [node name="Boot" type="Node2D"]
@@ -485,6 +564,39 @@ uppercase = true
 max_lines_visible = 1
 visible_characters = 0
 visible_ratio = 0.0
+
+[node name="save" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="save_icon" type="TextureRect" parent="save"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 0
+offset_left = 130.0
+offset_top = 20.0
+offset_right = 190.0
+offset_bottom = 80.0
+texture = ExtResource("7_vka3d")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="save"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 90.0
+offset_right = 280.0
+offset_bottom = 167.0
+text = "This game saves at predetermined points. Whenever the above icon is displayed, make sure to not turn off your device or you may lose your current save file."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="car" parent="." instance=ExtResource("4_vka3d")]
 visible = false
