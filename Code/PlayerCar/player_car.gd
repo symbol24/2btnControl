@@ -1,8 +1,10 @@
 class_name PlayerCar extends CharacterBody2D
 
+
 const CRASH = preload("res://Data/Audio/crash.tres")
 const BARKS = preload("res://Data/Audio/barks.tres")
 const BOINGS = preload("res://Data/Audio/boings.tres")
+
 
 @export var data:PlayerCarData
 @export var car_colors:CarColorData
@@ -68,6 +70,7 @@ var reset_timer := 0.0:
 			reset_active = false
 var in_puddle := false
 
+
 func _ready() -> void:
 	S.ResetLevel.connect(_reset_car)
 	crash_detector.body_entered.connect(_crash_detecter_body_entered)
@@ -78,9 +81,7 @@ func _ready() -> void:
 	back_detector.area_exited.connect(_back_detector_exit)
 	start_transform = transform
 	_set_car_color()
-	var level = get_tree().get_first_node_in_group("level")
-	if level and (!level.has_meta("no_gameplay_ui") or !level.get_meta("no_gameplay_ui")):
-		S.ToggleDisplay.emit("gameplay_ui", true)
+	
 
 func _physics_process(_delta: float) -> void:
 	if front_in and back_in: parked_timer += _delta
@@ -114,7 +115,8 @@ func _physics_process(_delta: float) -> void:
 	if in_puddle: velocity = velocity * data.puddle_slow_down
 	
 	move_and_slide()
-		
+
+
 func _move(_delta:=0.0, _direction:=0.0, _velocity := Vector2.ZERO) -> Vector2:
 	var new_vel = _velocity
 	
@@ -127,6 +129,7 @@ func _move(_delta:=0.0, _direction:=0.0, _velocity := Vector2.ZERO) -> Vector2:
 	
 	return new_vel
 
+
 func _rotate(_delta := 0.0, _rotation := 0.0, _angle := 0.0, _speed_lost := 0.0) -> float:
 	var new_rotation := _rotation
 	#print("_speed_lost ", _speed_lost)
@@ -134,26 +137,31 @@ func _rotate(_delta := 0.0, _rotation := 0.0, _angle := 0.0, _speed_lost := 0.0)
 
 	return new_rotation
 
+
 func _front_detector_enter(_area) -> void:
 	#print("area is ParkingSpot ", _area is ParkingSpot)
 	if _area is ParkingSpot:
 		if parking_spot == null: parking_spot = _area
 		front_in = true
 
+
 func _front_detector_exit(_area) -> void:
 	if _area is ParkingSpot:
 		front_in = false
 		if !back_in: parking_spot = null
-		
+
+
 func _back_detector_enter(_area) -> void:
 	if _area is ParkingSpot:
 		if parking_spot == null: parking_spot = _area
 		back_in = true
 
+
 func _back_detector_exit(_area) -> void:
 	if _area is ParkingSpot:
 		back_in = false
 		if !front_in: parking_spot = null
+
 
 func _check_if_parked() -> void:
 	if front_in and back_in and _check_if_slow_speed(current_speed) and !parked:
@@ -163,8 +171,10 @@ func _check_if_parked() -> void:
 		print("PARKED!")
 		if parking_spot != null: parking_spot.parked()
 
+
 func _check_if_slow_speed(_speed := 0.0):
 	return _speed >= data.parked_slow_speed[0] and _speed <= data.parked_slow_speed[1]
+
 
 func _reset_car() -> void:
 	reset_active = true
@@ -172,22 +182,26 @@ func _reset_car() -> void:
 	velocity = Vector2.ZERO
 	transform = start_transform
 
+
 func push(_direction:Vector2) -> void:
 	if _direction:
 		accept_input_timer = 0.0
 		accept_input = false
 		velocity = _direction
 
+
 func oil_spin() -> void:
 		accept_input_timer = 0.0
 		accept_input = false
 		oil_slick = true
 
+
 func _set_car_color() -> void:
 	var is_metallic := randi_range(0,1)
 	if is_metallic == 1: body.frame = 1
 	var color = car_colors.colors.pick_random()
-	body.set_deferred("modulate", color)
+	body.set_deferred(&"modulate", color)
+
 
 func _crash_detecter_body_entered(_body) -> void:
 	if _body is Bumper:
@@ -198,9 +212,11 @@ func _crash_detecter_body_entered(_body) -> void:
 		return
 	S.PlayAudio.emit(CRASH)
 
+
 func _crash_detecter_area_entered(_area) -> void:
 	if _area.get_parent() and _area.get_parent() is Bumper:
 		S.PlayAudio.emit(BOINGS)
+
 
 func pot_hole() -> void:
 	accept_input = false
@@ -208,6 +224,7 @@ func pot_hole() -> void:
 	if randf() <= 0.5: offset = -offset
 	if randf() <= 0.5: velocity.y += offset
 	else: velocity.x += offset
-	
+
+
 func end_pot_hole() -> void:
 	accept_input_timer = 33

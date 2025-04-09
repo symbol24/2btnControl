@@ -51,7 +51,7 @@ func _play(audio:AudioFile = null, _is_2d := false) -> TBAudioStreamPlayer:
 		new_player.volume_db = audio.volume_db
 		new_player.pitch_scale = audio.get_random_pitch()
 	if new_player.stream != null:
-		GM.game.add_child(new_player)
+		add_child(new_player)
 		audio_pool.append(new_player)
 		if audio.is_music: new_player.process_mode = PROCESS_MODE_ALWAYS
 		elif audio.always_play: new_player.process_mode = PROCESS_MODE_ALWAYS

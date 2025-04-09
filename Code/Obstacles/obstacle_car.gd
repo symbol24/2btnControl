@@ -12,4 +12,4 @@ func _ready() -> void:
 func _set_car_color() -> void:
 	var metallic := randi_range(0,1)
 	if metallic == 1: body.frame = 1
-	body.set_deferred("modulate", car_colors.colors.pick_random())
+	body.set_deferred(&"modulate", car_colors.colors.pick_random())

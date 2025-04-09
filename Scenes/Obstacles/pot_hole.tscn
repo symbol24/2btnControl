@@ -11,6 +11,7 @@ collision_mask = 2
 script = ExtResource("1_l5nw8")
 
 [node name="collider" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_k1e7m")
 
 [node name="hole1" type="TileMapLayer" parent="."]

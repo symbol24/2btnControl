@@ -6,5 +6,7 @@ func parked():
 	#print("triggering parked")
 	if load_to != "":
 		S.PlayAudio.emit(CAR_PARKED)
-		if load_to == "level_selector": S.ToggleDisplay.emit("level_selector", true)
+		if load_to == "level_selector": 
+			S.ToggleDisplay.emit(&"level_selector", true)
+			S.PauseGame.emit(true)
 		else: S.LoadScene.emit(load_to)

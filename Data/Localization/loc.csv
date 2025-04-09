@@ -1,0 +1,73 @@
+keys,en,fr,fr-CA
+lorem_ipsum,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porttitor ornare lorem, non lobortis sem eleifend at. Donec euismod ullamcorper est sed eleifend. In non magna nisl. Nulla blandit elit dolor, in eleifend nibh tincidunt eu. Cras iaculis orci et felis rhoncus tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam ut suscipit diam. Sed luctus laoreet nisl id tincidunt. Phasellus congue, urna a placerat posuere, ex metus pellentesque velit, vel pretium eros neque quis enim. Vivamus elementum scelerisque urna sit amet tristique. Vestibulum elementum massa quis diam accumsan semper. Aenean accumsan odio at hendrerit dignissim.",,
+lorem_ipsum2,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porttitor ornare lorem, non lobortis sem eleifend at. Donec euismod ullamcorper est sed eleifend. In non magna nisl. Nulla blandit elit dolor, in eleifend nibh tincidunt eu. Cras iaculis orci et felis rhoncus tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam ut suscipit diam. Sed luctus laoreet nisl id tincidunt. Phasellus congue, urna a placerat posuere, ex metus pellentesque velit, vel pretium eros neque quis enim. Vivamus elementum scelerisque urna sit amet tristique. Vestibulum elementum massa quis diam accumsan semper. Aenean accumsan odio at hendrerit dignissim.",,
+lorem_ipsum3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque porttitor ornare lorem, non lobortis sem eleifend at. Donec euismod ullamcorper est sed eleifend. In non magna nisl. Nulla blandit elit dolor, in eleifend nibh tincidunt eu. Cras iaculis orci et felis rhoncus tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam ut suscipit diam. Sed luctus laoreet nisl id tincidunt. Phasellus congue, urna a placerat posuere, ex metus pellentesque velit, vel pretium eros neque quis enim. Vivamus elementum scelerisque urna sit amet tristique. Vestibulum elementum massa quis diam accumsan semper. Aenean accumsan odio at hendrerit dignissim.",,
+game_title,Valet Parking not Included,Fais ton Parking,Stationement pas Inclut
+mm_btn_htp,HOW TO PLAY,APPRENDRE A JOUER,COMMENT ON JOUE
+mm_btn_level_select,SELECT LEVEL,NIVEAUX,LES LEVELS
+mm_btn_settings,SETTINGS,OPTIONS,OPTIONS
+mm_btn_credits,CREDITS,CREDITS,CREDITS
+mm_btn_quit,QUIT,QUITTER,FARMER
+mm_btn_close,CLOSE,RETOURS,RETOURS
+mm_btn_discord,Discord,,
+how_to_title,How To Play,,
+ht_car,You,,
+ht_park,Park in here,,
+ht_how_to,Levels are timed. The result of the level depend on how fast you are.,,
+ht_gates,Gates can be opened by driving on the opener.,,
+ht_cone,Cones can be run over.,,
+ht_bumper,Bumpers bump you.,,
+ht_oil_slick,Oil Slicks make you slide.,,
+ht_pothole,Potholes jerk the verhicle.,,
+ht_water_puddle,Water Puddles slow you down.,,
+ht_btn_back,BACK,,
+set_btn_reset,RESET,DEFAULTS,RESET
+set_btn_close,CLOSE,FERMER,FERMER
+settings_title,Settings,Parametres,Options
+popup_cancel,CANCEL,NON,NON
+popup_confirm,CONFIRM,OUI,OUI
+set_language,Language,Langue,Langue
+set_master,Master,Maitre,
+set_music,Music,Musique,
+set_sfx,SFX,Effets Sonores,SFX
+settings_changes_title,Pending Changes,Changements en attente de sauvegarde,Changements en attente de sauvegarde
+settings_changes_description,There are pending changes not yet saved. Do you wish to save these changes?,"Des changements sont en attente de sauvegarde, voulez-vous les sauvegarder?","Des changements sont en attente de sauvegarde, voulez-vous les sauvegarder?"
+settings_reset_title,Reset Settings?,Remettre par Default,Remettre par Default
+settings_reset_description,Do you wish to reset settings to default values?,Voulez-vous remettres les paramtres par default?,Voulez-vous remettres les paramtres par default?
+english,English,,
+french,Francais,,
+quebecois,Quebecois,,
+fullscreen,Fullscreen,Plein Ecran,Plein Ecran
+windowed,Windowed,Fenêtré,Fenêtré
+borderless,Windowed Borderless,Fenêtré sans bordures,Fenêtré sans bordures
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,

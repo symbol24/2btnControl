@@ -7,6 +7,10 @@ class_name SaveData extends Resource
 
 # SETTINGS
 
+# Language
+@export var language:int = 0
+
+
 # AUDIO
 @export var master_volume := 0.7
 @export var sfx_volume := 0.7

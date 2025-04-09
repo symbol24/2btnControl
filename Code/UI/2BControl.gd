@@ -1,11 +1,9 @@
 class_name TBControl extends Control
 
-@export var id := ""
+@export var id := &""
 
-func _ready() -> void:
-	S.ToggleDisplay.connect(_toggle_display)
+var previous:StringName = &""
 
-func _toggle_display(_id := "", _visible := true) -> void:
-	if _id == id:
-		#print("Making ", _id, " visible: ", _visible)
-		set_deferred("visible", _visible)
+
+func toggle_display(_visible := true) -> void:
+	visible = _visible

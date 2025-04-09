@@ -16,11 +16,11 @@ func _toggle_gate() -> void:
 	if !open.is_visible():
 		open.show()
 		closed.hide()
-		collider.set_deferred("disabled", true)
+		collider.set_deferred(&"disabled", true)
 		S.PlayAudio.emit(GATE_OPEN)
 	elif open.is_visible():
 		closed.show()
 		open.hide()
-		collider.set_deferred("disabled", false)
+		collider.set_deferred(&"disabled", false)
 		S.PlayAudio.emit(GATE_CLOSED)
 		

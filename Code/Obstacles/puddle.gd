@@ -8,10 +8,10 @@ func _ready() -> void:
 	
 func _body_entered(_body) -> void:
 	if _body is PlayerCar:
-		_body.set_deferred("in_puddle", true)
+		_body.set_deferred(&"in_puddle", true)
 		S.PlayAudio.emit(PUDDLE)
 		
 func _body_exited(_body) -> void:
 	if _body is PlayerCar:
-		_body.set_deferred("in_puddle", false)
+		_body.set_deferred(&"in_puddle", false)
 		S.PlayAudio.emit(PUDDLE)

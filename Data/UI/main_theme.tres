@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=12 format=3 uid="uid://ccmutdk2gfuxo"]
+[gd_resource type="Theme" load_steps=20 format=3 uid="uid://ccmutdk2gfuxo"]
 
 [ext_resource type="StyleBox" uid="uid://byarpmpd2nic0" path="res://Data/UI/style_boxes/button_focus.tres" id="1_rw2q5"]
 [ext_resource type="FontFile" uid="uid://dkt64yh06mdfo" path="res://Data/Fonts/VideoGlauBold.ttf" id="1_xrnyt"]
@@ -6,30 +6,67 @@
 [ext_resource type="FontFile" uid="uid://ckvii6ob74g1e" path="res://Data/Fonts/VideoGlau.ttf" id="2_puhi5"]
 [ext_resource type="StyleBox" uid="uid://cki0pv4spfuxn" path="res://Data/UI/style_boxes/button_pressed.tres" id="2_q7kjh"]
 [ext_resource type="StyleBox" uid="uid://cww3rphpgfe38" path="res://Data/UI/style_boxes/button_normal.tres" id="3_43qxk"]
+[ext_resource type="StyleBox" uid="uid://c4vcxsf7qvsqx" path="res://Data/UI/style_boxes/button_hover.tres" id="4_pb4ls"]
 [ext_resource type="StyleBox" uid="uid://sv0til3jpp0b" path="res://Data/UI/style_boxes/TC_Panel.tres" id="7_o8i6q"]
+[ext_resource type="Texture2D" uid="uid://cy1mvwxyyyu03" path="res://Textures/slider_grabber_normal.png" id="7_oe52x"]
+[ext_resource type="Texture2D" uid="uid://bdlneyh22wc5j" path="res://Textures/slider_grabber_disabled.png" id="8_2tg4d"]
 [ext_resource type="StyleBox" uid="uid://2141kqncnpyc" path="res://Data/UI/style_boxes/TC_tab_disabled.tres" id="8_dgc56"]
+[ext_resource type="Texture2D" uid="uid://0xxonem576nw" path="res://Textures/slider_grabber.png" id="9_acpds"]
 [ext_resource type="StyleBox" uid="uid://biwhaiiojrn4j" path="res://Data/UI/style_boxes/TC_tab_focus.tres" id="9_rqwuq"]
+[ext_resource type="Texture2D" uid="uid://dl8b0vwrdgune" path="res://Textures/slider_tickl.png" id="10_gjmak"]
 [ext_resource type="StyleBox" uid="uid://bwrhxwgu20uoo" path="res://Data/UI/style_boxes/TC_tab_selected.tres" id="10_s7wwb"]
 [ext_resource type="StyleBox" uid="uid://dacqfgx0acb13" path="res://Data/UI/style_boxes/TC_tab_unselected.tres" id="11_ifyqp"]
+[ext_resource type="Texture2D" uid="uid://b0lu16uhsr7mc" path="res://Textures/small_arrow.png" id="11_w6l1m"]
+[ext_resource type="StyleBox" uid="uid://c0j8b4ug5a1rl" path="res://Data/UI/style_boxes/popup_panel.tres" id="12_2tg4d"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kk65i"]
+color = Color(0.41598, 0.41598, 0.41598, 1)
+thickness = 2
 
 [resource]
 default_font = ExtResource("2_puhi5")
 default_font_size = 10
-Button/colors/font_color = Color(1, 0.756863, 0.0313726, 1)
-Button/colors/font_disabled_color = Color(1, 0.756863, 0.0313726, 0.329412)
-Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+Button/colors/font_disabled_color = Color(0.788235, 0.788235, 0.788235, 0.27451)
+Button/colors/font_focus_color = Color(1, 0.756863, 0.0313726, 1)
 Button/colors/font_hover_color = Color(1, 0.756863, 0.0313726, 1)
-Button/colors/font_pressed_color = Color(0.054902, 0.0509804, 0.0862745, 1)
+Button/colors/font_hover_pressed_color = Color(0.787759, 0.787759, 0.787759, 1)
+Button/colors/font_pressed_color = Color(0.41598, 0.41598, 0.41598, 1)
 Button/font_sizes/font_size = 7
 Button/fonts/font = ExtResource("2_puhi5")
 Button/styles/disabled = ExtResource("2_6cvog")
 Button/styles/focus = ExtResource("1_rw2q5")
-Button/styles/hover = ExtResource("1_rw2q5")
+Button/styles/hover = ExtResource("4_pb4ls")
+Button/styles/hover_pressed = ExtResource("2_q7kjh")
 Button/styles/normal = ExtResource("3_43qxk")
 Button/styles/pressed = ExtResource("2_q7kjh")
+HSlider/icons/grabber = ExtResource("7_oe52x")
+HSlider/icons/grabber_disabled = ExtResource("8_2tg4d")
+HSlider/icons/grabber_highlight = ExtResource("9_acpds")
+HSlider/icons/tick = ExtResource("10_gjmak")
+HSlider/styles/slider = SubResource("StyleBoxLine_kk65i")
+HowToLabel/base_type = &"Label"
+HowToLabel/font_sizes/font_size = 6
+MMGameTtileLabel/base_type = &"Label"
+MMGameTtileLabel/font_sizes/font_size = 24
+OptionButton/colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+OptionButton/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+OptionButton/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+OptionButton/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+OptionButton/colors/font_pressed_color = Color(1, 1, 1, 1)
+OptionButton/font_sizes/font_size = 6
+OptionButton/icons/arrow = ExtResource("11_w6l1m")
+PageTitle/base_type = &"Label"
+PageTitle/font_sizes/font_size = 16
+PanelPopup/base_type = &"PanelContainer"
+PanelPopup/styles/panel = ExtResource("12_2tg4d")
+PopupDescription/base_type = &"RichTextLabel"
+PopupDescription/font_sizes/normal_font_size = 8
 RichTextLabel/font_sizes/normal_font_size = 16
 RichTextLabel/fonts/bold_font = ExtResource("1_xrnyt")
 RichTextLabel/fonts/normal_font = ExtResource("2_puhi5")
+SettingsLabel/base_type = &"Label"
+SettingsLabel/font_sizes/font_size = 6
 TabContainer/colors/font_disabled_color = Color(1, 0.756863, 0.0313726, 0.368627)
 TabContainer/colors/font_hovered_color = Color(1, 0.756863, 0.0313726, 1)
 TabContainer/colors/font_selected_color = Color(0.054902, 0.0509804, 0.0862745, 1)

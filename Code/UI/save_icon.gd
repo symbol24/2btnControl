@@ -1,4 +1,4 @@
-class_name SaveIcon extends Control
+class_name SaveIcon extends TBControl
 
 
 @export var cycles:int = 3

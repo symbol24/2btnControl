@@ -1,24 +1,32 @@
 class_name LevelSelector extends TBControl
 
+
 const LEVEL_BUTTON = preload("res://Scenes/UI/level_button.tscn")
 const LEVEL_PAGE = preload("res://Scenes/UI/level_page.tscn")
+
+
+@export var buttons_per_page := 45
 
 @onready var back: Button = %back
 @onready var tab_container: TabContainer = %TabContainer
 
-@export var buttons_per_page := 45
-
 var button_pool := []
 
+
 func _ready() -> void:
-	super()
 	back.pressed.connect(_back_pressed)
 	_construct_level_pages(GM.LEVELS.level_order)
 
+
 func _back_pressed() -> void:
-	hide()
-	S.ResetLevel.emit()
-	S.PauseGame.emit(false)
+	if GM.active_level != null and GM.active_level.is_in_group(&"level"):
+		hide()
+		S.ResetLevel.emit()
+		S.PauseGame.emit(false)
+	else:
+		hide()
+		S.ToggleDisplay.emit(Ui.previous, true)
+
 
 func _construct_level_pages(_level_name:Array[String]) -> void:
 	if !_level_name.is_empty():
@@ -38,10 +46,9 @@ func _construct_level_pages(_level_name:Array[String]) -> void:
 				i += 1
 			tab_container.add_child.call_deferred(new_page)
 
-func _toggle_display(_id := "", _visible := true) -> void:
-	if _id == id:
-		set_deferred("visible", _visible)
-		if !button_pool.is_empty() and _visible:
-			button_pool[0].grab_focus()
-		if _visible: S.PauseGame.emit(true)
-		else: S.PauseGame.emit(false)
+
+func toggle_display(_visible := true) -> void:
+	visible = _visible
+	if _visible:
+		if not button_pool.is_empty() and _visible:
+			button_pool[0].grab_focus.call_deferred()

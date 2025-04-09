@@ -6,10 +6,6 @@ signal LoadSceneFromPath(path)
 signal GameReady(game)
 signal PauseGame(is_paused)
 
-#PlayerData
-signal Save()
-signal Load()
-
 #Gameplay
 signal CarParked()
 signal StartLevelTimer()
@@ -20,10 +16,12 @@ signal ToggleGate(open)
 signal ResetLevel()
 
 #UI
-signal ToggleDisplay(id, is_visible)
+signal ToggleDisplay(id:StringName, is_visible:bool, from:StringName)
 signal UpdateLevelTimer(value)
 signal LevelButtonPressed(level_id)
 signal DisplaySaveIcon()
+signal DisplayPopup(id:StringName, title:String, description:String, timer:int)
+signal PopupResult(id:StringName, result:bool)
 
 #Audio
 signal PlayAudio(audio_data, is_2d)

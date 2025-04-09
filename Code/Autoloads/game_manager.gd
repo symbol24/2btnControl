@@ -2,6 +2,7 @@ extends Node
 
 const LEVELS = preload("res://Data/levels.tres")
 
+
 var is_playing:bool:
 	get:
 		return !get_tree().paused
@@ -30,6 +31,7 @@ var tot_timer_string := ""
 var cone_hit_count := 0
 var level_cones_hit := 0
 
+
 func _ready() -> void:
 	process_mode = PROCESS_MODE_ALWAYS
 	S.LoadScene.connect(_load_scene)
@@ -39,6 +41,7 @@ func _ready() -> void:
 	S.PauseGame.connect(_pause_game)
 	S.StartLevelTimer.connect(_start_timer)
 	S.ConeHit.connect(_cone_hit)
+
 
 func _physics_process(_delta: float) -> void:
 	if is_loading:
@@ -53,11 +56,33 @@ func _physics_process(_delta: float) -> void:
 		current_level_timer += _delta
 		time_string = get_time_string(current_level_timer)
 
+
+func get_time_string(_timer := 0.0) -> String:
+	var msec := fmod(_timer, 1) * 100
+	var sec := fmod(_timer, 60)
+	var mins := fmod(_timer, 3600) / 60
+	return "%02d:%02d.%03d" % [mins, sec, msec]
+
+
+func get_locale_from_int(id:int) -> String:
+	var lang:String = "en"
+	match id:
+		1:
+			lang = "fr"
+		2:
+			lang = "fr-CA"
+		_:
+			pass
+	return lang
+
+
 func _start_timer() -> void:
 	timer_running = true
 
+
 func _pause_game(_value := false) -> void:
-	get_tree().set_deferred("paused", _value)
+	get_tree().set_deferred(&"paused", _value)
+
 
 func _load_from_path(_path := "") -> void:
 	#print("Received load from path signal: ", _path)
@@ -65,16 +90,16 @@ func _load_from_path(_path := "") -> void:
 		var loaded := load(_path)
 		get_tree().change_scene_to_packed.call_deferred(loaded)
 
+
 func _load_scene(_id := "") -> void:
 	#print("received load scene signal for id: ", _id)
-	S.ToggleDisplay.emit("loading_screen", true)
-	S.ToggleDisplay.emit("gameplay_ui", false)
+	S.ToggleDisplay.emit(&"loading_screen", true)
 	time_string = "00.00.000"
 	S.PauseGame.emit(true)
 	var path := LEVELS.get_level(_id)
 	if path == "": 
 		push_error("Level list does not contain ", _id)
-		S.ToggleDisplay.emit("loading_screen", false)
+		S.ToggleDisplay.emit(&"loading_screen", false)
 		return
 	
 	if active_level != null: 
@@ -88,6 +113,7 @@ func _load_scene(_id := "") -> void:
 	ResourceLoader.load_threaded_request(to_load)
 	level_cones_hit = 0
 
+
 func _complete_load() -> void:
 	is_loading = false
 	var new_world := ResourceLoader.load_threaded_get(to_load)
@@ -96,13 +122,16 @@ func _complete_load() -> void:
 	game.add_child.call_deferred(active_level)
 	var wait_timer := get_tree().create_timer(loading_delay)
 	await wait_timer.timeout
-	S.ToggleDisplay.emit("loading_screen", false)
+	if active_level.is_in_group(&"level"): S.ToggleDisplay.emit(&"gameplay_ui", true)
+	else: S.ToggleDisplay.emit(&"loading_screen", false)
 	S.PauseGame.emit(false)
+
 
 func _set_game(_game:Game) -> void:
 	if _game != null:
 		game = _game
 		S.LoadScene.emit("main_menu")
+
 
 func _car_parked() -> void:
 	timer_running = false
@@ -110,14 +139,9 @@ func _car_parked() -> void:
 	total_timer += current_level_timer
 	current_level_timer = 0.0
 	tot_timer_string = get_time_string(total_timer)
-	S.ToggleDisplay.emit("result_screen", true)
+	S.ToggleDisplay.emit(&"result_screen", true)
 	S.PauseGame.emit(true)
 
-func get_time_string(_timer := 0.0) -> String:
-	var msec := fmod(_timer, 1) * 100
-	var sec := fmod(_timer, 60)
-	var mins := fmod(_timer, 3600) / 60
-	return "%02d:%02d.%03d" % [mins, sec, msec]
 
 func _cone_hit() -> void:
 	cone_hit_count += 1

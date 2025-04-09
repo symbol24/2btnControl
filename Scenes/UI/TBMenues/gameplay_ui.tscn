@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://hyyhf40kqab8"]
+
+[ext_resource type="Script" uid="uid://b0rsls5nw4ma4" path="res://Code/UI/gameplay.gd" id="1_7fu0s"]
+[ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="2_n06hh"]
+
+[node name="Gameplay" type="Control"]
+visible = false
+custom_minimum_size = Vector2(320, 180)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_7fu0s")
+id = &"gameplay_ui"
+
+[node name="level_timer" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+clip_contents = false
+custom_minimum_size = Vector2(70, 15)
+layout_mode = 0
+offset_left = 255.0
+offset_top = 5.0
+offset_right = 325.0
+offset_bottom = 20.0
+theme = ExtResource("2_n06hh")
+theme_override_font_sizes/normal_font_size = 10
+text = "00:00.000"
+scroll_active = false

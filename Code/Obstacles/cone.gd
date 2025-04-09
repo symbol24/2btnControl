@@ -15,7 +15,7 @@ func _body_entered(_body) -> void:
 	if _body is PlayerCar and !squished:
 		up.hide()
 		down.show()
-		collider.set_deferred("disabled", true)
+		collider.set_deferred(&"disabled", true)
 		S.ConeHit.emit()
 		S.PlayAudio.emit(CONE_SQUISH)
 		squished = true
