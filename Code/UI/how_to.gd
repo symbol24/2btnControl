@@ -11,3 +11,8 @@ func _ready() -> void:
 func _btn_back_pressed() -> void:
 	hide()
 	S.ToggleDisplay.emit(Ui.previous, true)
+
+
+func toggle_display(_visible := true) -> void:
+	visible = _visible
+	btn_back.grab_focus()

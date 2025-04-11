@@ -170,10 +170,10 @@ autowrap_mode = 3
 [node name="Label7" type="Label" parent="."]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 0
-offset_left = 251.0
-offset_top = 107.0
-offset_right = 306.0
-offset_bottom = 120.0
+offset_left = 263.0
+offset_top = 106.0
+offset_right = 318.0
+offset_bottom = 125.0
 theme_type_variation = &"HowToLabel"
 text = "ht_water_puddle"
 horizontal_alignment = 1

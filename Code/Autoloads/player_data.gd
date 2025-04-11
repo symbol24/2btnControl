@@ -3,9 +3,12 @@ extends Node
 
 const FOLDER = "user://save/"
 const FILE = "save.tres"
-
+const NORMAL_FONT:Font = preload("uid://ckvii6ob74g1e")
+const DYSLEXIC_FONT:Font = preload("uid://rfxvao5asei8")
+const THEME:Theme = preload("uid://ccmutdk2gfuxo")
 
 var data:SaveData = null
+var default_theme:Theme = THEME
 
 
 func _ready() -> void:
@@ -16,6 +19,9 @@ func _ready() -> void:
 	S.UpdateAudioVolume.emit(&"Master", data.master_volume)
 	S.UpdateAudioVolume.emit(&"SFX", data.sfx_volume)
 	S.UpdateAudioVolume.emit(&"Music", data.master_volume)
+	if data.use_dyslexia_friendly_font:
+		if default_theme != null: default_theme.default_font = DYSLEXIC_FONT
+		
 
 
 func save() -> void:

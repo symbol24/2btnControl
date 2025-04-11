@@ -38,6 +38,8 @@ offset_bottom = 170.0
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 22)
 layout_mode = 2
+focus_neighbor_top = NodePath("../btn_quit")
+focus_previous = NodePath("../btn_quit")
 text = "mm_btn_htp"
 
 [node name="btn_level_select" type="Button" parent="buttons"]
@@ -63,6 +65,8 @@ text = "mm_btn_credits"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 22)
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../btn_how_to")
+focus_next = NodePath("../btn_how_to")
 text = "mm_btn_quit"
 
 [node name="btn_close" type="Button" parent="."]
@@ -72,6 +76,7 @@ offset_left = 259.0
 offset_top = 148.0
 offset_right = 310.0
 offset_bottom = 170.0
+focus_neighbor_right = NodePath("../btn_discord")
 theme = ExtResource("3_s0ynw")
 text = "mm_btn_close"
 clip_text = true
@@ -83,6 +88,7 @@ offset_left = 10.0
 offset_top = 148.0
 offset_right = 61.0
 offset_bottom = 170.0
+focus_neighbor_left = NodePath("../btn_close")
 theme = ExtResource("3_s0ynw")
 text = "mm_btn_discord"
 clip_text = true

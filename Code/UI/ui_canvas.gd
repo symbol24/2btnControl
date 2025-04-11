@@ -9,6 +9,7 @@ const RESULTSCREEN:String = "uid://bac7cgigqb4ep"
 const GAMEPLAYUI:String = "uid://hyyhf40kqab8"
 const HOWTO:String = "uid://dy4fgwyyqrdnm"
 const SETTINGS:String = "uid://bn767iuoh3wj4"
+const CREDITS:String = "uid://dkyy7qajjbty2"
 
 
 @onready var uis:Array[TBControl] = []
@@ -64,6 +65,8 @@ func _get_tbcontrol(id:StringName) -> TBControl:
 			to_load = load(HOWTO)
 		&"settings":
 			to_load = load(SETTINGS)
+		&"credits":
+			to_load = load(CREDITS)
 		_:
 			pass
 	if to_load != null:

@@ -1,7 +1,6 @@
-[gd_resource type="Theme" load_steps=20 format=3 uid="uid://ccmutdk2gfuxo"]
+[gd_resource type="Theme" load_steps=24 format=3 uid="uid://ccmutdk2gfuxo"]
 
 [ext_resource type="StyleBox" uid="uid://byarpmpd2nic0" path="res://Data/UI/style_boxes/button_focus.tres" id="1_rw2q5"]
-[ext_resource type="FontFile" uid="uid://dkt64yh06mdfo" path="res://Data/Fonts/VideoGlauBold.ttf" id="1_xrnyt"]
 [ext_resource type="StyleBox" uid="uid://bva86prams52q" path="res://Data/UI/style_boxes/button_disabled.tres" id="2_6cvog"]
 [ext_resource type="FontFile" uid="uid://ckvii6ob74g1e" path="res://Data/Fonts/VideoGlau.ttf" id="2_puhi5"]
 [ext_resource type="StyleBox" uid="uid://cki0pv4spfuxn" path="res://Data/UI/style_boxes/button_pressed.tres" id="2_q7kjh"]
@@ -23,6 +22,30 @@
 color = Color(0.41598, 0.41598, 0.41598, 1)
 thickness = 2
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tg4d"]
+bg_color = Color(1, 0.756863, 0.0313726, 0.658824)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acpds"]
+bg_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.756863, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjmak"]
+bg_color = Color(1, 0.756863, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6l1m"]
+bg_color = Color(0.233925, 0.233925, 0.233925, 1)
+border_width_left = 2
+border_width_right = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kk65i"]
+bg_color = Color(0.314316, 0.314316, 0.314316, 1)
+border_width_left = 2
+border_width_right = 2
+
 [resource]
 default_font = ExtResource("2_puhi5")
 default_font_size = 10
@@ -33,13 +56,16 @@ Button/colors/font_hover_color = Color(1, 0.756863, 0.0313726, 1)
 Button/colors/font_hover_pressed_color = Color(0.787759, 0.787759, 0.787759, 1)
 Button/colors/font_pressed_color = Color(0.41598, 0.41598, 0.41598, 1)
 Button/font_sizes/font_size = 7
-Button/fonts/font = ExtResource("2_puhi5")
 Button/styles/disabled = ExtResource("2_6cvog")
 Button/styles/focus = ExtResource("1_rw2q5")
 Button/styles/hover = ExtResource("4_pb4ls")
 Button/styles/hover_pressed = ExtResource("2_q7kjh")
 Button/styles/normal = ExtResource("3_43qxk")
 Button/styles/pressed = ExtResource("2_q7kjh")
+CreditLabels/base_type = &"Label"
+CreditLabels/font_sizes/font_size = 8
+DyslexiaSettingButton/base_type = &"Button"
+DyslexiaSettingButton/font_sizes/font_size = 6
 HSlider/icons/grabber = ExtResource("7_oe52x")
 HSlider/icons/grabber_disabled = ExtResource("8_2tg4d")
 HSlider/icons/grabber_highlight = ExtResource("9_acpds")
@@ -63,8 +89,6 @@ PanelPopup/styles/panel = ExtResource("12_2tg4d")
 PopupDescription/base_type = &"RichTextLabel"
 PopupDescription/font_sizes/normal_font_size = 8
 RichTextLabel/font_sizes/normal_font_size = 16
-RichTextLabel/fonts/bold_font = ExtResource("1_xrnyt")
-RichTextLabel/fonts/normal_font = ExtResource("2_puhi5")
 SettingsLabel/base_type = &"Label"
 SettingsLabel/font_sizes/font_size = 6
 TabContainer/colors/font_disabled_color = Color(1, 0.756863, 0.0313726, 0.368627)
@@ -79,3 +103,8 @@ TabContainer/styles/tab_focus = ExtResource("9_rqwuq")
 TabContainer/styles/tab_hovered = ExtResource("9_rqwuq")
 TabContainer/styles/tab_selected = ExtResource("10_s7wwb")
 TabContainer/styles/tab_unselected = ExtResource("11_ifyqp")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_2tg4d")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_acpds")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_gjmak")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_w6l1m")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_kk65i")

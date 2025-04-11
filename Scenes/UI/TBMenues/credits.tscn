@@ -1,200 +1,122 @@
-[gd_scene load_steps=3 format=4 uid="uid://bn767iuoh3wj4"]
+[gd_scene load_steps=4 format=4 uid="uid://dkyy7qajjbty2"]
 
-[ext_resource type="Script" uid="uid://1ijxe0jum8vg" path="res://Code/UI/settings.gd" id="1_ln8u1"]
-[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_pgnmc"]
+[ext_resource type="Script" uid="uid://cvdcjpw2gnetr" path="res://Code/UI/credits.gd" id="1_aspst"]
+[ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_runbk"]
+[ext_resource type="Texture2D" uid="uid://dta34lo82pa73" path="res://Textures/UI/logo_back_mini.png" id="3_toxr1"]
 
-[node name="Settings" type="Control"]
+[node name="Credits" type="Control"]
 custom_minimum_size = Vector2(320, 180)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_ln8u1")
-id = &"settings"
+script = ExtResource("1_aspst")
+id = &"credits"
 metadata/_custom_type_script = "uid://bgiq0jiythb07"
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAUAAsAAAAAAAUAAAAUAAoAAAACAAQAAAAUAAkAAAAAAAQAAAAUAAgAAAAAAAQAAAAUAAcAAAAAAAUAAAAUAAYAAAACAAUAAAAUAAUAAAACAAUAAAAUAAQAAAAAAAUAAAAUAAMAAAAAAAQAAAAUAAIAAAABAAMAAAAUAAEAAAAAAAUAAAAUAAAAAAABAAQAAAAUAP//AAACAAQAAAATAAsAAAAAAAQAAAATAAoAAAACAAQAAAATAAkAAAAAAAUAAAATAAgAAAABAAQAAAATAAcAAAACAAUAAAATAAYAAAABAAQAAAATAAUAAAABAAMAAAATAAQAAAACAAQAAAATAAMAAAABAAUAAAATAAIAAAACAAMAAAATAAEAAAABAAMAAAATAAAAAAAAAAUAAAATAP//AAACAAMAAAASAAsAAAAAAAUAAAASAAoAAAAAAAQAAAASAAkAAAACAAQAAAASAAgAAAACAAQAAAASAAcAAAACAAMAAAASAAYAAAAAAAQAAAASAAUAAAABAAMAAAASAAQAAAABAAMAAAASAAMAAAAAAAQAAAASAAIAAAABAAUAAAASAAEAAAABAAQAAAASAAAAAAACAAUAAAASAP//AAACAAQAAAARAAsAAAACAAUAAAARAAoAAAABAAMAAAARAAkAAAAAAAQAAAARAAgAAAAAAAMAAAARAAcAAAAAAAMAAAARAAYAAAAAAAQAAAARAAUAAAABAAMAAAARAAQAAAACAAQAAAARAAMAAAAAAAUAAAARAAIAAAAAAAUAAAARAAEAAAAAAAQAAAARAAAAAAAAAAQAAAARAP//AAACAAQAAAAQAAsAAAAAAAQAAAAQAAoAAAAAAAUAAAAQAAkAAAACAAUAAAAQAAgAAAACAAUAAAAQAAcAAAACAAQAAAAQAAYAAAACAAUAAAAQAAUAAAABAAUAAAAQAAQAAAAAAAMAAAAQAAMAAAABAAMAAAAQAAIAAAACAAQAAAAQAAEAAAABAAMAAAAQAAAAAAAAAAMAAAAQAP//AAABAAQAAAAPAAsAAAAAAAQAAAAPAAoAAAACAAUAAAAPAAkAAAACAAMAAAAPAAgAAAABAAQAAAAPAAcAAAACAAUAAAAPAAYAAAAAAAMAAAAPAAUAAAAAAAQAAAAPAAQAAAABAAUAAAAPAAMAAAAAAAMAAAAPAAIAAAAAAAUAAAAPAAEAAAACAAUAAAAPAAAAAAAAAAMAAAAPAP//AAAAAAUAAAAOAAsAAAAAAAUAAAAOAAoAAAABAAQAAAAOAAkAAAAAAAQAAAAOAAgAAAACAAQAAAAOAAcAAAABAAQAAAAOAAYAAAACAAQAAAAOAAUAAAABAAUAAAAOAAQAAAABAAMAAAAOAAMAAAACAAUAAAAOAAIAAAACAAQAAAAOAAEAAAABAAMAAAAOAAAAAAABAAQAAAAOAP//AAAAAAQAAAANAAsAAAAAAAUAAAANAAoAAAACAAQAAAANAAkAAAABAAMAAAANAAgAAAACAAMAAAANAAcAAAABAAUAAAANAAYAAAAAAAUAAAANAAUAAAACAAMAAAANAAQAAAACAAUAAAANAAMAAAAAAAMAAAANAAIAAAABAAUAAAANAAEAAAAAAAMAAAANAAAAAAACAAQAAAANAP//AAACAAMAAAAMAAsAAAABAAMAAAAMAAoAAAAAAAQAAAAMAAkAAAABAAUAAAAMAAgAAAAAAAQAAAAMAAcAAAABAAUAAAAMAAYAAAACAAMAAAAMAAUAAAAAAAMAAAAMAAQAAAAAAAMAAAAMAAMAAAAAAAMAAAAMAAIAAAACAAMAAAAMAAEAAAAAAAUAAAAMAAAAAAACAAUAAAAMAP//AAAAAAQAAAALAAsAAAABAAUAAAALAAoAAAAAAAMAAAALAAkAAAABAAQAAAALAAgAAAABAAUAAAALAAcAAAABAAQAAAALAAYAAAAAAAQAAAALAAUAAAAAAAUAAAALAAQAAAABAAQAAAALAAMAAAAAAAQAAAALAAIAAAAAAAMAAAALAAEAAAACAAQAAAALAAAAAAAAAAUAAAALAP//AAABAAUAAAAKAAsAAAACAAMAAAAKAAoAAAACAAQAAAAKAAkAAAACAAQAAAAKAAgAAAACAAQAAAAKAAcAAAABAAQAAAAKAAYAAAAAAAQAAAAKAAUAAAABAAQAAAAKAAQAAAABAAMAAAAKAAMAAAACAAUAAAAKAAIAAAAAAAMAAAAKAAEAAAABAAUAAAAKAAAAAAACAAUAAAAKAP//AAABAAMAAAAJAAsAAAACAAUAAAAJAAoAAAACAAMAAAAJAAkAAAACAAUAAAAJAAgAAAABAAMAAAAJAAcAAAAAAAMAAAAJAAYAAAAAAAUAAAAJAAUAAAAAAAUAAAAJAAQAAAABAAMAAAAJAAMAAAABAAUAAAAJAAIAAAABAAQAAAAJAAEAAAABAAMAAAAJAAAAAAAAAAQAAAAJAP//AAAAAAUAAAAIAAsAAAAAAAUAAAAIAAoAAAAAAAMAAAAIAAkAAAAAAAQAAAAIAAgAAAABAAMAAAAIAAcAAAABAAQAAAAIAAYAAAABAAMAAAAIAAUAAAACAAUAAAAIAAQAAAACAAMAAAAIAAMAAAAAAAUAAAAIAAIAAAACAAMAAAAIAAEAAAABAAMAAAAIAAAAAAAAAAQAAAAIAP//AAAAAAUAAAAHAAsAAAACAAMAAAAHAAoAAAABAAQAAAAHAAkAAAAAAAQAAAAHAAgAAAABAAMAAAAHAAcAAAABAAMAAAAHAAYAAAABAAUAAAAHAAUAAAACAAQAAAAHAAQAAAABAAMAAAAHAAMAAAAAAAQAAAAHAAIAAAABAAMAAAAHAAEAAAAAAAUAAAAHAAAAAAAAAAUAAAAHAP//AAABAAMAAAAGAAsAAAACAAQAAAAGAAoAAAACAAMAAAAGAAkAAAACAAQAAAAGAAgAAAABAAUAAAAGAAcAAAAAAAMAAAAGAAYAAAABAAQAAAAGAAUAAAACAAQAAAAGAAQAAAABAAMAAAAGAAMAAAABAAMAAAAGAAIAAAACAAQAAAAGAAEAAAAAAAQAAAAGAAAAAAAAAAQAAAAGAP//AAABAAMAAAAFAAsAAAACAAQAAAAFAAoAAAAAAAQAAAAFAAkAAAACAAUAAAAFAAgAAAABAAUAAAAFAAcAAAAAAAMAAAAFAAYAAAABAAQAAAAFAAUAAAAAAAQAAAAFAAQAAAACAAUAAAAFAAMAAAACAAMAAAAFAAIAAAABAAUAAAAFAAEAAAAAAAMAAAAFAAAAAAAAAAUAAAAFAP//AAACAAUAAAAEAAsAAAACAAMAAAAEAAoAAAABAAMAAAAEAAkAAAABAAQAAAAEAAgAAAAAAAQAAAAEAAcAAAAAAAMAAAAEAAYAAAABAAQAAAAEAAUAAAACAAQAAAAEAAQAAAABAAMAAAAEAAMAAAAAAAUAAAAEAAIAAAACAAUAAAAEAAEAAAAAAAQAAAAEAAAAAAABAAQAAAAEAP//AAABAAUAAAADAAsAAAACAAUAAAADAAoAAAABAAQAAAADAAkAAAACAAQAAAADAAgAAAAAAAUAAAADAAcAAAACAAUAAAADAAYAAAACAAUAAAADAAUAAAAAAAQAAAADAAQAAAACAAUAAAADAAMAAAABAAMAAAADAAIAAAAAAAUAAAADAAEAAAABAAQAAAADAAAAAAABAAUAAAADAP//AAABAAQAAAACAAsAAAAAAAMAAAACAAoAAAABAAQAAAACAAkAAAACAAMAAAACAAgAAAACAAQAAAACAAcAAAACAAQAAAACAAYAAAAAAAQAAAACAAUAAAAAAAMAAAACAAQAAAACAAMAAAACAAMAAAACAAQAAAACAAIAAAACAAQAAAACAAEAAAABAAQAAAACAAAAAAABAAMAAAACAP//AAACAAUAAAABAAsAAAAAAAMAAAABAAoAAAAAAAMAAAABAAkAAAAAAAMAAAABAAgAAAABAAUAAAABAAcAAAABAAUAAAABAAYAAAAAAAUAAAABAAUAAAABAAQAAAABAAQAAAABAAQAAAABAAMAAAABAAMAAAABAAIAAAAAAAQAAAABAAEAAAAAAAUAAAABAAAAAAACAAQAAAABAP//AAAAAAMAAAAAAAsAAAAAAAMAAAAAAAoAAAABAAMAAAAAAAkAAAAAAAQAAAAAAAgAAAACAAUAAAAAAAcAAAACAAQAAAAAAAYAAAABAAQAAAAAAAUAAAABAAUAAAAAAAQAAAACAAQAAAAAAAMAAAAAAAUAAAAAAAIAAAABAAUAAAAAAAEAAAABAAMAAAAAAAAAAAAAAAMAAAAAAP//AAAAAAUAAAD//wsAAAABAAQAAAD//woAAAACAAQAAAD//wkAAAABAAQAAAD//wgAAAACAAMAAAD//wcAAAACAAMAAAD//wYAAAABAAUAAAD//wUAAAABAAQAAAD//wQAAAACAAQAAAD//wMAAAACAAMAAAD//wIAAAABAAUAAAD//wEAAAABAAQAAAD//wAAAAAAAAUAAAD/////AAAAAAMAAAA=")
-tile_set = ExtResource("2_pgnmc")
+tile_set = ExtResource("2_runbk")
 metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(320, 40)
-layout_mode = 0
 offset_right = 40.0
 offset_bottom = 13.0
 theme_type_variation = &"PageTitle"
-text = "settings_title"
+text = "credits_title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(300, 130)
+[node name="btn_close" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 22)
 layout_mode = 0
-offset_left = 10.0
-offset_top = 40.0
-offset_right = 310.0
+offset_left = 260.0
+offset_top = 148.0
+offset_right = 313.0
 offset_bottom = 170.0
-theme_override_constants/separation = 5
+text = "c_btn_close"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+[node name="credits" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 280.0
+offset_bottom = 122.0
+
+[node name="rid" type="TextureRect" parent="credits"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_toxr1")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="GridContainer" type="GridContainer" parent="credits"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 3
-
-[node name="game" type="GridContainer" parent="VBoxContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 6
 columns = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/game"]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_type_variation = &"SettingsLabel"
-text = "set_language"
-clip_text = true
-text_overrun_behavior = 1
-
-[node name="ob_language" type="OptionButton" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 12)
-layout_mode = 2
-size_flags_horizontal = 3
-selected = 0
-item_count = 3
-popup/item_0/text = "english"
-popup/item_0/id = 0
-popup/item_1/text = "french"
-popup/item_1/id = 1
-popup/item_2/text = "quebecois"
-popup/item_2/id = 2
-
-[node name="Label2" type="Label" parent="VBoxContainer/ScrollContainer/game"]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_type_variation = &"SettingsLabel"
-text = "set_master"
-clip_text = true
-text_overrun_behavior = 1
-
-[node name="slider_master" type="HSlider" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
+[node name="Label" type="Label" parent="credits/GridContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-max_value = 1.0
-step = 0.1
-tick_count = 11
-ticks_on_borders = true
+theme_type_variation = &"CreditLabels"
+theme_override_colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+text = "c_me_label"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="Label3" type="Label" parent="VBoxContainer/ScrollContainer/game"]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_type_variation = &"SettingsLabel"
-text = "set_music"
-clip_text = true
-text_overrun_behavior = 1
-
-[node name="slider_music" type="HSlider" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
+[node name="Label2" type="Label" parent="credits/GridContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-max_value = 1.0
-step = 0.1
-tick_count = 11
-ticks_on_borders = true
+theme_type_variation = &"CreditLabels"
+theme_override_colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+text = "c_me_name"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="VBoxContainer/ScrollContainer/game"]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_type_variation = &"SettingsLabel"
-text = "set_sfx"
-clip_text = true
-text_overrun_behavior = 1
-
-[node name="slider_sfx" type="HSlider" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
+[node name="Label3" type="Label" parent="credits/GridContainer"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-max_value = 1.0
-step = 0.1
-tick_count = 11
-ticks_on_borders = true
+theme_type_variation = &"CreditLabels"
+theme_override_colors/font_color = Color(1, 0.756863, 0.0313726, 1)
+text = "c_music_label"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="mode_label" type="Label" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_type_variation = &"SettingsLabel"
-text = "set_window"
-clip_text = true
-text_overrun_behavior = 1
-
-[node name="ob_window" type="OptionButton" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 12)
+[node name="Label4" type="Label" parent="credits/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-selected = 0
-item_count = 3
-popup/item_0/text = "fullscreen"
-popup/item_0/id = 0
-popup/item_1/text = "windowed"
-popup/item_1/id = 1
-popup/item_2/text = "borderless"
-popup/item_2/id = 2
+theme_type_variation = &"CreditLabels"
+theme_override_colors/font_color = Color(1, 0.756863, 0.0313726, 1)
+text = "c_music_name"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="size_label" type="Label" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(80, 0)
+[node name="Label5" type="Label" parent="credits/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-theme_type_variation = &"SettingsLabel"
-text = "c_size_label"
-clip_text = true
-text_overrun_behavior = 1
+size_flags_horizontal = 3
+theme_type_variation = &"CreditLabels"
+theme_override_colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+text = "c_font_label"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="ob_window_size" type="OptionButton" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 12)
+[node name="Label6" type="Label" parent="credits/GridContainer"]
+custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-
-[node name="dyslexia_label" type="Label" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-theme_type_variation = &"SettingsLabel"
-text = "c_dyslexia_label"
-clip_text = true
-text_overrun_behavior = 1
-
-[node name="btn_dyslexia" type="Button" parent="VBoxContainer/ScrollContainer/game"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 12)
-layout_mode = 2
-theme_type_variation = &"DyslexiaSettingButton"
-text = "c_dyslexia_off"
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 22)
-layout_mode = 2
-size_flags_horizontal = 8
-
-[node name="btn_reset" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(60, 22)
-layout_mode = 2
-text = "set_btn_reset"
-clip_text = true
-
-[node name="btn_close" type="Button" parent="VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(60, 22)
-layout_mode = 2
-text = "set_btn_close"
-clip_text = true
+size_flags_horizontal = 3
+theme_type_variation = &"CreditLabels"
+theme_override_colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+text = "c_font_name"
+horizontal_alignment = 1
+vertical_alignment = 1
