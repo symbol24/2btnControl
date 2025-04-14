@@ -1,71 +1,30 @@
-[gd_resource type="Resource" script_class="LoaderData" load_steps=2 format=3 uid="uid://b02jasigu2l3e"]
+[gd_resource type="Resource" script_class="LoaderData" load_steps=24 format=3 uid="uid://b02jasigu2l3e"]
 
 [ext_resource type="Script" uid="uid://btvrixceq6ud0" path="res://Code/Utilities/loader_data.gd" id="1_1qcob"]
+[ext_resource type="Script" uid="uid://fn1rofnofmxd" path="res://Code/Levels/level_data.gd" id="1_hq701"]
+[ext_resource type="Resource" uid="uid://vys2khp75pjr" path="res://Data/Levels/level_001.tres" id="2_j75ct"]
+[ext_resource type="Resource" uid="uid://bakk0gjgiuugj" path="res://Data/Levels/level_000_main_menu.tres" id="2_koxsi"]
+[ext_resource type="Resource" uid="uid://d0sqeotwbmpii" path="res://Data/Levels/level_002.tres" id="3_rwt4t"]
+[ext_resource type="Resource" uid="uid://h7x5xhbf0pqi" path="res://Data/Levels/level_003.tres" id="4_luir1"]
+[ext_resource type="Resource" uid="uid://bso6ok2nykapg" path="res://Data/Levels/level_004.tres" id="5_wxrvg"]
+[ext_resource type="Resource" uid="uid://7fdbf25b8wjo" path="res://Data/Levels/level_005.tres" id="6_7m5j4"]
+[ext_resource type="Resource" uid="uid://cxfdxy1ply0i6" path="res://Data/Levels/level_006.tres" id="7_cshp7"]
+[ext_resource type="Resource" uid="uid://dqaajtfia6rhd" path="res://Data/Levels/level_007.tres" id="8_iugsc"]
+[ext_resource type="Resource" uid="uid://drksems5ngytc" path="res://Data/Levels/level_008.tres" id="9_7hoh0"]
+[ext_resource type="Resource" uid="uid://ca6ag1ym2212u" path="res://Data/Levels/level_009.tres" id="10_c0i5y"]
+[ext_resource type="Resource" uid="uid://bmk0a6qfna770" path="res://Data/Levels/level_010.tres" id="11_jw501"]
+[ext_resource type="Resource" uid="uid://ck4dh7wy824pf" path="res://Data/Levels/level_011.tres" id="12_nc4t1"]
+[ext_resource type="Resource" uid="uid://c8u00aet20gbj" path="res://Data/Levels/level_012.tres" id="13_e6rlq"]
+[ext_resource type="Resource" uid="uid://bx00lhd3mecc5" path="res://Data/Levels/level_013.tres" id="14_cefhs"]
+[ext_resource type="Resource" uid="uid://csd8hyi52xwxc" path="res://Data/Levels/level_014.tres" id="15_ureim"]
+[ext_resource type="Resource" uid="uid://xd85beys2xid" path="res://Data/Levels/level_015.tres" id="16_8itco"]
+[ext_resource type="Resource" uid="uid://brh2f81y14l4a" path="res://Data/Levels/level_016.tres" id="17_hd3gb"]
+[ext_resource type="Resource" uid="uid://vj3yf5ti55iu" path="res://Data/Levels/level_017.tres" id="18_ocbxk"]
+[ext_resource type="Resource" uid="uid://mxgjknvwf0ax" path="res://Data/Levels/level_018.tres" id="19_qffgq"]
+[ext_resource type="Resource" uid="uid://dor1an8xrv1nx" path="res://Data/Levels/level_019.tres" id="20_7p4lc"]
+[ext_resource type="Resource" uid="uid://bv6ulrhlb3wd1" path="res://Data/Levels/level_020.tres" id="21_e51we"]
 
 [resource]
 script = ExtResource("1_1qcob")
-levels = Array[Dictionary]([{
-"id": "main_menu",
-"path": "res://Scenes/UI/main_menu.tscn"
-}, {
-"id": "level_001",
-"path": "res://Scenes/Levels/level_001.tscn"
-}, {
-"id": "level_002",
-"path": "res://Scenes/Levels/level_002.tscn"
-}, {
-"id": "level_003",
-"path": "res://Scenes/Levels/level_003.tscn"
-}, {
-"id": "level_004",
-"path": "res://Scenes/Levels/level_004.tscn"
-}, {
-"id": "level_005",
-"path": "res://Scenes/Levels/level_005.tscn"
-}, {
-"id": "level_006",
-"path": "res://Scenes/Levels/level_006.tscn"
-}, {
-"id": "level_007",
-"path": "res://Scenes/Levels/level_007.tscn"
-}, {
-"id": "level_008",
-"path": "res://Scenes/Levels/level_008.tscn"
-}, {
-"id": "level_009",
-"path": "res://Scenes/Levels/level_009.tscn"
-}, {
-"id": "level_010",
-"path": "res://Scenes/Levels/level_010.tscn"
-}, {
-"id": "level_011",
-"path": "res://Scenes/Levels/level_011.tscn"
-}, {
-"id": "level_012",
-"path": "res://Scenes/Levels/level_012.tscn"
-}, {
-"id": "level_013",
-"path": "res://Scenes/Levels/level_013.tscn"
-}, {
-"id": "level_014",
-"path": "res://Scenes/Levels/level_014.tscn"
-}, {
-"id": "level_015",
-"path": "res://Scenes/Levels/level_015.tscn"
-}, {
-"id": "level_016",
-"path": "res://Scenes/Levels/level_016.tscn"
-}, {
-"id": "level_017",
-"path": "res://Scenes/Levels/level_017.tscn"
-}, {
-"id": "level_018",
-"path": "res://Scenes/Levels/level_018.tscn"
-}, {
-"id": "level_019",
-"path": "res://Scenes/Levels/level_019.tscn"
-}, {
-"id": "level_020",
-"path": "res://Scenes/Levels/level_020.tscn"
-}])
-level_order = Array[String](["level_001", "level_002", "level_003", "level_004", "level_005", "level_006", "level_007", "level_008", "level_009", "level_010", "level_011", "level_012", "level_013", "level_014", "level_015", "level_016", "level_017", "level_018", "level_019", "level_020"])
+level_array = Array[ExtResource("1_hq701")]([ExtResource("2_j75ct"), ExtResource("3_rwt4t"), ExtResource("4_luir1"), ExtResource("5_wxrvg"), ExtResource("6_7m5j4"), ExtResource("7_cshp7"), ExtResource("8_iugsc"), ExtResource("9_7hoh0"), ExtResource("10_c0i5y"), ExtResource("11_jw501"), ExtResource("12_nc4t1"), ExtResource("13_e6rlq"), ExtResource("14_cefhs"), ExtResource("15_ureim"), ExtResource("16_8itco"), ExtResource("17_hd3gb"), ExtResource("18_ocbxk"), ExtResource("19_qffgq"), ExtResource("20_7p4lc"), ExtResource("21_e51we")])
+main_menu = ExtResource("2_koxsi")

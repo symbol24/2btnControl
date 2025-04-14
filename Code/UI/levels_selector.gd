@@ -15,7 +15,7 @@ var button_pool := []
 
 func _ready() -> void:
 	back.pressed.connect(_back_pressed)
-	_construct_level_pages(GM.LEVELS.level_order)
+	_construct_level_pages(GM.LEVELS.levels)
 
 
 func _back_pressed() -> void:
@@ -28,19 +28,20 @@ func _back_pressed() -> void:
 		S.ToggleDisplay.emit(Ui.previous, true)
 
 
-func _construct_level_pages(_level_name:Array[String]) -> void:
-	if !_level_name.is_empty():
-		var page_count = ceil(_level_name.size() / buttons_per_page) if _level_name.size() > 45 else 1
+func _construct_level_pages(levels:Dictionary) -> void:
+	if !levels.is_empty():
+		var keys:Array = levels.keys()
+		var page_count = ceil(keys.size() / buttons_per_page) if keys.size() > 45 else 1
 		#print("constructing ", page_count, " level pages")
 		for x in page_count:
 			var new_page := LEVEL_PAGE.instantiate()
 			new_page.name = "Page "+str(x+1)
 			var i = x * buttons_per_page
-			while i < (x+1) * buttons_per_page and i < _level_name.size():
+			while i < (x+1) * buttons_per_page and i < keys.size():
 				var new_button := LEVEL_BUTTON.instantiate()
 				new_button.name = "level_"+str(i)
-				new_button.level_id = _level_name[i]
-				new_button.text = str(i+1)
+				new_button.level_id = keys[i]
+				new_button.text = str(keys[i])
 				button_pool.append(new_button)
 				new_page.add_child.call_deferred(new_button)
 				i += 1

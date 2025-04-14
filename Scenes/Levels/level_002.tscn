@@ -26,11 +26,13 @@ tile_map_data = PackedByteArray("AAAUAAsAAAAAAAUAAAAUAAoAAAAAAAMAAAAUAAkAAAACAAU
 tile_set = ExtResource("1_pimng")
 
 [node name="fluff" type="TileMapLayer" parent="."]
+position = Vector2(41, 0)
 tile_map_data = PackedByteArray("AAAFAAUAAAAEAAIAAAAGAAUAAAAFAAIAAAA=")
 tile_set = ExtResource("1_pimng")
 
 [node name="fadded" type="TileMapLayer" parent="."]
 modulate = Color(1, 1, 1, 0.368627)
+position = Vector2(40, 0)
 tile_map_data = PackedByteArray("AAACAAEAAAAIAAAAAAACAAIAAAAIAAEAAAACAAMAAAAIAAIAAAADAAEAAAAJAAAAAAADAAIAAAAJAAEAAAADAAMAAAAJAAIAAAAHAAEAAAAIAAAAAAAHAAIAAAAIAAEAAAAHAAMAAAAIAAIAAAAIAAEAAAAJAAAAAAAIAAIAAAAJAAEAAAAIAAMAAAAJAAIAAAA=")
 tile_set = ExtResource("1_pimng")
 
@@ -67,7 +69,7 @@ text = "[center]Do the same thing, but in reverse. What do you mean, you turn le
 scroll_active = false
 
 [node name="parking_spot_big" parent="." instance=ExtResource("3_2dm42")]
-position = Vector2(88, 40)
+position = Vector2(128, 40)
 
 [node name="hut" parent="." instance=ExtResource("5_5nwgp")]
 position = Vector2(295, 88)

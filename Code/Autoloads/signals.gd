@@ -11,6 +11,9 @@ signal CarParked()
 signal StartLevelTimer()
 signal ConeHit()
 signal ToggleGate(open)
+signal CarCrash()
+signal CarReset()
+signal ObjectiveComplete()
 
 #level
 signal ResetLevel()

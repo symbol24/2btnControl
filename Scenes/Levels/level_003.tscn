@@ -149,4 +149,4 @@ vframes = 2
 frame = 1
 
 [node name="PlayerCar" parent="." instance=ExtResource("2_b4pv4")]
-position = Vector2(191, 89)
+position = Vector2(177, 88)

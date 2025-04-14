@@ -233,8 +233,8 @@ func _receive_popup_result(_id:StringName, result:bool) -> void:
 			pass
 
 
-func _set_display_mode(mode:Window_Mode) -> void:
-	match mode:
+func _set_display_mode(_mode:Window_Mode) -> void:
+	match _mode:
 		Window_Mode.BORDERLESS_WINDOWED:
 			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

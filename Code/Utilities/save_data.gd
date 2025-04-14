@@ -1,8 +1,8 @@
 class_name SaveData extends Resource
 
 
-# LEVELS {id:StringName, uid:String, score:int}
-@export var levels:Array[Dictionary] = []
+# LEVELS {int:{score:int, fastet_time:float. last_time:float, medal:int, cones_hit:int}}
+@export var levels:Dictionary = {}
 
 
 # SETTINGS

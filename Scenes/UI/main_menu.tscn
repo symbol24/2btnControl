@@ -102,7 +102,7 @@ uppercase = true
 [node name="level_001" parent="." instance=ExtResource("4_hwnqj")]
 position = Vector2(262, 118)
 rotation = 1.5708
-load_to = "level_001"
+load_to = &"continue"
 
 [node name="cars" type="Node2D" parent="."]
 

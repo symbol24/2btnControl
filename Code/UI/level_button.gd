@@ -1,6 +1,6 @@
 class_name LevelButton extends TBButton
 
-var level_id := ""
+var level_id:int = -1
 
 func _ready() -> void:
 	super()

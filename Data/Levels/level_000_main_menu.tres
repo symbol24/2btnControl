@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://bakk0gjgiuugj"]
+
+[ext_resource type="Script" uid="uid://fn1rofnofmxd" path="res://Code/Levels/level_data.gd" id="1_0o10e"]
+
+[resource]
+script = ExtResource("1_0o10e")
+id = 0
+uid = "uid://dv1wftrvdj81m"
+times = Dictionary[StringName, float]({
+&"bronze": 0.0,
+&"gold": 0.0,
+&"silver": 0.0
+})
+has_cones = false
+metadata/_custom_type_script = "uid://fn1rofnofmxd"

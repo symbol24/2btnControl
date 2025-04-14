@@ -206,6 +206,7 @@ func _set_car_color() -> void:
 func _crash_detecter_body_entered(_body) -> void:
 	if _body is Bumper:
 		return
+	S.CarCrash.emit()
 	var chance = randf_range(0,1)
 	if chance <= data.bark_chance: 
 		S.PlayAudio.emit(BARKS)

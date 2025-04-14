@@ -18,7 +18,7 @@ func _continue_pressed() -> void:
 
 
 func _restart_pressed() -> void:
-	S.LoadScene.emit("current")
+	S.LoadScene.emit(&"current")
 	hide()
 
 
