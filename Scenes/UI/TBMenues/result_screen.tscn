@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://bac7cgigqb4ep"]
+[gd_scene load_steps=7 format=4 uid="uid://bac7cgigqb4ep"]
 
 [ext_resource type="Script" uid="uid://c2t3xs2if7jvj" path="res://Code/UI/result_screen.gd" id="1_fdgx0"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_n6v5o"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_dan2u"]
 [ext_resource type="Script" uid="uid://cqeur4nji36a" path="res://Code/Utilities/tb_button.gd" id="4_bepvv"]
 [ext_resource type="Texture2D" uid="uid://dekt3kors81kr" path="res://Textures/star_empty.png" id="5_n6v5o"]
+[ext_resource type="Texture2D" uid="uid://bhq7ib6g1knie" path="res://Textures/mini_star_empty.png" id="6_dan2u"]
 
 [node name="ResultScreen" type="Control"]
 custom_minimum_size = Vector2(320, 180)
@@ -92,7 +93,7 @@ text = "00:00:000"
 horizontal_alignment = 1
 
 [node name="spacer" type="Control" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 20)
+custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
 
 [node name="details box" type="HBoxContainer" parent="VBoxContainer"]
@@ -107,6 +108,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 2
+size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="VBoxContainer/details box/target score suff"]
 layout_mode = 2
@@ -179,7 +181,7 @@ custom_minimum_size = Vector2(80, 10)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"ResultLabel"
-text = "Level time:"
+text = "Time:"
 
 [node name="level_time" type="Label" parent="VBoxContainer/details box/details"]
 unique_name_in_owner = true
@@ -276,3 +278,14 @@ layout_mode = 2
 [node name="spacer_2" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+
+[node name="cones_star" type="TextureRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.938605, 0.407425, 0.141684, 1)
+layout_mode = 0
+offset_left = 158.0
+offset_top = 118.0
+offset_right = 166.0
+offset_bottom = 126.0
+rotation = -0.523599
+texture = ExtResource("6_dan2u")

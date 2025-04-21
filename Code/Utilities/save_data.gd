@@ -1,7 +1,7 @@
 class_name SaveData extends Resource
 
 
-# LEVELS {int:{score:int, fastet_time:float. last_time:float, medal:int, cones_hit:int}}
+# LEVELS {int:{score:int, score_date:string, fastet_time:float. last_time:float, medal:int, cones_hit:int}}
 @export var levels:Dictionary = {}
 
 

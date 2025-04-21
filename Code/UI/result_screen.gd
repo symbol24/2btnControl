@@ -3,12 +3,15 @@ class_name ResultScreen extends TBControl
 
 const STAREMPTY:String = "uid://dekt3kors81kr"
 const STARFULL:String = "uid://7fh3btgdw4do"
+const MINISSTAREMPTY:String = "uid://bhq7ib6g1knie"
+const MINISTARFULL:String = "uid://dxxoapbnyuxwm"
 
 
 @onready var star_1: TextureRect = %star1
 @onready var star_2: TextureRect = %star2
 @onready var star_3: TextureRect = %star3
 @onready var star_score: TextureRect = %star_score
+@onready var cones_star: TextureRect = %cones_star
 @onready var target_score: Label = %target_score
 @onready var last_score: Label = %last_score
 @onready var high_score: Label = %high_score
@@ -67,11 +70,13 @@ func toggle_display(_visible := true) -> void:
 				least_cones_hit.show()
 				cones_hit_label.show()
 				least_cones_label.show()
+				cones_star.show()
 			else:
 				cones_hit.hide()
 				least_cones_hit.hide()
 				cones_hit_label.hide()
 				least_cones_label.hide()
+				cones_star.hide()
 			bronze.text = GM.get_time_string(GM.level_data.times[&"bronze"])
 			silver.text = GM.get_time_string(GM.level_data.times[&"silver"])
 			gold.text = GM.get_time_string(GM.level_data.times[&"gold"])
@@ -88,6 +93,9 @@ func toggle_display(_visible := true) -> void:
 				fastest_time.text = GM.get_time_string(PD.data.levels[GM.level_data.id][&"fastest_time"])
 				cones_hit.text = str(PD.data.levels[GM.level_data.id][&"cones_hit"])
 				least_cones_hit.text = str(PD.data.levels[GM.level_data.id][&"least_cones"])
+				if PD.data.levels[GM.level_data.id][&"least_cones"] == 0:
+					cones_star.texture = load(MINISTARFULL) as CompressedTexture2D
+				else: cones_star.texture = load(MINISSTAREMPTY) as CompressedTexture2D
 				
 		continue_button.grab_focus()
 

@@ -60,7 +60,7 @@ shape = SubResource("SegmentShape2D_c246a")
 [node name="hut" parent="obstacles" instance=ExtResource("2_gsss5")]
 position = Vector2(27, 152)
 rotation = -1.5708
-level_number = "06"
+level_number = "07"
 
 [node name="Divider" parent="obstacles" instance=ExtResource("4_3c3dx")]
 position = Vector2(38, 112)
