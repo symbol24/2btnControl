@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=24 format=3 uid="uid://ccmutdk2gfuxo"]
+[gd_resource type="Theme" load_steps=30 format=3 uid="uid://ccmutdk2gfuxo"]
 
 [ext_resource type="StyleBox" uid="uid://byarpmpd2nic0" path="res://Data/UI/style_boxes/button_focus.tres" id="1_rw2q5"]
 [ext_resource type="StyleBox" uid="uid://bva86prams52q" path="res://Data/UI/style_boxes/button_disabled.tres" id="2_6cvog"]
@@ -21,6 +21,53 @@
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_kk65i"]
 color = Color(0.41598, 0.41598, 0.41598, 1)
 thickness = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oe52x"]
+bg_color = Color(0.054902, 0.0509804, 0.0862745, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjoup"]
+bg_color = Color(0.054902, 0.0509804, 0.0862745, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.756863, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6dei"]
+bg_color = Color(1, 0.756863, 0.0313726, 0.388235)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.756863, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1p22b"]
+bg_color = Color(1, 0.756863, 0.0313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.787759, 0.787759, 0.787759, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udpbk"]
+bg_color = Color(0.054902, 0.0509804, 0.0862745, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8uyp"]
+bg_color = Color(1, 0.756863, 0.0313726, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.787759, 0.787759, 0.787759, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tg4d"]
 bg_color = Color(1, 0.756863, 0.0313726, 0.658824)
@@ -73,6 +120,18 @@ HSlider/icons/tick = ExtResource("10_gjmak")
 HSlider/styles/slider = SubResource("StyleBoxLine_kk65i")
 HowToLabel/base_type = &"Label"
 HowToLabel/font_sizes/font_size = 6
+LevelButton/base_type = &"Button"
+LevelButton/colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+LevelButton/colors/font_disabled_color = Color(0.788235, 0.788235, 0.788235, 0.27451)
+LevelButton/colors/font_focus_color = Color(1, 0.756863, 0.0313726, 1)
+LevelButton/colors/font_hover_color = Color(1, 0.756863, 0.0313726, 1)
+LevelButton/font_sizes/font_size = 3
+LevelButton/styles/disabled = SubResource("StyleBoxFlat_oe52x")
+LevelButton/styles/focus = SubResource("StyleBoxFlat_rjoup")
+LevelButton/styles/hover = SubResource("StyleBoxFlat_d6dei")
+LevelButton/styles/hover_pressed = SubResource("StyleBoxFlat_1p22b")
+LevelButton/styles/normal = SubResource("StyleBoxFlat_udpbk")
+LevelButton/styles/pressed = SubResource("StyleBoxFlat_y8uyp")
 MMGameTtileLabel/base_type = &"Label"
 MMGameTtileLabel/font_sizes/font_size = 24
 OptionButton/colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)

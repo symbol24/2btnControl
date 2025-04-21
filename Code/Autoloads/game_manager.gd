@@ -1,7 +1,21 @@
 extends Node
 
+
+enum Vehicle_Type {
+					NORMALCAR,
+					COMPACT,
+					SUV,
+					LIMO,
+					BUS,
+					MONSTERTRUCK,
+}
+
+
 const LEVELS = preload("res://Data/levels.tres")
 const SCORECOLOR:Color = Color.RED
+const BRONZE:Color = Color("cd7f32")
+const SILVER:Color = Color("c0c0c0")
+const GOLD:Color = Color("ffd700")
 const CRASHSCOREVALUE:int = 10
 const CONESCOREVALUE:int = 100
 const RESETCSOREVALUE:int = 1000

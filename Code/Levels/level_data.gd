@@ -12,3 +12,4 @@ class_name LevelData extends Resource
 @export var score_star:int = 100
 @export var starting_score:int = 10000
 @export var objective_count:int = 0
+@export var car:GM.Vehicle_Type

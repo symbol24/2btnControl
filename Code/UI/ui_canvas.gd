@@ -39,6 +39,7 @@ func _toggle_ui(id:StringName, _visible:bool = false, _from:StringName = &"") ->
 	previous = _from
 	current = id
 	var tbcontrol:TBControl = _get_tbcontrol(id)
+	if not tbcontrol.is_node_ready(): await tbcontrol.ready
 	if tbcontrol: tbcontrol.toggle_display(_visible)
 
 

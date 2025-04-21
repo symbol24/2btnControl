@@ -1,11 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://bahlrx6e287i2"]
+[gd_scene load_steps=4 format=3 uid="uid://bahlrx6e287i2"]
 
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="1_oxhy1"]
 [ext_resource type="Script" uid="uid://dj4lvrdc5okl4" path="res://Code/UI/level_button.gd" id="2_vta1n"]
+[ext_resource type="Texture2D" uid="uid://dxxoapbnyuxwm" path="res://Textures/mini_star_full.png" id="3_j7lvc"]
 
 [node name="level_button" type="Button"]
-custom_minimum_size = Vector2(18, 18)
+custom_minimum_size = Vector2(9, 9)
+offset_right = 8.0
+offset_bottom = 8.0
 theme = ExtResource("1_oxhy1")
-theme_override_font_sizes/font_size = 5
+theme_type_variation = &"LevelButton"
 text = "000"
 script = ExtResource("2_vta1n")
+
+[node name="star" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 14.0
+offset_bottom = 11.0
+rotation = 0.523599
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_j7lvc")
