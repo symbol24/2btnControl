@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=4 uid="uid://dfbftahbhub4r"]
+[gd_scene load_steps=9 format=4 uid="uid://dfbftahbhub4r"]
 
 [ext_resource type="Script" uid="uid://ceus2aoldchtp" path="res://Code/UI/levels_selector.gd" id="1_yobnx"]
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="2_8rhcx"]
 [ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="3_1xj3g"]
-[ext_resource type="PackedScene" uid="uid://cmke2lvyylppx" path="res://Scenes/Obstacles/car.tscn" id="3_8rhcx"]
+[ext_resource type="PackedScene" uid="uid://colwpxfd28uyc" path="res://Scenes/UI/Stuff/car.tscn" id="3_06tb0"]
+[ext_resource type="PackedScene" uid="uid://swwug4rvis1x" path="res://Scenes/UI/Stuff/car_short.tscn" id="4_hbg8c"]
+[ext_resource type="PackedScene" uid="uid://cffotuvrkv6b4" path="res://Scenes/UI/Stuff/car_long.tscn" id="5_l7k41"]
+[ext_resource type="PackedScene" uid="uid://dco2fgrt1ynh1" path="res://Scenes/UI/Stuff/car_suv.tscn" id="6_3nx13"]
+[ext_resource type="PackedScene" uid="uid://cwhhdygh6xw17" path="res://Scenes/UI/Stuff/car_bus.tscn" id="7_kptru"]
 
 [node name="Levels" type="Control"]
 custom_minimum_size = Vector2(320, 180)
@@ -33,6 +37,10 @@ text = "Select a Level"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="spacer2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(5, 15)
+layout_mode = 2
+
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -48,7 +56,7 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 
-[node name="car" parent="VBoxContainer/GridContainer/car_1/spacer" instance=ExtResource("3_8rhcx")]
+[node name="car" parent="VBoxContainer/GridContainer/car_1/spacer" instance=ExtResource("3_06tb0")]
 position = Vector2(52, 9)
 
 [node name="normal" type="GridContainer" parent="VBoxContainer/GridContainer/car_1"]
@@ -70,8 +78,8 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 
-[node name="car" parent="VBoxContainer/GridContainer/car_2/spacer" instance=ExtResource("3_8rhcx")]
-position = Vector2(53, 9)
+[node name="car_short" parent="VBoxContainer/GridContainer/car_2/spacer" instance=ExtResource("4_hbg8c")]
+position = Vector2(52, 9)
 
 [node name="compact" type="GridContainer" parent="VBoxContainer/GridContainer/car_2"]
 unique_name_in_owner = true
@@ -92,10 +100,10 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 
-[node name="car" parent="VBoxContainer/GridContainer/car_3/spacer" instance=ExtResource("3_8rhcx")]
-position = Vector2(54, 9)
+[node name="CarLong" parent="VBoxContainer/GridContainer/car_3/spacer" instance=ExtResource("5_l7k41")]
+position = Vector2(52, 9)
 
-[node name="suv" type="GridContainer" parent="VBoxContainer/GridContainer/car_3"]
+[node name="limo" type="GridContainer" parent="VBoxContainer/GridContainer/car_3"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -105,6 +113,7 @@ theme_override_constants/v_separation = 1
 columns = 5
 
 [node name="car_4" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -114,10 +123,10 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 
-[node name="car" parent="VBoxContainer/GridContainer/car_4/spacer" instance=ExtResource("3_8rhcx")]
+[node name="CarSuv" parent="VBoxContainer/GridContainer/car_4/spacer" instance=ExtResource("6_3nx13")]
 position = Vector2(52, 9)
 
-[node name="limo" type="GridContainer" parent="VBoxContainer/GridContainer/car_4"]
+[node name="suv" type="GridContainer" parent="VBoxContainer/GridContainer/car_4"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
@@ -127,6 +136,7 @@ theme_override_constants/v_separation = 1
 columns = 5
 
 [node name="car_5" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -136,8 +146,8 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 
-[node name="car" parent="VBoxContainer/GridContainer/car_5/spacer" instance=ExtResource("3_8rhcx")]
-position = Vector2(53, 8)
+[node name="CarBus" parent="VBoxContainer/GridContainer/car_5/spacer" instance=ExtResource("7_kptru")]
+position = Vector2(52, 9)
 
 [node name="bus" type="GridContainer" parent="VBoxContainer/GridContainer/car_5"]
 unique_name_in_owner = true
@@ -149,6 +159,7 @@ theme_override_constants/v_separation = 1
 columns = 5
 
 [node name="car_6" type="VBoxContainer" parent="VBoxContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -158,8 +169,14 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 
-[node name="car" parent="VBoxContainer/GridContainer/car_6/spacer" instance=ExtResource("3_8rhcx")]
-position = Vector2(54, 9)
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer/car_6/spacer"]
+custom_minimum_size = Vector2(104, 18)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 13.0
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="monster_truck" type="GridContainer" parent="VBoxContainer/GridContainer/car_6"]
 unique_name_in_owner = true

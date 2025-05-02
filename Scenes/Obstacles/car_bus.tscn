@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://diefr78yph3hk"]
+
+[ext_resource type="Script" uid="uid://dev6w2lf7oete" path="res://Code/Obstacles/obstacle_car.gd" id="1_hreoh"]
+[ext_resource type="Texture2D" uid="uid://dmhp76uttmc6w" path="res://Textures/Cars/bus.png" id="2_d53am"]
+[ext_resource type="Resource" uid="uid://dby28llx50ilr" path="res://Data/bus_color_data.tres" id="2_h63wc"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_h63wc"]
+points = PackedVector2Array(-30, -11, 30, -11, 31, -10, 31, 10, 30, 11, -30, 11, -31, 10, -31, -10)
+
+[node name="CarBus" type="StaticBody2D"]
+script = ExtResource("1_hreoh")
+car_colors = ExtResource("2_h63wc")
+metadata/_custom_type_script = "uid://dev6w2lf7oete"
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_h63wc")
+
+[node name="outline" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_d53am")
+vframes = 6
+metadata/_edit_lock_ = true
+
+[node name="body" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_d53am")
+vframes = 6
+frame = 4
+metadata/_edit_lock_ = true
+
+[node name="windows" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_d53am")
+vframes = 6
+frame = 2
+metadata/_edit_lock_ = true

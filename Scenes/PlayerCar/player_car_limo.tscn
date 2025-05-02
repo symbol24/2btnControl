@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgvychskfdrii"]
+
+[ext_resource type="Script" uid="uid://b267fnda88uvi" path="res://Code/PlayerCar/player_car.gd" id="1_3pas0"]
+[ext_resource type="Texture2D" uid="uid://dp0aio5tqw6p4" path="res://Textures/Cars/limo.png" id="2_b46ci"]
+[ext_resource type="Script" uid="uid://b8y3p8wsg7lor" path="res://Code/PlayerCar/inputs.gd" id="3_t5bnd"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_7d3ob"]
+points = PackedVector2Array(20, -7, 23, -4, 23, 4, 20, 7, -22, 7, -23, 6, -23, -6, -22, -7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3jyiu"]
+radius = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0u1gk"]
+radius = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xkxi"]
+size = Vector2(48, 16)
+
+[node name="PlayerCarLimo" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_3pas0")
+metadata/_custom_type_script = "uid://b267fnda88uvi"
+
+[node name="move_collider" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_7d3ob")
+
+[node name="outline" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_b46ci")
+vframes = 6
+
+[node name="body" type="Sprite2D" parent="outline"]
+unique_name_in_owner = true
+texture = ExtResource("2_b46ci")
+vframes = 6
+frame = 4
+
+[node name="windows" type="Sprite2D" parent="outline"]
+unique_name_in_owner = true
+texture = ExtResource("2_b46ci")
+vframes = 6
+frame = 5
+
+[node name="front" type="ColorRect" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = -2.0
+offset_right = 26.0
+offset_bottom = 2.0
+color = Color(0.376463, 0, 0.0391056, 1)
+
+[node name="back" type="ColorRect" parent="."]
+visible = false
+offset_left = -26.0
+offset_top = -2.0
+offset_right = -22.0
+offset_bottom = 2.0
+color = Color(0.376463, 0, 0.0391056, 1)
+
+[node name="inputs" type="Node2D" parent="."]
+script = ExtResource("3_t5bnd")
+
+[node name="front_detector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 4
+
+[node name="collider" type="CollisionShape2D" parent="front_detector"]
+position = Vector2(23, 0)
+shape = SubResource("CircleShape2D_3jyiu")
+
+[node name="back_detector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 4
+
+[node name="collider" type="CollisionShape2D" parent="back_detector"]
+position = Vector2(-23, 0)
+shape = SubResource("CircleShape2D_0u1gk")
+
+[node name="crash_detector" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="collider" type="CollisionShape2D" parent="crash_detector"]
+shape = SubResource("RectangleShape2D_2xkxi")

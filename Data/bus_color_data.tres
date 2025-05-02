@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CarColorData" load_steps=2 format=3 uid="uid://dby28llx50ilr"]
+
+[ext_resource type="Script" uid="uid://bq6pmyomxfawg" path="res://Code/Utilities/car_color_data.gd" id="1_7t6as"]
+
+[resource]
+script = ExtResource("1_7t6as")
+colors = Array[Color]([Color(0.76662, 0.76662, 0.76662, 1), Color(0.674431, 0.736741, 0.846834, 1), Color(0.705964, 0.586481, 0.828816, 1), Color(0, 0.823404, 0.695, 1), Color(0.994665, 0.614022, 0.641155, 1), Color(0.93845, 0.93845, 0.93845, 1), Color(0.417758, 0.930559, 0.433755, 1), Color(0.75232, 0.893879, 0.974933, 1), Color(0.721987, 0.788227, 0.775594, 1), Color(0.255659, 0.255659, 0.255659, 1)])
+metadata/_custom_type_script = "uid://bq6pmyomxfawg"

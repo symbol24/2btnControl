@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://oadcs8f6rf4s"]
+
+[ext_resource type="Script" uid="uid://dev6w2lf7oete" path="res://Code/Obstacles/obstacle_car.gd" id="1_yykoh"]
+[ext_resource type="Resource" uid="uid://dejwp1x3xijvq" path="res://Data/car_color_data.tres" id="2_k0doy"]
+[ext_resource type="Texture2D" uid="uid://bicasmpjfxhi4" path="res://Textures/Cars/suv.png" id="3_76na4"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_tjx6e"]
+points = PackedVector2Array(-14, -11, 11, -11, 15, -8, 15, 8, 11, 11, -14, 11, -15, 10, -15, -10)
+
+[node name="CarSuv" type="StaticBody2D"]
+script = ExtResource("1_yykoh")
+car_colors = ExtResource("2_k0doy")
+metadata/_custom_type_script = "uid://dev6w2lf7oete"
+
+[node name="outline" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("3_76na4")
+vframes = 6
+metadata/_edit_lock_ = true
+
+[node name="body" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("3_76na4")
+vframes = 6
+frame = 4
+metadata/_edit_lock_ = true
+
+[node name="windows" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("3_76na4")
+vframes = 6
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="collider" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_tjx6e")

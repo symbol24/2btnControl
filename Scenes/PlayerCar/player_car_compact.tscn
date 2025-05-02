@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpw4y75554q0a"]
+
+[ext_resource type="Script" uid="uid://b267fnda88uvi" path="res://Code/PlayerCar/player_car.gd" id="1_bvt02"]
+[ext_resource type="Resource" uid="uid://scmvn5oaw2ff" path="res://Data/playerCarData.tres" id="2_jklkp"]
+[ext_resource type="Texture2D" uid="uid://57g4m4b3sji3" path="res://Textures/Cars/compact.png" id="2_we3ka"]
+[ext_resource type="Script" uid="uid://b8y3p8wsg7lor" path="res://Code/PlayerCar/inputs.gd" id="3_6qsxj"]
+[ext_resource type="Resource" uid="uid://dejwp1x3xijvq" path="res://Data/car_color_data.tres" id="3_l7b4o"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_jklkp"]
+points = PackedVector2Array(9, -7, 11, -4, 11, 5, 9, 7, -10, 7, -11, 6, -11, -6, -10, -7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l7b4o"]
+radius = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y4u0g"]
+radius = 2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_we3ka"]
+size = Vector2(24, 16)
+
+[node name="PlayerCarCompact" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_bvt02")
+data = ExtResource("2_jklkp")
+car_colors = ExtResource("3_l7b4o")
+metadata/_custom_type_script = "uid://b267fnda88uvi"
+
+[node name="move_collider" type="CollisionShape2D" parent="."]
+shape = SubResource("ConvexPolygonShape2D_jklkp")
+
+[node name="outline" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_we3ka")
+vframes = 6
+
+[node name="body" type="Sprite2D" parent="outline"]
+unique_name_in_owner = true
+texture = ExtResource("2_we3ka")
+vframes = 6
+frame = 4
+
+[node name="windows" type="Sprite2D" parent="outline"]
+unique_name_in_owner = true
+texture = ExtResource("2_we3ka")
+vframes = 6
+frame = 5
+
+[node name="front" type="ColorRect" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = -2.0
+offset_right = 26.0
+offset_bottom = 2.0
+color = Color(0.376463, 0, 0.0391056, 1)
+
+[node name="back" type="ColorRect" parent="."]
+visible = false
+offset_left = -26.0
+offset_top = -2.0
+offset_right = -22.0
+offset_bottom = 2.0
+color = Color(0.376463, 0, 0.0391056, 1)
+
+[node name="inputs" type="Node2D" parent="."]
+script = ExtResource("3_6qsxj")
+
+[node name="front_detector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 4
+
+[node name="collider" type="CollisionShape2D" parent="front_detector"]
+position = Vector2(11, 0)
+shape = SubResource("CircleShape2D_l7b4o")
+
+[node name="back_detector" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 4
+
+[node name="collider" type="CollisionShape2D" parent="back_detector"]
+position = Vector2(-11, 0)
+shape = SubResource("CircleShape2D_y4u0g")
+
+[node name="crash_detector" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="collider" type="CollisionShape2D" parent="crash_detector"]
+shape = SubResource("RectangleShape2D_we3ka")

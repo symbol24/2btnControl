@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cffotuvrkv6b4"]
+
+[ext_resource type="Texture2D" uid="uid://dp0aio5tqw6p4" path="res://Textures/Cars/limo.png" id="1_6r24q"]
+[ext_resource type="Script" uid="uid://s0vrvf6iihrr" path="res://Code/UI/ui_car.gd" id="1_tu1oq"]
+[ext_resource type="Resource" uid="uid://dejwp1x3xijvq" path="res://Data/car_color_data.tres" id="2_6ti2h"]
+
+[node name="CarLong" type="Node2D"]
+script = ExtResource("1_tu1oq")
+car_colors = ExtResource("2_6ti2h")
+
+[node name="outline" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_6r24q")
+vframes = 6
+metadata/_edit_lock_ = true
+
+[node name="body" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_6r24q")
+vframes = 6
+frame = 4
+metadata/_edit_lock_ = true
+
+[node name="windows" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_6r24q")
+vframes = 6
+frame = 2
+metadata/_edit_lock_ = true

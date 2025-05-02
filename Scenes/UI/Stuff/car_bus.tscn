@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwhhdygh6xw17"]
+
+[ext_resource type="Script" uid="uid://s0vrvf6iihrr" path="res://Code/UI/ui_car.gd" id="1_1scw0"]
+[ext_resource type="Texture2D" uid="uid://dmhp76uttmc6w" path="res://Textures/Cars/bus.png" id="1_hetoa"]
+[ext_resource type="Resource" uid="uid://dby28llx50ilr" path="res://Data/bus_color_data.tres" id="2_nem3p"]
+
+[node name="CarBus" type="Node2D"]
+script = ExtResource("1_1scw0")
+car_colors = ExtResource("2_nem3p")
+
+[node name="outline" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_hetoa")
+vframes = 6
+metadata/_edit_lock_ = true
+
+[node name="body" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_hetoa")
+vframes = 6
+frame = 4
+metadata/_edit_lock_ = true
+
+[node name="windows" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_hetoa")
+vframes = 6
+frame = 2
+metadata/_edit_lock_ = true

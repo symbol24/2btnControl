@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://dygi0oanbi5cp"]
+
+[ext_resource type="Script" uid="uid://fn1rofnofmxd" path="res://Code/Levels/level_data.gd" id="1_ljhc8"]
+
+[resource]
+script = ExtResource("1_ljhc8")
+id = 59
+uid = "uid://dktls5yicf8ag"
+times = Dictionary[StringName, float]({
+&"bronze": 60.0,
+&"gold": 30.0,
+&"silver": 45.0
+})
+has_cones = true
+score_star = 100
+starting_score = 10000
+objective_count = 0
+car = 3
+metadata/_custom_type_script = "uid://fn1rofnofmxd"
