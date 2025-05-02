@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=30 format=3 uid="uid://ccmutdk2gfuxo"]
+[gd_resource type="Theme" load_steps=36 format=3 uid="uid://ccmutdk2gfuxo"]
 
 [ext_resource type="StyleBox" uid="uid://byarpmpd2nic0" path="res://Data/UI/style_boxes/button_focus.tres" id="1_rw2q5"]
 [ext_resource type="StyleBox" uid="uid://bva86prams52q" path="res://Data/UI/style_boxes/button_disabled.tres" id="2_6cvog"]
@@ -68,6 +68,30 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.787759, 0.787759, 0.787759, 1)
+
+[sub_resource type="ImageTexture" id="ImageTexture_oe52x"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_2tg4d"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_acpds"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_gjmak"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apqqw"]
+bg_color = Color(0.054902, 0.0509804, 0.0862745, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.756863, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw6kk"]
+bg_color = Color(0.054902, 0.0509804, 0.0862745, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.233925, 0.233925, 0.233925, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tg4d"]
 bg_color = Color(1, 0.756863, 0.0313726, 0.658824)
@@ -147,6 +171,18 @@ PanelPopup/base_type = &"PanelContainer"
 PanelPopup/styles/panel = ExtResource("12_2tg4d")
 PopupDescription/base_type = &"RichTextLabel"
 PopupDescription/font_sizes/normal_font_size = 8
+PopupMenu/colors/font_color = Color(0.787759, 0.787759, 0.787759, 1)
+PopupMenu/colors/font_hover_color = Color(1, 0.756863, 0.0313726, 1)
+PopupMenu/constants/v_separation = 1
+PopupMenu/font_sizes/font_separator_size = 5
+PopupMenu/font_sizes/font_size = 5
+PopupMenu/font_sizes/title_font_size = 5
+PopupMenu/icons/radio_checked = SubResource("ImageTexture_oe52x")
+PopupMenu/icons/radio_checked_disabled = SubResource("ImageTexture_2tg4d")
+PopupMenu/icons/radio_unchecked = SubResource("ImageTexture_acpds")
+PopupMenu/icons/radio_unchecked_disabled = SubResource("ImageTexture_gjmak")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_apqqw")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_mw6kk")
 ResultLabel/base_type = &"Label"
 ResultLabel/font_sizes/font_size = 6
 ResultRTL/base_type = &"RichTextLabel"

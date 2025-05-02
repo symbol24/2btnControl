@@ -94,7 +94,7 @@ position = Vector2(56, 15)
 rotation = 0.575959
 
 [node name="hut" parent="." instance=ExtResource("7_ah1e4")]
-position = Vector2(285, 22)
+position = Vector2(285, 47)
 rotation = 1.5708
 level_number = "03"
 
@@ -108,7 +108,7 @@ offset_bottom = 158.0
 theme = ExtResource("3_nw0em")
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "Press"
+text = "level03_tut_01"
 scroll_active = false
 
 [node name="tutorial_reset2" type="RichTextLabel" parent="."]
@@ -121,7 +121,7 @@ offset_bottom = 158.0
 theme = ExtResource("3_nw0em")
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "at the same time if "
+text = "level03_tut_02"
 scroll_active = false
 
 [node name="tutorial_reset3" type="RichTextLabel" parent="."]
@@ -134,7 +134,7 @@ offset_bottom = 184.0
 theme = ExtResource("3_nw0em")
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "you are stuck. The car wiill return to it's starting position."
+text = "level03_tut_03"
 scroll_active = false
 
 [node name="arrow_up" type="Sprite2D" parent="."]

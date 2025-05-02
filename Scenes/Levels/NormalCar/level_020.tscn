@@ -90,7 +90,7 @@ position = Vector2(131, 168)
 rotation = 0.0349066
 
 [node name="Cone" parent="obstacles" instance=ExtResource("4_eexf8")]
-position = Vector2(285, 106)
+position = Vector2(299, 111)
 
 [node name="Cone2" parent="obstacles" instance=ExtResource("4_eexf8")]
 position = Vector2(134, 112)
@@ -143,10 +143,11 @@ position = Vector2(214, 148)
 rotation = 1.5708
 
 [node name="GateOpener" parent="obstacles" instance=ExtResource("7_huf32")]
-position = Vector2(296, 137)
+position = Vector2(296, 140)
 
 [node name="hut" parent="obstacles" instance=ExtResource("8_n04hs")]
-position = Vector2(299, 20)
+position = Vector2(299, 85)
+rotation = 3.14159
 level_number = "20"
 
 [node name="OilSlick" parent="obstacles" instance=ExtResource("9_i0uev")]

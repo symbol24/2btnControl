@@ -68,7 +68,7 @@ offset_bottom = 68.0
 theme = ExtResource("3_mmyvb")
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
-text = "[center]Alright, you know how to park right? Just stop the car inside the open parking space.[/center]"
+text = "level01_tut"
 scroll_active = false
 
 [node name="cars" type="Node2D" parent="."]

@@ -21,6 +21,7 @@ config/version="1.0"
 run/main_scene="res://Scenes/UI/boot.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://Textures/key_icon.png"
+config/windows_native_icon="res://Textures/icon.ico"
 
 [autoload]
 

@@ -65,7 +65,7 @@ offset_bottom = 192.0
 theme = ExtResource("3_t4mjm")
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
-text = "[center]Do the same thing, but in reverse. What do you mean, you turn left when reversing?[/center]"
+text = "level01_tut"
 scroll_active = false
 
 [node name="parking_spot_big" parent="." instance=ExtResource("3_2dm42")]

@@ -165,6 +165,7 @@ text_overrun_behavior = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 12)
 layout_mode = 2
+fit_to_longest_item = false
 
 [node name="dyslexia_label" type="Label" parent="VBoxContainer/ScrollContainer/game"]
 unique_name_in_owner = true

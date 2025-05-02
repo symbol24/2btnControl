@@ -28,7 +28,7 @@ offset_top = 130.0
 offset_right = 240.0
 offset_bottom = 155.0
 theme = ExtResource("3_natkr")
-text = "LOADING"
+text = "loading_text"
 scroll_active = false
 
 [node name="LoadingTire" parent="." instance=ExtResource("4_8maim")]

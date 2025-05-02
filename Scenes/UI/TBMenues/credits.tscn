@@ -21,6 +21,7 @@ metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
 custom_minimum_size = Vector2(320, 40)
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 13.0
 theme_type_variation = &"PageTitle"
@@ -32,11 +33,12 @@ vertical_alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 22)
 layout_mode = 0
-offset_left = 260.0
+offset_left = 259.0
 offset_top = 148.0
-offset_right = 313.0
+offset_right = 310.0
 offset_bottom = 170.0
 text = "c_btn_close"
+clip_text = true
 
 [node name="credits" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -86,7 +88,6 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"CreditLabels"
-theme_override_colors/font_color = Color(1, 0.756863, 0.0313726, 1)
 text = "c_music_label"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -96,7 +97,6 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"CreditLabels"
-theme_override_colors/font_color = Color(1, 0.756863, 0.0313726, 1)
 text = "c_music_name"
 horizontal_alignment = 1
 vertical_alignment = 1

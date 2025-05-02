@@ -6,3 +6,4 @@ class_name Hut extends StaticBody2D
 
 func _ready() -> void:
 	level_id.text = level_number
+	level_id.rotation = -rotation

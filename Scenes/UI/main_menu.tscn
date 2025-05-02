@@ -75,7 +75,7 @@ offset_right = 350.0
 offset_bottom = 124.0
 rotation = 1.5708
 theme_override_colors/font_color = Color(1, 0.756863, 0.0313726, 1)
-text = "Play"
+text = "mm_play"
 uppercase = true
 
 [node name="park" type="Label" parent="."]
@@ -85,7 +85,7 @@ offset_top = 80.0
 offset_right = 318.0
 offset_bottom = 110.0
 theme_override_colors/font_color = Color(1, 0.756863, 0.0313726, 1)
-text = "Park to"
+text = "mm_park"
 uppercase = true
 
 [node name="this_you" type="Label" parent="."]
@@ -95,7 +95,7 @@ offset_top = 96.0
 offset_right = 215.0
 offset_bottom = 126.0
 theme_override_colors/font_color = Color(0.41598, 0.41598, 0.41598, 1)
-text = "This is you"
+text = "mm_this"
 horizontal_alignment = 1
 uppercase = true
 
@@ -242,7 +242,7 @@ offset_top = 23.0
 offset_right = 255.0
 offset_bottom = 53.0
 theme_override_colors/font_color = Color(0.41598, 0.41598, 0.41598, 1)
-text = "Forward"
+text = "mm_fr"
 uppercase = true
 
 [node name="backward" type="Label" parent="tutorial"]
@@ -252,7 +252,7 @@ offset_top = 43.0
 offset_right = 235.0
 offset_bottom = 73.0
 theme_override_colors/font_color = Color(0.41598, 0.41598, 0.41598, 1)
-text = "Reverse"
+text = "mm_rev"
 uppercase = true
 
 [node name="PlayerCar" parent="." instance=ExtResource("5_hn7w1")]

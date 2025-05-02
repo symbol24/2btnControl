@@ -285,7 +285,8 @@ func _check_display_size() -> void:
 func _populate_window_size() -> void:
 	var i:int = 0
 	while i < WINDOW_SIZES.size():
-		ob_window_size.add_item(str(WINDOW_SIZES[i], i))
+		var size_label:String = str(WINDOW_SIZES[i].x) + " x " + str(WINDOW_SIZES[i].y)
+		ob_window_size.add_item(size_label)
 		i += 1
 	
 
