@@ -52,7 +52,7 @@ func _btn_close_pressed() -> void:
 
 
 func _btn_discord_pressed() -> void:
-	pass
+	OS.shell_open("https://discord.gg/53jFqh7GPt")
 
 
 func toggle_display(_visible := true) -> void:

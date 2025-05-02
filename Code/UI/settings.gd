@@ -23,6 +23,8 @@ enum Window_Mode {
 }
 
 
+@export var display_dyselexia_option:bool = false
+
 @onready var btn_close: Button = %btn_close
 @onready var btn_reset: Button = %btn_reset
 @onready var ob_language: OptionButton = %ob_language
@@ -33,6 +35,7 @@ enum Window_Mode {
 @onready var mode_label: Label = %mode_label
 @onready var size_label: Label = %size_label
 @onready var ob_window_size: OptionButton = %ob_window_size
+@onready var dyslexia_label: Label = %dyslexia_label
 @onready var btn_dyslexia: Button = %btn_dyslexia
 
 var pending:bool = false
@@ -70,10 +73,17 @@ func toggle_display(_visible := true) -> void:
 		mode_label.hide()
 	window_size = PD.data.window_size
 	_check_display_size()
-	use_dyslexia = PD.data.use_dyslexia_friendly_font
-	if use_dyslexia: btn_dyslexia.text = tr("c_dyslexia_on")
-	else: btn_dyslexia.text = tr("c_dyslexia_off")
-	ob_language.grab_focus()
+	if display_dyselexia_option:
+		dyslexia_label.show()
+		btn_dyslexia.show()
+		use_dyslexia = PD.data.use_dyslexia_friendly_font
+		if use_dyslexia: btn_dyslexia.text = tr("c_dyslexia_on")
+		else: btn_dyslexia.text = tr("c_dyslexia_off")
+	else: 
+		dyslexia_label.hide()
+		btn_dyslexia.hide()
+	#ob_language.grab_focus()
+	slider_master.grab_focus()
 	
 
 func _btn_close_pressed() -> void:

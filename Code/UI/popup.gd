@@ -34,6 +34,7 @@ func _display_popup(id:StringName, title:String, description:String, _timer:int 
 		popup_timer.start()
 	else:
 		timer.hide()
+	btn_confirm.grab_focus()
 
 
 func _timer_timeout() -> void:

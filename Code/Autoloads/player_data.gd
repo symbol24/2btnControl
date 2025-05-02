@@ -21,7 +21,7 @@ func _ready() -> void:
 	S.UpdateAudioVolume.emit(&"Music", data.master_volume)
 	if data.use_dyslexia_friendly_font:
 		if default_theme != null: default_theme.default_font = DYSLEXIC_FONT
-		
+	_setup_window_mode(data.window_mode, data.window_size)
 
 
 func save() -> void:
@@ -52,3 +52,18 @@ func _check_folder() -> DirAccess:
 			print_debug("Error creating save folder: ", result)
 			return null
 	return dir
+
+
+func _setup_window_mode(mode:Settings.Window_Mode, size:Vector2i) -> void:
+	match mode:
+		Settings.Window_Mode.BORDERLESS_WINDOWED:
+			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			get_window().set_size(size)
+		Settings.Window_Mode.WINDOWED:
+			DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			get_window().set_size(size)
+		_:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+			
