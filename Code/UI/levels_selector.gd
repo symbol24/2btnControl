@@ -26,6 +26,7 @@ func _ready() -> void:
 func _back_pressed() -> void:
 	if GM.active_level != null and GM.active_level.is_in_group(&"level"):
 		hide()
+		S.HideMouse.emit()
 		S.ResetLevel.emit()
 		S.PauseGame.emit(false)
 	else:

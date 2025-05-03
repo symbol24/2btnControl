@@ -48,6 +48,7 @@ func _btn_quit_pressed() -> void:
 
 func _btn_close_pressed() -> void:
 	hide()
+	S.HideMouse.emit()
 	S.PauseGame.emit(false)
 
 
@@ -68,3 +69,4 @@ func _check_popup_result(_id:StringName, result:bool) -> void:
 				get_tree().quit()
 		_:
 			pass
+			

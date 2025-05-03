@@ -232,4 +232,3 @@ func _reset_level_stuff() -> void:
 	time_string = "00.00.000"
 	objectives_complete = 0
 	car_resets = 0
-	

@@ -19,7 +19,6 @@ func _input(_event: InputEvent) -> void:
 
 
 func _ready() -> void:
-	if not OS.has_feature("editor"): Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
 	animator.animation_finished.connect(_anim_check)
 	await get_tree().create_timer(1).timeout
 	animator.play(current)

@@ -13,21 +13,26 @@ func _ready() -> void:
 
 
 func _continue_pressed() -> void:
-	hide()
+	_hide_self()
 	S.PauseGame.emit(false)
 
 
 func _restart_pressed() -> void:
 	S.LoadScene.emit(&"current")
-	hide()
+	_hide_self()
 
 
 func _exit_pressed() -> void:
 	S.LoadScene.emit("main_menu")
-	hide()
+	_hide_self()
 
 
 func toggle_display(_visible := true) -> void:
 	visible = _visible
 	if _visible: pause_continue.grab_focus.call_deferred()
 	S.PauseGame.emit(_visible)
+
+
+func _hide_self() -> void:
+	hide()
+	S.HideMouse.emit()

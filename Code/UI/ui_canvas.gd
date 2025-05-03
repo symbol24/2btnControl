@@ -29,10 +29,14 @@ func _input(event: InputEvent) -> void:
 				S.ToggleDisplay.emit(&"main_menu", GM.is_playing)
 			elif not GM.is_loading and GM.active_level != null and GM.active_level.is_in_group(&"level") and previous == &"":
 				S.ToggleDisplay.emit(&"pause_menu", GM.is_playing)
+			_toggle_mouse()
 
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	S.ToggleDisplay.connect(_toggle_ui)
+	S.HideMouse.connect(_toggle_mouse)
+	_toggle_mouse()
 
 
 func _toggle_ui(id:StringName, _visible:bool = false, _from:StringName = &"") -> void:
@@ -77,3 +81,17 @@ func _get_tbcontrol(id:StringName) -> TBControl:
 		return tbcontrol
 		
 	return null
+	
+
+func _toggle_mouse() -> void:
+	#if not OS.has_feature("editor"): Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED_HIDDEN)
+	if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED || Input.mouse_mode == Input.MOUSE_MODE_HIDDEN:
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			if not OS.has_feature("editor"): Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+		else:
+			if not OS.has_feature("editor"): Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			if not OS.has_feature("editor"): Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		else:
+			if not OS.has_feature("editor"): Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

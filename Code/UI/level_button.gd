@@ -27,4 +27,5 @@ func toggle_star(id:int) -> void:
 
 func _button_pressed() -> void:
 	S.ToggleDisplay.emit(&"level_selector", false)
+	S.HideMouse.emit()
 	S.LoadScene.emit(level_id)
