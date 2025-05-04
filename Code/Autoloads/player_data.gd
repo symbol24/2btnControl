@@ -18,7 +18,7 @@ func _ready() -> void:
 		save()
 	S.UpdateAudioVolume.emit(&"Master", data.master_volume)
 	S.UpdateAudioVolume.emit(&"SFX", data.sfx_volume)
-	S.UpdateAudioVolume.emit(&"Music", data.master_volume)
+	S.UpdateAudioVolume.emit(&"Music", data.music_volume)
 	if data.use_dyslexia_friendly_font:
 		if default_theme != null: default_theme.default_font = DYSLEXIC_FONT
 	_setup_window_mode(data.window_mode, data.window_size)

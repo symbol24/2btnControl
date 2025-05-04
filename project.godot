@@ -44,6 +44,11 @@ window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
+[editor]
+
+movie_writer/mjpeg_quality=1.0
+movie_writer/movie_file="D:/Videos/ihatethis.avi"
+
 [file_customization]
 
 folder_colors={

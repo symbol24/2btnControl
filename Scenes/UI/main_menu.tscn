@@ -257,3 +257,15 @@ uppercase = true
 
 [node name="PlayerCar" parent="." instance=ExtResource("5_hn7w1")]
 position = Vector2(165, 120)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+modulate = Color(1, 0.756863, 0.0313726, 1)
+custom_minimum_size = Vector2(320, 0)
+offset_top = 96.0
+offset_right = 320.0
+offset_bottom = 126.0
+theme_type_variation = &"MMGameTtileLabel"
+text = "June 3rd 2025"
+horizontal_alignment = 1
+uppercase = true
