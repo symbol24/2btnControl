@@ -57,7 +57,7 @@ shape = SubResource("SegmentShape2D_c246a")
 [node name="obstacles" type="Node2D" parent="."]
 
 [node name="hut" parent="obstacles" instance=ExtResource("2_n6tlp")]
-position = Vector2(195, 161)
+position = Vector2(195, 153)
 rotation = 1.5708
 level_number = "19"
 
@@ -86,7 +86,7 @@ visible = false
 visible = true
 
 [node name="Gate5" parent="obstacles" instance=ExtResource("4_1viyv")]
-position = Vector2(293, 127)
+position = Vector2(293, 104)
 
 [node name="collider" parent="obstacles/Gate5" index="0"]
 disabled = true
@@ -106,7 +106,7 @@ position = Vector2(182, 63)
 rotation = 1.5708
 
 [node name="Gate6" parent="obstacles" instance=ExtResource("4_1viyv")]
-position = Vector2(266, 154)
+position = Vector2(254, 154)
 rotation = 1.5708
 
 [node name="Divider" parent="obstacles" instance=ExtResource("5_4w7ad")]
@@ -122,10 +122,10 @@ position = Vector2(63, 53)
 position = Vector2(63, 86)
 
 [node name="Divider2" parent="obstacles" instance=ExtResource("5_4w7ad")]
-position = Vector2(124, 144)
+position = Vector2(124, 142)
 
 [node name="Divider3" parent="obstacles" instance=ExtResource("5_4w7ad")]
-position = Vector2(190, 120)
+position = Vector2(184, 111)
 
 [node name="Divider7" parent="obstacles" instance=ExtResource("5_4w7ad")]
 position = Vector2(261, 112)
