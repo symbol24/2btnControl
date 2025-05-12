@@ -5,13 +5,13 @@
 [resource]
 script = ExtResource("1_h6el3")
 id = 23
-uid = "uid://cbk1fur20grw"
+uid = "uid://qrgse6nwtj0h"
 times = Dictionary[StringName, float]({
-&"bronze": 20.0,
-&"gold": 2.0,
-&"silver": 5.0
+&"bronze": 30.0,
+&"gold": 22.0,
+&"silver": 45.0
 })
-has_cones = false
+has_cones = true
 score_star = 100
 starting_score = 10000
 objective_count = 0
