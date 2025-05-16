@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://6upkajmu11fm"]
+[gd_scene load_steps=14 format=4 uid="uid://6upkajmu11fm"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_4h1mw"]
 [ext_resource type="PackedScene" uid="uid://banqa38750x1l" path="res://Scenes/Obstacles/cone.tscn" id="2_fictk"]
+[ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="2_m6s1q"]
 [ext_resource type="PackedScene" uid="uid://dpw4y75554q0a" path="res://Scenes/PlayerCar/player_car_compact.tscn" id="3_4h1mw"]
 [ext_resource type="PackedScene" uid="uid://cej66lbo5026q" path="res://Scenes/Obstacles/car_long.tscn" id="4_fwxs0"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="4_ujn41"]
@@ -55,6 +56,19 @@ shape = SubResource("SegmentShape2D_lq3qx")
 [node name="right" type="CollisionShape2D" parent="world_boundries"]
 position = Vector2(320, 0)
 shape = SubResource("SegmentShape2D_c246a")
+
+[node name="level21_text" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0.560784)
+custom_minimum_size = Vector2(160, 50)
+offset_left = 64.0
+offset_top = 8.0
+offset_right = 224.0
+offset_bottom = 68.0
+theme = ExtResource("2_m6s1q")
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "level21_text"
+scroll_active = false
 
 [node name="obstacles" type="Node2D" parent="."]
 

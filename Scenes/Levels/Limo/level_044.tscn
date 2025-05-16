@@ -52,6 +52,10 @@ shape = SubResource("SegmentShape2D_c246a")
 
 [node name="obstacles" type="Node2D" parent="."]
 
+[node name="hut" parent="obstacles" instance=ExtResource("6_506wt")]
+position = Vector2(21, 54)
+level_number = "44"
+
 [node name="parking_spot_big" parent="." instance=ExtResource("2_v26bw")]
 position = Vector2(248, 87)
 rotation = 1.5708
@@ -60,7 +64,3 @@ rotation = 1.5708
 position = Vector2(116, 88)
 data = ExtResource("4_3im3k")
 car_colors = ExtResource("5_1yw47")
-
-[node name="hut" parent="." instance=ExtResource("6_506wt")]
-position = Vector2(21, 54)
-level_number = "44"
