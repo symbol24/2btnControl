@@ -11,7 +11,7 @@ times = Dictionary[StringName, float]({
 &"gold": 21.5,
 &"silver": 26.0
 })
-has_cones = true
+has_cones = false
 score_star = 100
 starting_score = 10000
 objective_count = 0

@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://dkotrthi04xxi"]
+[gd_scene load_steps=11 format=4 uid="uid://dkotrthi04xxi"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_wcj6i"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="2_phwav"]
-[ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="3_2bt4c"]
+[ext_resource type="PackedScene" uid="uid://bnvrv7ryb8k5d" path="res://Scenes/Obstacles/bumper.tscn" id="3_phwav"]
 [ext_resource type="PackedScene" uid="uid://dpw4y75554q0a" path="res://Scenes/PlayerCar/player_car_compact.tscn" id="4_1duox"]
+[ext_resource type="PackedScene" uid="uid://banqa38750x1l" path="res://Scenes/Obstacles/cone.tscn" id="4_2bt4c"]
+[ext_resource type="PackedScene" uid="uid://fkn7f766j6ti" path="res://Scenes/ParkingSpots/parking_spot.tscn" id="4_phwav"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wux44"]
 b = Vector2(320, 0)
@@ -51,12 +53,132 @@ shape = SubResource("SegmentShape2D_c246a")
 [node name="obstacles" type="Node2D" parent="."]
 
 [node name="hut" parent="obstacles" instance=ExtResource("2_phwav")]
-position = Vector2(29, 106)
+position = Vector2(20, 160)
+rotation = 3.14159
 level_number = "30"
 
-[node name="parking_spot_big" parent="." instance=ExtResource("3_2bt4c")]
-position = Vector2(248, 87)
+[node name="Bumper" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(70, 96)
+
+[node name="Bumper2" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(104, 96)
+
+[node name="Bumper3" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(138, 96)
+
+[node name="Bumper4" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(172, 96)
+
+[node name="Bumper5" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(206, 96)
+
+[node name="Bumper6" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(240, 96)
+
+[node name="Bumper7" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(70, 148)
+rotation = 3.14159
+
+[node name="Bumper8" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(104, 148)
+rotation = 3.14159
+
+[node name="Bumper9" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(138, 148)
+rotation = 3.14159
+
+[node name="Bumper10" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(172, 148)
+rotation = 3.14159
+
+[node name="Bumper11" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(206, 148)
+rotation = 3.14159
+
+[node name="Bumper12" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(240, 148)
+rotation = 3.14159
+
+[node name="Bumper13" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(274, 148)
+rotation = 3.14159
+
+[node name="Bumper15" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(70, 17)
+
+[node name="Bumper16" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(104, 17)
+
+[node name="Bumper17" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(138, 17)
+
+[node name="Bumper18" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(172, 17)
+
+[node name="Bumper19" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(206, 17)
+
+[node name="Bumper20" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(240, 17)
+
+[node name="Bumper21" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(70, 69)
+rotation = 3.14159
+
+[node name="Bumper22" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(104, 69)
+rotation = 3.14159
+
+[node name="Bumper23" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(138, 69)
+rotation = 3.14159
+
+[node name="Bumper24" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(172, 69)
+rotation = 3.14159
+
+[node name="Bumper25" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(206, 69)
+rotation = 3.14159
+
+[node name="Bumper26" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(240, 69)
+rotation = 3.14159
+
+[node name="Bumper27" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(274, 17)
+
+[node name="Bumper28" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(307, 28)
+rotation = 0.785398
+
+[node name="Bumper29" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(317, 64)
 rotation = 1.5708
 
+[node name="Bumper30" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(317, 99)
+rotation = 1.5708
+
+[node name="Bumper31" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(266, 83)
+rotation = -1.5708
+
+[node name="Bumper14" parent="obstacles" instance=ExtResource("3_phwav")]
+position = Vector2(308, 135)
+rotation = 2.35619
+
+[node name="Cone" parent="obstacles" instance=ExtResource("4_2bt4c")]
+position = Vector2(41, 96)
+
+[node name="Cone2" parent="obstacles" instance=ExtResource("4_2bt4c")]
+position = Vector2(41, 70)
+
+[node name="Cone3" parent="obstacles" instance=ExtResource("4_2bt4c")]
+position = Vector2(19, 82)
+
+[node name="parking_spot" parent="." instance=ExtResource("4_phwav")]
+position = Vector2(25, 23)
+
 [node name="PlayerCarCompact" parent="." instance=ExtResource("4_1duox")]
-position = Vector2(111, 87)
+position = Vector2(106, 122)

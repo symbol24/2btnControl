@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=4 uid="uid://daqpnkojqg1bs"]
+[gd_scene load_steps=12 format=4 uid="uid://daqpnkojqg1bs"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_68txg"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="2_5k6m5"]
-[ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="3_fm8rb"]
+[ext_resource type="PackedScene" uid="uid://banqa38750x1l" path="res://Scenes/Obstacles/cone.tscn" id="3_7lrpa"]
 [ext_resource type="PackedScene" uid="uid://dpw4y75554q0a" path="res://Scenes/PlayerCar/player_car_compact.tscn" id="4_7lrpa"]
+[ext_resource type="PackedScene" uid="uid://br04k8swrm7d4" path="res://Scenes/Obstacles/divider.tscn" id="4_8f728"]
+[ext_resource type="PackedScene" uid="uid://bw2gixajk2fps" path="res://Scenes/ParkingSpots/parking_spot_thin.tscn" id="4_68txg"]
+[ext_resource type="PackedScene" uid="uid://c1xyv4yx83ncd" path="res://Scenes/Obstacles/gate.tscn" id="7_odbih"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wux44"]
 b = Vector2(320, 0)
@@ -27,9 +30,20 @@ tile_map_data = PackedByteArray("AAAUAAsAAAACAAQAAAAUAAoAAAAAAAMAAAAUAAkAAAAAAAU
 tile_set = ExtResource("1_68txg")
 
 [node name="spots" type="TileMapLayer" parent="."]
+rotation = -1.5708
+tile_map_data = PackedByteArray("AAD+/wAAAAAHAAQAAAD+/wEAAAAHAAUAAAD//wAAAAAIAAQAAAD//wEAAAAIAAUAAAAAAAAAAAAJAAQAAAAAAAEAAAAJAAUAAAD7/wAAAAAHAAQAAAD7/wEAAAAHAAUAAAD8/wAAAAAIAAQAAAD8/wEAAAAIAAUAAAD9/wAAAAAJAAQAAAD9/wEAAAAJAAUAAAD4/wAAAAAHAAQAAAD4/wEAAAAHAAUAAAD5/wAAAAAIAAQAAAD5/wEAAAAIAAUAAAD6/wAAAAAJAAQAAAD6/wEAAAAJAAUAAAD1/wAAAAAHAAQAAAD1/wEAAAAHAAUAAAD2/wAAAAAIAAQAAAD2/wEAAAAIAAUAAAD3/wAAAAAJAAQAAAD3/wEAAAAJAAUAAAA=")
+tile_set = ExtResource("1_68txg")
+
+[node name="spots2" type="TileMapLayer" parent="."]
+rotation = 1.5708
+scale = Vector2(-1, 1)
+tile_map_data = PackedByteArray("AAAAAAEAAAAJAAUAAAD+/+z/AAAHAAQAAAD+/+3/AAAHAAUAAAD//+z/AAAIAAQAAAD//+3/AAAIAAUAAAAAAOz/AAAJAAQAAAAAAO3/AAAJAAUAAAD7/+z/AAAHAAQAAAD7/+3/AAAHAAUAAAD8/+z/AAAIAAQAAAD8/+3/AAAIAAUAAAD9/+z/AAAJAAQAAAD9/+3/AAAJAAUAAAD4/+z/AAAHAAQAAAD4/+3/AAAHAAUAAAD5/+z/AAAIAAQAAAD5/+3/AAAIAAUAAAD6/+z/AAAJAAQAAAD6/+3/AAAJAAUAAAD1/+z/AAAHAAQAAAD1/+3/AAAHAAUAAAD2/+z/AAAIAAQAAAD2/+3/AAAIAAUAAAD3/+z/AAAJAAQAAAD3/+3/AAAJAAUAAAA=")
 tile_set = ExtResource("1_68txg")
 
 [node name="arrows" type="TileMapLayer" parent="."]
+position = Vector2(8, -11)
+rotation = -1.5708
+tile_map_data = PackedByteArray("AAD2/wkAAAACAAIAAAD3/wkAAAADAAIAAAA=")
 tile_set = ExtResource("1_68txg")
 
 [node name="world_boundries" type="StaticBody2D" parent="."]
@@ -51,12 +65,70 @@ shape = SubResource("SegmentShape2D_c246a")
 [node name="obstacles" type="Node2D" parent="."]
 
 [node name="hut" parent="obstacles" instance=ExtResource("2_5k6m5")]
-position = Vector2(29, 106)
+position = Vector2(128, 19)
+rotation = -1.5708
 level_number = "38"
 
-[node name="parking_spot_big" parent="." instance=ExtResource("3_fm8rb")]
-position = Vector2(248, 87)
-rotation = 1.5708
+[node name="Cone" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(103, 47)
+
+[node name="Cone2" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(86, 64)
+
+[node name="Cone3" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(74, 86)
+
+[node name="Cone4" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(74, 109)
+
+[node name="Cone5" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(86, 129)
+
+[node name="Cone6" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(103, 150)
+
+[node name="Cone7" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(213, 47)
+
+[node name="Cone8" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(232, 64)
+
+[node name="Cone9" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(243, 86)
+
+[node name="Cone10" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(243, 109)
+
+[node name="Cone11" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(232, 129)
+
+[node name="Cone12" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(213, 150)
+
+[node name="Cone13" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(192, 162)
+
+[node name="Cone14" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(171, 166)
+
+[node name="Cone15" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(150, 166)
+
+[node name="Cone16" parent="obstacles" instance=ExtResource("3_7lrpa")]
+position = Vector2(128, 162)
+
+[node name="Divider" parent="obstacles" instance=ExtResource("4_8f728")]
+position = Vector2(139, 91)
+
+[node name="Divider2" parent="obstacles" instance=ExtResource("4_8f728")]
+position = Vector2(180, 91)
+
+[node name="Gate" parent="obstacles" instance=ExtResource("7_odbih")]
+position = Vector2(160, 69)
+
+[node name="parking_spot" parent="." instance=ExtResource("4_68txg")]
+position = Vector2(160, 90)
 
 [node name="PlayerCarCompact" parent="." instance=ExtResource("4_7lrpa")]
-position = Vector2(111, 87)
+position = Vector2(160, 18)
+rotation = 1.5708

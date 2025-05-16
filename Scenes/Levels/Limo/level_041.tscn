@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://bpsyvhcxpbno3"]
+[gd_scene load_steps=13 format=4 uid="uid://bpsyvhcxpbno3"]
 
 [ext_resource type="TileSet" uid="uid://ctb0cwkl7fnqv" path="res://Data/parking_tileset.tres" id="1_i11as"]
 [ext_resource type="PackedScene" uid="uid://b42l5e3jvdua0" path="res://Scenes/ParkingSpots/parking_spot_big.tscn" id="2_dqq5h"]
@@ -6,6 +6,8 @@
 [ext_resource type="Resource" uid="uid://scmvn5oaw2ff" path="res://Data/playerCarData.tres" id="4_ru506"]
 [ext_resource type="Resource" uid="uid://dejwp1x3xijvq" path="res://Data/car_color_data.tres" id="5_5vy37"]
 [ext_resource type="PackedScene" uid="uid://bwl2vsp3q63hm" path="res://Scenes/Obstacles/hut.tscn" id="6_dqq5h"]
+[ext_resource type="PackedScene" uid="uid://banqa38750x1l" path="res://Scenes/Obstacles/cone.tscn" id="7_xqvhl"]
+[ext_resource type="Theme" uid="uid://ccmutdk2gfuxo" path="res://Data/UI/main_theme.tres" id="8_ru506"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wux44"]
 b = Vector2(320, 0)
@@ -32,6 +34,8 @@ tile_set = ExtResource("1_i11as")
 tile_set = ExtResource("1_i11as")
 
 [node name="arrows" type="TileMapLayer" parent="."]
+position = Vector2(0, -6)
+tile_map_data = PackedByteArray("AAACAAYAAAAEAAIAAAADAAYAAAAFAAIAAAA=")
 tile_set = ExtResource("1_i11as")
 
 [node name="world_boundries" type="StaticBody2D" parent="."]
@@ -50,17 +54,32 @@ shape = SubResource("SegmentShape2D_lq3qx")
 position = Vector2(320, 0)
 shape = SubResource("SegmentShape2D_c246a")
 
+[node name="level41_text" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0.560784)
+custom_minimum_size = Vector2(160, 50)
+offset_left = 74.0
+offset_top = 8.0
+offset_right = 234.0
+offset_bottom = 68.0
+theme = ExtResource("8_ru506")
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+text = "level41_text"
+scroll_active = false
+
 [node name="obstacles" type="Node2D" parent="."]
 
+[node name="Cone" parent="obstacles" instance=ExtResource("7_xqvhl")]
+position = Vector2(38, 11)
+
+[node name="hut" parent="obstacles" instance=ExtResource("6_dqq5h")]
+position = Vector2(286, 94)
+level_number = "41"
+
 [node name="parking_spot_big" parent="." instance=ExtResource("2_dqq5h")]
-position = Vector2(248, 87)
-rotation = 1.5708
+position = Vector2(39, 46)
 
 [node name="PlayerCarLimo" parent="." instance=ExtResource("3_xqvhl")]
-position = Vector2(116, 88)
+position = Vector2(157, 102)
 data = ExtResource("4_ru506")
 car_colors = ExtResource("5_5vy37")
-
-[node name="hut" parent="." instance=ExtResource("6_dqq5h")]
-position = Vector2(21, 54)
-level_number = "41"
