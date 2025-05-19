@@ -69,12 +69,9 @@ scroll_active = false
 
 [node name="obstacles" type="Node2D" parent="."]
 
-<<<<<<< HEAD
 [node name="Cone" parent="obstacles" instance=ExtResource("7_xqvhl")]
 position = Vector2(38, 11)
 
-=======
->>>>>>> origin/steam
 [node name="hut" parent="obstacles" instance=ExtResource("6_dqq5h")]
 position = Vector2(286, 94)
 level_number = "41"
@@ -86,22 +83,3 @@ position = Vector2(39, 46)
 position = Vector2(157, 102)
 data = ExtResource("4_ru506")
 car_colors = ExtResource("5_5vy37")
-<<<<<<< HEAD
-=======
-
-[node name="Cone" parent="." instance=ExtResource("7_xqvhl")]
-position = Vector2(38, 11)
-
-[node name="level41_text" type="RichTextLabel" parent="."]
-modulate = Color(1, 1, 1, 0.560784)
-custom_minimum_size = Vector2(160, 50)
-offset_left = 74.0
-offset_top = 8.0
-offset_right = 234.0
-offset_bottom = 68.0
-theme = ExtResource("8_ru506")
-theme_override_font_sizes/normal_font_size = 11
-bbcode_enabled = true
-text = "level41_text"
-scroll_active = false
->>>>>>> origin/steam

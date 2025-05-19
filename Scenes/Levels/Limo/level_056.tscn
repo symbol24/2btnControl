@@ -60,7 +60,6 @@ shape = SubResource("SegmentShape2D_c246a")
 [node name="obstacles" type="Node2D" parent="."]
 
 [node name="hut" parent="obstacles" instance=ExtResource("6_4hrcl")]
-<<<<<<< HEAD
 position = Vector2(25, 23)
 rotation = -1.5708
 level_number = "56"
@@ -167,14 +166,6 @@ position = Vector2(272, 156)
 
 [node name="parking_spot" parent="." instance=ExtResource("3_1t0l0")]
 position = Vector2(257, 27)
-=======
-position = Vector2(21, 54)
-level_number = "56"
-
-[node name="parking_spot_big" parent="." instance=ExtResource("2_75var")]
-position = Vector2(248, 87)
-rotation = 1.5708
->>>>>>> origin/steam
 
 [node name="PlayerCarLimo" parent="." instance=ExtResource("3_8s6xl")]
 position = Vector2(62, 30)

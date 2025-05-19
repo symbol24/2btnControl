@@ -154,10 +154,6 @@ rotation = 1.5708
 [node name="parking_spot" parent="." instance=ExtResource("6_rt83i")]
 position = Vector2(36, 156)
 rotation = 0.485724
-<<<<<<< HEAD
-=======
-scale = Vector2(1, 1)
->>>>>>> origin/steam
 
 [node name="PlayerCarCompact" parent="." instance=ExtResource("4_pbsja")]
 position = Vector2(300, 34)
