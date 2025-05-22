@@ -18,6 +18,7 @@ func _continue_pressed() -> void:
 
 
 func _restart_pressed() -> void:
+	GM.timer_running = false
 	S.LoadScene.emit(&"current")
 	_hide_self()
 

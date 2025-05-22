@@ -17,11 +17,12 @@ const CREDITS:String = "uid://dkyy7qajjbty2"
 var previous:StringName = &""
 var current:StringName = &""
 var ls_displayed:bool = false
+var active_screen:StringName = &""
 
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"pause"):
-		if previous != &"":
+		if previous != &"" and not active_screen in [&"loading_screen", &"result_screen"]:
 			S.ToggleDisplay.emit(current, false, previous)
 			S.ToggleDisplay.emit(previous, true)
 		else:
