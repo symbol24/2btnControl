@@ -20,6 +20,7 @@ size = Vector2(32, 16)
 
 [node name="PlayerCar" type="CharacterBody2D"]
 process_mode = 1
+top_level = true
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_jkyj6")

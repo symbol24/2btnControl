@@ -12,8 +12,8 @@ times = Dictionary[StringName, float]({
 &"silver": 10.0
 })
 has_cones = true
-score_star = 100
-starting_score = 10000
+score_star = 2800
+starting_score = 3000
 objective_count = 0
 car = 0
 metadata/_custom_type_script = "uid://fn1rofnofmxd"

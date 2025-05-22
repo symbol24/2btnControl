@@ -60,7 +60,13 @@ shape = SubResource("SegmentShape2D_lq3qx")
 position = Vector2(320, 0)
 shape = SubResource("SegmentShape2D_c246a")
 
+[node name="parking_spot" parent="." instance=ExtResource("6_xsnw6")]
+position = Vector2(52, 111)
+
 [node name="obstacles" type="Node2D" parent="."]
+
+[node name="PotHole" parent="obstacles" instance=ExtResource("12_1v24n")]
+position = Vector2(135, 74)
 
 [node name="hut" parent="obstacles" instance=ExtResource("6_tr7hc")]
 position = Vector2(52, 20)
@@ -185,26 +191,17 @@ rotation = -1.36398
 position = Vector2(123, 96)
 rotation = -1.21854
 
-[node name="parking_spot" parent="." instance=ExtResource("6_xsnw6")]
-position = Vector2(52, 111)
+[node name="Bumper" parent="obstacles" instance=ExtResource("10_r5hxy")]
+position = Vector2(299, 55)
+rotation = 1.5708
+
+[node name="Cone" parent="obstacles" instance=ExtResource("11_nfglo")]
+position = Vector2(302, 128)
+
+[node name="OilSlick" parent="obstacles" instance=ExtResource("13_hd8p6")]
+position = Vector2(241, 97)
 
 [node name="PlayerCarLimo" parent="." instance=ExtResource("3_ga7og")]
 position = Vector2(63, 57)
 data = ExtResource("4_hxgvd")
 car_colors = ExtResource("5_vtsp4")
-
-[node name="Bumper" parent="." instance=ExtResource("10_r5hxy")]
-position = Vector2(299, 55)
-rotation = 1.5708
-
-[node name="Cone" parent="." instance=ExtResource("11_nfglo")]
-position = Vector2(302, 128)
-
-[node name="PotHole" parent="." instance=ExtResource("12_1v24n")]
-position = Vector2(125, 48)
-
-[node name="PotHole2" parent="." instance=ExtResource("12_1v24n")]
-position = Vector2(173, 61)
-
-[node name="OilSlick" parent="." instance=ExtResource("13_hd8p6")]
-position = Vector2(241, 97)

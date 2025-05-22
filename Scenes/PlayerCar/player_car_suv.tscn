@@ -19,6 +19,7 @@ radius = 2.0
 size = Vector2(32, 24)
 
 [node name="PlayerCarSuv" type="CharacterBody2D"]
+top_level = true
 collision_layer = 2
 script = ExtResource("1_j4wc8")
 data = ExtResource("2_byjwg")

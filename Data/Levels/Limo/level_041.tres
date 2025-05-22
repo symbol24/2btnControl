@@ -7,13 +7,13 @@ script = ExtResource("1_ae8y6")
 id = 41
 uid = "uid://bpsyvhcxpbno3"
 times = Dictionary[StringName, float]({
-&"bronze": 10.1,
-&"gold": 1.8,
-&"silver": 2.2
+&"bronze": 2.0,
+&"gold": 1.6,
+&"silver": 1.7
 })
 has_cones = true
-score_star = 100
-starting_score = 10000
+score_star = 3000
+starting_score = 3000
 objective_count = 0
 car = 3
 metadata/_custom_type_script = "uid://fn1rofnofmxd"

@@ -17,6 +17,7 @@ radius = 2.0
 size = Vector2(48, 16)
 
 [node name="PlayerCarLimo" type="CharacterBody2D"]
+top_level = true
 collision_layer = 2
 script = ExtResource("1_3pas0")
 metadata/_custom_type_script = "uid://b267fnda88uvi"
