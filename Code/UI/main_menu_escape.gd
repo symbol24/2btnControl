@@ -48,7 +48,7 @@ func _btn_quit_pressed() -> void:
 
 func _btn_close_pressed() -> void:
 	hide()
-	S.HideMouse.emit()
+	S.ToggleMouse.emit(false)
 	S.PauseGame.emit(false)
 
 
@@ -60,6 +60,7 @@ func toggle_display(_visible := true) -> void:
 	visible = _visible
 	if _visible: btn_how_to.grab_focus()
 	S.PauseGame.emit(_visible)
+	S.ToggleMouse.emit(_visible)
 
 
 func _check_popup_result(_id:StringName, result:bool) -> void:

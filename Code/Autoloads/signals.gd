@@ -25,7 +25,7 @@ signal LevelButtonPressed(level_id)
 signal DisplaySaveIcon()
 signal DisplayPopup(id:StringName, title:String, description:String, timer:int)
 signal PopupResult(id:StringName, result:bool)
-signal HideMouse()
+signal ToggleMouse(display:bool)
 
 #Audio
 signal PlayAudio(audio_data, is_2d)

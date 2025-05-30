@@ -32,8 +32,9 @@ func toggle_display(_visible := true) -> void:
 	visible = _visible
 	if _visible: pause_continue.grab_focus.call_deferred()
 	S.PauseGame.emit(_visible)
+	S.ToggleMouse.emit(_visible)
 
 
 func _hide_self() -> void:
 	hide()
-	S.HideMouse.emit()
+	S.ToggleMouse.emit(false)
