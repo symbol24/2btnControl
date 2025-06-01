@@ -48,22 +48,26 @@ func _ready() -> void:
 func _continue_pressed() -> void:
 	PD.save()
 	S.LoadScene.emit(&"next")
+	S.ToggleMouse.emit(false)
 	hide()
 
 
 func _restart_pressed() -> void:
 	S.LoadScene.emit(&"current")
+	S.ToggleMouse.emit(false)
 	hide()
 
 
 func _exit_pressed() -> void:
 	S.LoadScene.emit(&"main_menu")
+	S.ToggleMouse.emit(false)
 	hide()
 
 
 func toggle_display(_visible := true) -> void:
 	visible = _visible
 	if _visible:
+		S.ToggleMouse.emit(true)
 		if GM.level_data:
 			if GM.level_data.has_cones:
 				cones_hit.show()

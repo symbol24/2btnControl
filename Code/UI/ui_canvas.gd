@@ -17,15 +17,14 @@ const CREDITS:String = "uid://dkyy7qajjbty2"
 var previous:StringName = &""
 var current:StringName = &""
 var ls_displayed:bool = false
-var active_screen:StringName = &""
 
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"pause"):
-		if previous != &"" and not active_screen in [&"loading_screen", &"result_screen"]:
+		if previous != &"" and not current in [&"loading_screen", &"result_screen"]:
 			S.ToggleDisplay.emit(current, false, previous)
 			S.ToggleDisplay.emit(previous, true)
-		else:
+		elif not current in [&"loading_screen", &"result_screen"]:
 			if not GM.is_loading and GM.active_level != null and GM.active_level.is_in_group(&"main_menu") and previous == &"":
 				S.ToggleDisplay.emit(&"main_menu", GM.is_playing)
 			elif not GM.is_loading and GM.active_level != null and GM.active_level.is_in_group(&"level") and previous == &"":
@@ -42,7 +41,8 @@ func _ready() -> void:
 
 func _toggle_ui(id:StringName, _visible:bool = false, _from:StringName = &"") -> void:
 	previous = _from
-	current = id
+	if _visible: current = id
+	else: current = &""
 	var tbcontrol:TBControl = _get_tbcontrol(id)
 	if not tbcontrol.is_node_ready(): await tbcontrol.ready
 	if tbcontrol: tbcontrol.toggle_display(_visible)
